@@ -1,6 +1,6 @@
-# 📚 mdCrawler - Documentation Crawler
+# 📚 mdCrawler - Documentation to Markdown Converter
 
-A powerful documentation crawler built on top of [Crawl4AI](https://github.com/unclecode/crawl4ai) that converts documentation websites into well-structured Markdown files.
+Transform entire documentation websites into a clean, organized collection of Markdown files with a single command. mdCrawler automatically crawls through all pages of a documentation site and converts each page into a well-formatted Markdown file while preserving the original structure.
 
 ## 💬 Join Our Community!
 
@@ -8,71 +8,50 @@ Join our vibrant Discord community [AiCodingBattle](https://discord.gg/TH8V5b5rG
 - Share daily news about AI and coding tools
 - Exchange expertise and best practices
 - Connect with fellow AI enthusiasts
-- Get early access to updates and features
 
-## 🌟 Features
+## 🎯 What it Does
 
-- 🔄 Automatically crawls entire documentation websites
-- 📝 Converts HTML documentation to clean Markdown format
-- 📁 Maintains the original site structure in the output
-- 🎯 Specifically optimized for documentation sites
-- 🌐 Works with most modern documentation platforms
+Give it a documentation URL, and mdCrawler will:
+1. 🔍 Automatically discover all documentation pages
+2. 📥 Download and process each page
+3. ✨ Convert the content to clean Markdown
+4. 📁 Save everything in an organized folder structure
 
-## 🚀 Getting Started
+Perfect for:
+- 📖 Offline documentation reading
+- 📝 Content migration projects
+- 🔄 Documentation backups
+- 🎨 Custom documentation styling
 
-### Prerequisites
+## 🚀 Quick Start
+
+```bash
+# Install and run in 3 simple steps:
+git clone https://github.com/yourusername/mdCrawler.git
+python -m playwright install
+pip install -r requirements.txt
+
+# Convert an entire documentation site:
+python main.py https://docs.python.org/fr/3/ python-docs
+```
+
+Your converted documentation will be available in `output/python-docs/`!
+
+## 📋 Requirements
 
 - Python 3.8 or higher (Install via Windows Store for Windows users)
 - pip (Python package manager)
 
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/mdCrawler.git
-cd mdCrawler
-```
-
-2. Install Playwright:
-```bash
-python -m playwright install
-```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-## 💻 Usage
-
-The basic syntax to run the crawler is:
-
-```bash
-python main.py <documentation-url> <output-name>
-```
-
-Example:
-```bash
-python main.py https://docs.python.org/fr/3/ python-docs
-```
-
-The crawler will:
-1. Visit the specified documentation URL
-2. Crawl all related documentation pages
-3. Convert the content to Markdown format
-4. Save the files in `output/<output-name>/`
-
 ## 📂 Output Structure
-
-The converted documentation will be saved in the `output` directory with the following structure:
 
 ```
 output/
-└── <output-name>/
-    ├── page1.md
-    ├── page2.md
-    └── subdirectory/
-        └── page3.md
+└── your-docs/
+    ├── index.md              # Main documentation page
+    ├── getting-started.md    # Each page becomes a Markdown file
+    └── api/                  # Original structure is preserved
+        ├── overview.md
+        └── reference.md
 ```
 
 ## 🛠️ Built With
