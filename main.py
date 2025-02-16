@@ -61,13 +61,55 @@ async def crawl_documentation(url: str, name: str):
         viewport_height=1080
     )
     
-    # Configure crawler with advanced content filtering
-    crawler_cfg = CrawlerRunConfig(
-        word_count_threshold=10,  # Ignore les blocs de texte trop courts
-        excluded_tags=["nav", "header", "footer"],
+    # Configure crawler with less restrictive filtering
+    link_extraction_cfg = CrawlerRunConfig(
+        word_count_threshold=0,  # No minimum word count for link extraction
+        excluded_tags=[],  # Don't exclude any tags for link discovery
         markdown_generator=DefaultMarkdownGenerator(
-            content_filter=PruningContentFilter(threshold=0.5),
-            options={"ignore_links": True}  # Supprime les liens
+            content_filter=PruningContentFilter(threshold=0.1),  # Very permissive threshold
+            options={"ignore_links": False}
+        ),
+        cache_mode="BYPASS"
+    )
+
+    content_extraction_cfg = CrawlerRunConfig(
+        word_count_threshold=15,  # Augmenté pour filtrer les petits blocs de texte comme les menus
+        excluded_tags=[
+            # Base HTML elements
+            "script", "style", "nav", "header", "footer", "aside",
+            # Navigation and menu selectors
+            ".sidebar", "#sidebar", ".menu", "#menu", ".navigation", "#navigation",
+            # Documentation specific selectors
+            "[role='navigation']", ".nav-menu", ".nav-list", ".table-of-contents",
+            ".toc", "#toc", ".site-nav", ".site-menu", ".docs-nav", ".docs-menu",
+            # Specific to documentation platforms
+            # Mintlify (firecrawl)
+            ".mintlify-nav", ".docs-sidebar", ".navigation-menu", ".nav-groups",
+            ".nav-wrapper", ".nav-container", ".navigation-wrapper",
+            # MkDocs (crawl4ai)
+            ".md-nav", ".md-sidebar", ".md-header", ".md-footer", ".md-tabs",
+            ".md-search", ".md-search-result", ".md-source", ".md-header-nav",
+            ".md-main__inner > nav", ".md-nav__title", ".md-nav__list",
+            ".terminal-mkdocs", ".terminal-mkdocs-nav", ".terminal-mkdocs-sidebar",
+            # Generic doc elements
+            ".search-box", ".search-wrapper", ".ctrl-key", ".keyboard-shortcut",
+            ".version-selector", ".version-info", ".metadata-bar",
+            # Additional navigation patterns
+            "*[class*='sidebar']", "*[class*='navigation']", "*[class*='nav-']",
+            "*[id*='sidebar']", "*[id*='navigation']", "*[id*='nav-']",
+            "*[class*='menu']", "*[id*='menu']"
+        ],
+        markdown_generator=DefaultMarkdownGenerator(
+            content_filter=PruningContentFilter(threshold=0.3),
+            options={
+                "ignore_links": True,
+                "ignore_navigation": True,
+                "main_content_only": True,
+                "remove_navigation_elements": True,
+                "clean_documentation_artifacts": True,
+                "strip_empty_headings": True,
+                "remove_duplicate_content": True
+            }
         ),
         cache_mode="BYPASS"
     )
@@ -80,16 +122,17 @@ async def crawl_documentation(url: str, name: str):
             base_domain = urlparse(url).netloc
             logger.info(f"Base domain: {base_domain}")
             
-            # First get all links from the main page
-            main_result = await crawler.arun(url, config=crawler_cfg)
+            # First get all links from the main page with less restrictive config
+            main_result = await crawler.arun(url, config=link_extraction_cfg)
             internal_links = main_result.links.get("internal", [])
             logger.info(f"Found {len(internal_links)} internal links")
             
-            # Process the main page
+            # Process the main page with content config
+            main_content = await crawler.arun(url, config=content_extraction_cfg)
             main_filename = get_safe_filename(url)
             main_path = output_dir / main_filename
             with open(main_path, "w", encoding="utf-8") as f:
-                f.write(main_result.markdown)
+                f.write(main_content.markdown)
             logger.info(f"Saved main page: {main_path}")
             
             # Process each internal link
@@ -113,7 +156,8 @@ async def crawl_documentation(url: str, name: str):
                         continue
                     
                     logger.info(f"Processing link: {link_url}")
-                    result = await crawler.arun(link_url, config=crawler_cfg)
+                    # Use content extraction config for the actual page content
+                    result = await crawler.arun(link_url, config=content_extraction_cfg)
                     
                     if result and result.success:
                         filename = get_safe_filename(link_url)
