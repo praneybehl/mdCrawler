@@ -3,7 +3,9 @@ import asyncio
 import logging
 from pathlib import Path
 from urllib.parse import urlparse
-from crawl4ai import AsyncWebCrawler
+from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
+from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
+from crawl4ai.content_filter_strategy import PruningContentFilter
 from datetime import datetime
 
 # Configure logging
@@ -52,16 +54,34 @@ async def crawl_documentation(url: str, name: str):
     output_dir.mkdir(parents=True, exist_ok=True)
     logger.info(f"Created output directory: {output_dir}")
     
+    # Configure browser for better performance
+    browser_cfg = BrowserConfig(
+        headless=True,
+        viewport_width=1920,
+        viewport_height=1080
+    )
+    
+    # Configure crawler with advanced content filtering
+    crawler_cfg = CrawlerRunConfig(
+        word_count_threshold=10,  # Ignore les blocs de texte trop courts
+        excluded_tags=["nav", "header", "footer"],
+        markdown_generator=DefaultMarkdownGenerator(
+            content_filter=PruningContentFilter(threshold=0.5),
+            options={"ignore_links": True}  # Supprime les liens
+        ),
+        cache_mode="BYPASS"
+    )
+    
     # Initialize crawler
     logger.info("Initializing AsyncWebCrawler...")
-    async with AsyncWebCrawler() as crawler:
+    async with AsyncWebCrawler(config=browser_cfg) as crawler:
         try:
             # Get base domain for filtering
             base_domain = urlparse(url).netloc
             logger.info(f"Base domain: {base_domain}")
             
             # First get all links from the main page
-            main_result = await crawler.arun(url)
+            main_result = await crawler.arun(url, config=crawler_cfg)
             internal_links = main_result.links.get("internal", [])
             logger.info(f"Found {len(internal_links)} internal links")
             
@@ -93,7 +113,7 @@ async def crawl_documentation(url: str, name: str):
                         continue
                     
                     logger.info(f"Processing link: {link_url}")
-                    result = await crawler.arun(link_url)
+                    result = await crawler.arun(link_url, config=crawler_cfg)
                     
                     if result and result.success:
                         filename = get_safe_filename(link_url)

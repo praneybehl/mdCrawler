@@ -1,4 +1,6 @@
 
+Sur Windows il faut installer python via windows store c'est la manière la plus simple de l'installer.
+
 1) Il faut installer playwright :
 python -m playwright install
 
