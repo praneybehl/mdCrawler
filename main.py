@@ -1,11 +1,10 @@
 import os
-import argparse
-import logging
 import asyncio
-from crawl4ai import AsyncWebCrawler
+import logging
 from pathlib import Path
-from datetime import datetime
 from urllib.parse import urlparse
+from crawl4ai import AsyncWebCrawler
+from datetime import datetime
 
 # Configure logging
 logging.basicConfig(
@@ -29,6 +28,14 @@ def get_safe_filename(url: str) -> str:
     safe_name = path.replace('/', '_').replace('\\', '_')
     return f"{safe_name}.md"
 
+def get_url_from_link(link) -> str:
+    """Extract URL from a link object."""
+    if isinstance(link, str):
+        return link
+    elif isinstance(link, dict):
+        return link.get('href', '')
+    return ''
+
 async def crawl_documentation(url: str, name: str):
     """
     Crawl a documentation website and save all pages as markdown files.
@@ -48,38 +55,62 @@ async def crawl_documentation(url: str, name: str):
     # Initialize crawler
     logger.info("Initializing AsyncWebCrawler...")
     async with AsyncWebCrawler() as crawler:
-        # Start crawling
-        logger.info("Starting to crawl pages...")
         try:
-            # Crawl all pages under the same domain
+            # Get base domain for filtering
             base_domain = urlparse(url).netloc
             logger.info(f"Base domain: {base_domain}")
             
-            results = await crawler.arun_many(
-                url,
-                max_pages=1000,  # Adjust this number based on your needs
-                same_domain=True,  # Only crawl pages from the same domain
-                max_depth=15  # Adjust the depth of crawling
-            )
+            # First get all links from the main page
+            main_result = await crawler.arun(url)
+            internal_links = main_result.links.get("internal", [])
+            logger.info(f"Found {len(internal_links)} internal links")
             
-            logger.info(f"Successfully retrieved {len(results)} pages")
+            # Process the main page
+            main_filename = get_safe_filename(url)
+            main_path = output_dir / main_filename
+            with open(main_path, "w", encoding="utf-8") as f:
+                f.write(main_result.markdown)
+            logger.info(f"Saved main page: {main_path}")
             
-            # Process each page
-            for result in results:
+            # Process each internal link
+            processed_urls = {url}  # Keep track of processed URLs to avoid duplicates
+            
+            for link in internal_links:
                 try:
-                    # Generate a safe filename from the URL
-                    filename = get_safe_filename(result.url)
-                    logger.info(f"Processing page: {result.url} -> {filename}")
+                    link_url = get_url_from_link(link)
+                    if not link_url or link_url in processed_urls:
+                        continue
+                        
+                    # Skip fragment URLs (URLs with #)
+                    if '#' in link_url:
+                        logger.debug(f"Skipping fragment URL: {link_url}")
+                        continue
+                        
+                    # Verify it's from the same domain
+                    link_domain = urlparse(link_url).netloc
+                    if link_domain != base_domain:
+                        logger.debug(f"Skipping external domain: {link_url}")
+                        continue
                     
-                    # Save markdown content
-                    output_path = output_dir / filename
-                    with open(output_path, "w", encoding="utf-8") as f:
-                        f.write(result.markdown)
-                    logger.info(f"Successfully saved: {output_path}")
+                    logger.info(f"Processing link: {link_url}")
+                    result = await crawler.arun(link_url)
                     
+                    if result and result.success:
+                        filename = get_safe_filename(link_url)
+                        output_path = output_dir / filename
+                        
+                        with open(output_path, "w", encoding="utf-8") as f:
+                            f.write(result.markdown)
+                        logger.info(f"Successfully saved: {output_path}")
+                        processed_urls.add(link_url)
+                    else:
+                        logger.warning(f"Failed to process {link_url}")
+                        
                 except Exception as e:
-                    logger.error(f"Error processing page {result.url}: {str(e)}")
+                    logger.error(f"Error processing link {link}: {str(e)}")
                     continue
+            
+            logger.info(f"Total pages processed: {len(processed_urls)}")
             
         except Exception as e:
             logger.error(f"Error during crawling: {str(e)}")
@@ -87,13 +118,13 @@ async def crawl_documentation(url: str, name: str):
 
     logger.info(f"Crawling completed. Output directory: {output_dir}")
 
-async def async_main():
+def main():
+    import argparse
+    
     parser = argparse.ArgumentParser(description="Crawl documentation and convert to markdown")
     parser.add_argument("url", help="URL of the documentation website")
     parser.add_argument("name", help="Name of the output directory")
     parser.add_argument("--debug", action="store_true", help="Enable debug logging")
-    parser.add_argument("--max-pages", type=int, default=100, help="Maximum number of pages to crawl")
-    parser.add_argument("--max-depth", type=int, default=3, help="Maximum depth of crawling")
     
     args = parser.parse_args()
     
@@ -102,13 +133,10 @@ async def async_main():
         logger.debug("Debug mode enabled")
 
     try:
-        await crawl_documentation(args.url, args.name)
+        asyncio.run(crawl_documentation(args.url, args.name))
     except Exception as e:
         logger.error(f"Fatal error: {str(e)}")
         raise
-
-def main():
-    asyncio.run(async_main())
 
 if __name__ == "__main__":
     main() 
