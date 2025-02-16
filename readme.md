@@ -1,6 +1,8 @@
 # 📚 mdCrawler - Documentation to Markdown Converter
 
-Transform entire documentation websites into a clean, organized collection of Markdown files with a single command. mdCrawler automatically crawls through all pages of a documentation site and converts each page into a well-formatted Markdown file while preserving the original structure.
+> Built with ❤️ using [Crawl4AI](https://github.com/unclecode/crawl4ai), the powerful open-source web crawler (30.5k+ ⭐)
+
+Transform entire documentation websites into a clean, organized collection of Markdown files with a single command. mdCrawler leverages the power of Crawl4AI to automatically process documentation sites and convert them into well-structured Markdown files while preserving the original structure.
 
 ## 💬 Join Our Community!
 
@@ -104,9 +106,16 @@ output/
 
 ## 🛠️ Built With
 
-- [Crawl4AI](https://github.com/unclecode/crawl4ai) - Powerful web crawling engine
+- [Crawl4AI](https://github.com/unclecode/crawl4ai) - The backbone of our crawler, providing powerful web crawling capabilities
 - [Playwright](https://playwright.dev/) - Browser automation
 - Python 3.8+
+
+## 🙏 Acknowledgments
+
+This project would not be possible without:
+- [Crawl4AI](https://github.com/unclecode/crawl4ai) and its amazing community
+- The incredible work of [@unclecode](https://github.com/unclecode) and all Crawl4AI contributors
+- Everyone who has contributed to making web crawling more accessible
 
 ## 📝 License
 
