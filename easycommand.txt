@@ -13,6 +13,8 @@ python main.py https://react.dev/learn/ react-docs
 python main.py https://docs.stripe.com/ stripe-docs
 python main.py https://docs.stripe.com/connect stripe-docs
 
+python main.py https://docs.trae.ai/docs/ trae-docs
+
 python main.py https://firebase.google.com/docs/firestore firebase-firestore-docs
 python main.py https://firebase.google.com/docs/functions firebase-functions-docs
 python main.py https://firebase.google.com/docs/storage firebase-storage-docs
