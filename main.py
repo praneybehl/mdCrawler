@@ -46,10 +46,10 @@ async def crawl_documentation(url: str, name: str):
         name (str): Name of the output directory where markdown files will be saved
     """
     logger.info(f"Starting crawl process for URL: {url}")
-    logger.info(f"Output will be saved in: output/{name}")
+    logger.info(f"Output will be saved in: docs/{name}")
 
     # Create output directory
-    output_dir = Path(f"output/{name}")
+    output_dir = Path(f"docs/{name}")
     output_dir.mkdir(parents=True, exist_ok=True)
     logger.info(f"Created output directory: {output_dir}")
     
