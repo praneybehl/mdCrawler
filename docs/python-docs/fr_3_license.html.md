@@ -1,46 +1,46 @@
 ### Navigation
   * index
   * modules |
-  * previous |
-  * ![Python logo](https://docs.python.org/_static/py.svg)
+  * précédent |
+  * ![Python logo](https://docs.python.org/fr/3/_static/py.svg)
   * Python »
   * EnglishSpanishFrenchItalianJapaneseKoreanPolishBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
 dev (3.14)3.13.23.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
   * 3.13.2 Documentation » 
-  * History and License
+  * Histoire et licence
   * | 
   * Theme  Auto Light Dark |
 
 
-# History and License¶
-## History of the software¶
-Python was created in the early 1990s by Guido van Rossum at Stichting Mathematisch Centrum (CWI, see https://www.cwi.nl) in the Netherlands as a successor of a language called ABC. Guido remains Python’s principal author, although it includes many contributions from others.
+# Histoire et licence¶
+## Histoire du logiciel¶
+Python was created in the early 1990s by Guido van Rossum at Stichting Mathematisch Centrum (CWI, see https://www.cwi.nl) in the Netherlands as a successor of a language called ABC. Guido remains Python's principal author, although it includes many contributions from others.
 In 1995, Guido continued his work on Python at the Corporation for National Research Initiatives (CNRI, see https://www.cnri.reston.va.us) in Reston, Virginia where he released several versions of the software.
 In May 2000, Guido and the Python core development team moved to BeOpen.com to form the BeOpen PythonLabs team. In October of the same year, the PythonLabs team moved to Digital Creations, which became Zope Corporation. In 2001, the Python Software Foundation (PSF, see https://www.python.org/psf/) was formed, a non-profit organization created specifically to own Python-related Intellectual Property. Zope Corporation was a sponsoring member of the PSF.
 All Python releases are Open Source (see https://opensource.org for the Open Source Definition). Historically, most, but not all, Python releases have also been GPL-compatible; the table below summarizes the various releases.
-Release | Derived from | Year | Owner | GPL-compatible? (1)  
+Version | Dérivé de | Année | Propriétaire | GPL-compatible? (1)  
 ---|---|---|---|---  
-0.9.0 thru 1.2 | n/a | 1991-1995 | CWI | yes  
-1.3 thru 1.5.2 | 1.2 | 1995-1999 | CNRI | yes  
-1.6 | 1.5.2 | 2000 | CNRI | no  
-2.0 | 1.6 | 2000 | BeOpen.com | no  
+0.9.0 à 1.2 | n/a | 1991-1995 | CWI | oui  
+1.3 à 1.5.2 | 1.2 | 1995-1999 | CNRI | oui  
+1.6 | 1.5.2 | 2000 | CNRI | non  
+2.0 | 1.6 | 2000 | BeOpen.com | non  
 1.6.1 | 1.6 | 2001 | CNRI | yes (2)  
-2.1 | 2.0+1.6.1 | 2001 | PSF | no  
-2.0.1 | 2.0+1.6.1 | 2001 | PSF | yes  
-2.1.1 | 2.1+2.0.1 | 2001 | PSF | yes  
-2.1.2 | 2.1.1 | 2002 | PSF | yes  
-2.1.3 | 2.1.2 | 2002 | PSF | yes  
-2.2 and above | 2.1.1 | 2001-now | PSF | yes  
+2.1 | 2.0+1.6.1 | 2001 | PSF | non  
+2.0.1 | 2.0+1.6.1 | 2001 | PSF | oui  
+2.1.1 | 2.1+2.0.1 | 2001 | PSF | oui  
+2.1.2 | 2.1.1 | 2002 | PSF | oui  
+2.1.3 | 2.1.2 | 2002 | PSF | oui  
+2.2 et ultérieure | 2.1.1 | 2001-maintenant | PSF | oui  
 Note
-  1. GPL-compatible doesn’t mean that we’re distributing Python under the GPL. All Python licenses, unlike the GPL, let you distribute a modified version without making your changes open source. The GPL-compatible licenses make it possible to combine Python with other software that is released under the GPL; the others don’t.
-  2. According to Richard Stallman, 1.6.1 is not GPL-compatible, because its license has a choice of law clause. According to CNRI, however, Stallman’s lawyer has told CNRI’s lawyer that 1.6.1 is “not incompatible” with the GPL.
+  1. GPL-compatible doesn't mean that we're distributing Python under the GPL. All Python licenses, unlike the GPL, let you distribute a modified version without making your changes open source. The GPL-compatible licenses make it possible to combine Python with other software that is released under the GPL; the others don't.
+  2. According to Richard Stallman, 1.6.1 is not GPL-compatible, because its license has a choice of law clause. According to CNRI, however, Stallman's lawyer has told CNRI's lawyer that 1.6.1 is "not incompatible" with the GPL.
 
 
-Thanks to the many outside volunteers who have worked under Guido’s direction to make these releases possible.
-## Terms and conditions for accessing or otherwise using Python¶
+Merci aux nombreux bénévoles qui ont travaillé sous la direction de Guido pour rendre ces versions possibles.
+## Conditions générales pour accéder à, ou utiliser, Python¶
 Python software and documentation are licensed under the Python Software Foundation License Version 2.
 Starting with Python 3.8.6, examples, recipes, and other code in the documentation are dual licensed under the PSF License Version 2 and the Zero-Clause BSD license.
-Some software incorporated into Python is under different licenses. The licenses are listed with code falling under that license. See Licenses and Acknowledgements for Incorporated Software for an incomplete list of these licenses.
+Certains logiciels faisant partie de Python sont soumis à d'autres licences. Ces licences sont incluses avec le code lié à celles-ci. Voir Licences et remerciements pour les logiciels tiers pour une liste non exhaustive de ces licences.
 ### PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2¶
 ```
 1. This LICENSE AGREEMENT is between the Python Software Foundation ("PSF"), and
@@ -79,8 +79,8 @@ Some software incorporated into Python is under different licenses. The licenses
 
 ```
 
-### BEOPEN.COM LICENSE AGREEMENT FOR PYTHON 2.0¶
-BEOPEN PYTHON OPEN SOURCE LICENSE AGREEMENT VERSION 1
+### LICENCE D'UTILISATION BEOPEN.COM POUR PYTHON 2.0¶
+LICENCE D'UTILISATION LIBRE BEOPEN PYTHON VERSION 1
 ```
 1. This LICENSE AGREEMENT is between BeOpen.com ("BeOpen"), having an office at
   160 Saratoga Avenue, Santa Clara, CA 95051, and the Individual or Organization
@@ -117,7 +117,7 @@ BEOPEN PYTHON OPEN SOURCE LICENSE AGREEMENT VERSION 1
 
 ```
 
-### CNRI LICENSE AGREEMENT FOR PYTHON 1.6.1¶
+### LICENCE D'UTILISATION CNRI POUR PYTHON 1.6.1¶
 ```
 1. This LICENSE AGREEMENT is between the Corporation for National Research
   Initiatives, having an office at 1895 Preston White Drive, Reston, VA 20191
@@ -173,7 +173,7 @@ BEOPEN PYTHON OPEN SOURCE LICENSE AGREEMENT VERSION 1
 
 ```
 
-### CWI LICENSE AGREEMENT FOR PYTHON 0.9.0 THROUGH 1.2¶
+### LICENCE D'UTILISATION CWI POUR PYTHON 0.9.0 à 1.2¶
 ```
 Copyright © 1991 - 1995, Stichting Mathematisch Centrum Amsterdam, The
 Netherlands. All rights reserved.
@@ -208,9 +208,9 @@ PERFORMANCE OF THIS SOFTWARE.
 
 ```
 
-## Licenses and Acknowledgements for Incorporated Software¶
-This section is an incomplete, but growing list of licenses and acknowledgements for third-party software incorporated in the Python distribution.
-### Mersenne Twister¶
+## Licences et remerciements pour les logiciels tiers¶
+Cette section est une liste incomplète mais grandissante de licences et remerciements pour les logiciels tiers incorporés dans la distribution de Python.
+### Mersenne twister¶
 The `_random` C extension underlying the `random` module includes code based on a download from http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/emt19937ar.html. The following are the verbatim comments from the original code:
 ```
 A C-program for MT19937, with initialization improved 2002/1/26.
@@ -248,7 +248,7 @@ email: m-mat @ math.sci.hiroshima-u.ac.jp (remove space)
 
 ```
 
-### Sockets¶
+### Interfaces de connexion (_sockets_)¶
 The `socket` module uses the functions, `getaddrinfo()`, and `getnameinfo()`, which are coded in separate source files from the WIDE Project, https://www.wide.ad.jp/.
 ```
 Copyright (C) 1995, 1996, 1997, and 1998 WIDE Project.
@@ -278,7 +278,7 @@ SUCH DAMAGE.
 
 ```
 
-### Asynchronous socket services¶
+### Interfaces de connexion asynchrones¶
 The `test.support.asynchat` and `test.support.asyncore` modules contain the following notice:
 ```
 Copyright 1996 by Sam Rushing
@@ -301,8 +301,8 @@ CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ```
 
-### Cookie management¶
-The `http.cookies` module contains the following notice:
+### Gestion de témoin (_cookie_)¶
+Le module `http.cookies` contient la note suivante :
 ```
 Copyright 2000 by Timothy O'Malley <timo@alum.mit.edu>
         All Rights Reserved
@@ -325,8 +325,8 @@ PERFORMANCE OF THIS SOFTWARE.
 
 ```
 
-### Execution tracing¶
-The `trace` module contains the following notice:
+### Traçage d'exécution¶
+Le module `trace` contient la note suivante :
 ```
 portions copyright 2001, Autonomous Zones Industries, Inc., all rights...
 err... reserved and offered to the public under the terms of the
@@ -352,7 +352,7 @@ distribution of the software without specific, written prior permission.
 
 ```
 
-### UUencode and UUdecode functions¶
+### Les fonctions UUencode et UUdecode¶
 The `uu` codec contains the following notice:
 ```
 Copyright 1994 by Lance Ellinghouse
@@ -380,8 +380,8 @@ Modified by Jack Jansen, CWI, July 1995:
 
 ```
 
-### XML Remote Procedure Calls¶
-The `xmlrpc.client` module contains the following notice:
+### Appel de procédures distantes en XML (_RPC_ , pour _Remote Procedure Call_)¶
+Le module `xmlrpc.client` contient la note suivante :
 ```
   The XML-RPC client interface is
 Copyright (c) 1999-2002 by Secret Labs AB
@@ -432,7 +432,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
 ### Select kqueue¶
-The `select` module contains the following notice for the kqueue interface:
+Le module `select` contient la note suivante pour l'interface _kqueue_ :
 ```
 Copyright (c) 2000 Doug White, 2006 James Knight, 2007 Christian Heimes
 All rights reserved.
@@ -459,7 +459,7 @@ SUCH DAMAGE.
 ```
 
 ### SipHash24¶
-The file `Python/pyhash.c` contains Marek Majkowski’ implementation of Dan Bernstein’s SipHash24 algorithm. It contains the following note:
+Le fichier `Python/pyhash.c` contient une implémentation par Marek Majkowski de l'algorithme _SipHash24_ de Dan Bernstein. Il contient la note suivante :
 ```
 <MIT License>
 Copyright (c) 2013 Marek Majkowski <marek@popcount.org>
@@ -481,7 +481,7 @@ Solution inspired by code from:
 
 ```
 
-### strtod and dtoa¶
+### _strtod_ et _dtoa_¶
 The file `Python/dtoa.c`, which supplies C functions dtoa and strtod for conversion of C doubles to and from strings, is derived from the file of the same name by David M. Gay, currently available from https://web.archive.org/web/20220517033456/http://www.netlib.org/fp/dtoa.c. The original file, as retrieved on March 16, 2009, contains the following copyright and licensing notice:
 ```
 /****************************************************************
@@ -710,7 +710,7 @@ DEALINGS IN THE SOFTWARE.
 ```
 
 ### zlib¶
-The `zlib` extension is built using an included copy of the zlib sources if the zlib version found on the system is too old to be used for the build:
+Le module `zlib` est compilé en utilisant une copie du code source de _zlib_ si la version de _zlib_ trouvée sur le système est trop vieille pour être utilisée :
 ```
 Copyright (C) 1995-2011 Jean-loup Gailly and Mark Adler
 This software is provided 'as-is', without any express or implied
@@ -732,7 +732,7 @@ jloup@gzip.org     madler@alumni.caltech.edu
 ```
 
 ### cfuhash¶
-The implementation of the hash table used by the `tracemalloc` is based on the cfuhash project:
+L'implémentation des dictionnaires, utilisée par le module `tracemalloc` est basée sur le projet _cfuhash_ :
 ```
 Copyright (c) 2005 Don Owens
 All rights reserved.
@@ -790,8 +790,8 @@ SUCH DAMAGE.
 
 ```
 
-### W3C C14N test suite¶
-The C14N 2.0 test suite in the `test` package (`Lib/test/xmltestdata/c14n-20/`) was retrieved from the W3C website at https://www.w3.org/TR/xml-c14n2-testcases/ and is distributed under the 3-clause BSD license:
+### Ensemble de tests C14N du W3C¶
+Les tests de C14N version 2.0 du module `test` (`Lib/test/xmltestdata/c14n-20/`) proviennent du site du W3C à l'adresse https://www.w3.org/TR/xml-c14n2-testcases/ et sont distribués sous licence BSD modifiée :
 ```
 Copyright (c) 2013 W3C(R) (MIT, ERCIM, Keio, Beihang),
 All Rights Reserved.
@@ -842,7 +842,7 @@ SOFTWARE.
 
 ```
 
-### asyncio¶
+### _asyncio_¶
 Parts of the `asyncio` module are incorporated from uvloop 0.16, which is distributed under the MIT license:
 ```
 Copyright (c) 2015-2021 MagicStack Inc. http://magic.io
@@ -866,7 +866,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
 ### Global Unbounded Sequences (GUS)¶
-The file `Python/qsbr.c` is adapted from FreeBSD’s “Global Unbounded Sequences” safe memory reclamation scheme in subr_smr.c. The file is distributed under the 2-Clause BSD License:
+The file `Python/qsbr.c` is adapted from FreeBSD's "Global Unbounded Sequences" safe memory reclamation scheme in subr_smr.c. The file is distributed under the 2-Clause BSD License:
 ```
 Copyright (c) 2019,2020 Jeffrey Roberson <jeff@FreeBSD.org>
 Redistribution and use in source and binary forms, with or without
@@ -891,59 +891,59 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ```
 
-### Table of Contents
-  * History and License
-    * History of the software
-    * Terms and conditions for accessing or otherwise using Python
+### Table des matières
+  * Histoire et licence
+    * Histoire du logiciel
+    * Conditions générales pour accéder à, ou utiliser, Python
       * PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
-      * BEOPEN.COM LICENSE AGREEMENT FOR PYTHON 2.0
-      * CNRI LICENSE AGREEMENT FOR PYTHON 1.6.1
-      * CWI LICENSE AGREEMENT FOR PYTHON 0.9.0 THROUGH 1.2
+      * LICENCE D'UTILISATION BEOPEN.COM POUR PYTHON 2.0
+      * LICENCE D'UTILISATION CNRI POUR PYTHON 1.6.1
+      * LICENCE D'UTILISATION CWI POUR PYTHON 0.9.0 à 1.2
       * ZERO-CLAUSE BSD LICENSE FOR CODE IN THE PYTHON DOCUMENTATION
-    * Licenses and Acknowledgements for Incorporated Software
-      * Mersenne Twister
-      * Sockets
-      * Asynchronous socket services
-      * Cookie management
-      * Execution tracing
-      * UUencode and UUdecode functions
-      * XML Remote Procedure Calls
+    * Licences et remerciements pour les logiciels tiers
+      * Mersenne twister
+      * Interfaces de connexion (_sockets_)
+      * Interfaces de connexion asynchrones
+      * Gestion de témoin (_cookie_)
+      * Traçage d'exécution
+      * Les fonctions UUencode et UUdecode
+      * Appel de procédures distantes en XML (_RPC_ , pour _Remote Procedure Call_)
       * test_epoll
       * Select kqueue
       * SipHash24
-      * strtod and dtoa
+      * _strtod_ et _dtoa_
       * OpenSSL
       * expat
       * libffi
       * zlib
       * cfuhash
       * libmpdec
-      * W3C C14N test suite
+      * Ensemble de tests C14N du W3C
       * mimalloc
-      * asyncio
+      * _asyncio_
       * Global Unbounded Sequences (GUS)
 
 
-#### Previous topic
+#### Sujet précédent
 Copyright
-### This Page
-  * Report a Bug
-  * Show Source 
+### Cette page
+  * Signalement de bogue
+  * Voir la source 
 
 
 «
 ### Navigation
   * index
   * modules |
-  * previous |
-  * ![Python logo](https://docs.python.org/_static/py.svg)
+  * précédent |
+  * ![Python logo](https://docs.python.org/fr/3/_static/py.svg)
   * Python »
   * EnglishSpanishFrenchItalianJapaneseKoreanPolishBrazilian PortugueseTurkishSimplified ChineseTraditional Chinese
 dev (3.14)3.13.23.123.113.103.93.83.73.63.53.43.33.23.13.02.72.6
   * 3.13.2 Documentation » 
-  * History and License
+  * Histoire et licence
   * | 
   * Theme  Auto Light Dark |
 
 
-©  Copyright  2001-2025, Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Feb 17, 2025 (16:47 UTC). Found a bug? Created using Sphinx 8.1.3. 
+©  Copyright  2001-2025, Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Mis à jour le févr. 17, 2025 (05:58 UTC). Found a bug? Créé en utilisant Sphinx 8.1.3. 

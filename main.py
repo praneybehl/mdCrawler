@@ -1,6 +1,7 @@
 import os
 import asyncio
 import logging
+import yaml
 from pathlib import Path
 from urllib.parse import urlparse
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
@@ -37,13 +38,39 @@ def get_url_from_link(link) -> str:
         return link.get('href', '')
     return ''
 
-async def crawl_documentation(url: str, name: str):
+def should_process_url(url: str, base_domain: str) -> bool:
+    """Determine if a URL should be processed based on filtering rules."""
+    parsed = urlparse(url)
+    
+    # Skip if not from same domain
+    if parsed.netloc != base_domain:
+        return False
+        
+    # Skip fragment URLs
+    if '#' in url:
+        return False
+        
+    # For Django docs, skip old versions (customize per documentation site)
+    if 'djangoproject.com' in base_domain:
+        path_parts = parsed.path.strip('/').split('/')
+        if len(path_parts) >= 2 and path_parts[0] == 'en':
+            try:
+                version = float(path_parts[1])
+                if version < 4.0:  # Only process Django 4.0+ docs
+                    return False
+            except ValueError:
+                pass
+    
+    return True
+
+async def crawl_documentation(url: str, name: str, timeout: int = 1800):  # 30 minute timeout
     """
     Crawl a documentation website and save all pages as markdown files.
     
     Args:
         url (str): The URL of the documentation website
         name (str): Name of the output directory where markdown files will be saved
+        timeout (int): Maximum time in seconds to spend crawling (default: 30 minutes)
     """
     logger.info(f"Starting crawl process for URL: {url}")
     logger.info(f"Output will be saved in: docs/{name}")
@@ -52,12 +79,12 @@ async def crawl_documentation(url: str, name: str):
     output_dir = Path(f"docs/{name}")
     output_dir.mkdir(parents=True, exist_ok=True)
     logger.info(f"Created output directory: {output_dir}")
+
+    start_time = datetime.now()
     
-    # Configure browser for better performance
+    # Configure browser for better performance and reliability
     browser_cfg = BrowserConfig(
-        headless=True,
-        viewport_width=1920,
-        viewport_height=1080
+        headless=True
     )
     
     # Configure crawler with less restrictive filtering
@@ -72,7 +99,7 @@ async def crawl_documentation(url: str, name: str):
     )
 
     content_extraction_cfg = CrawlerRunConfig(
-        word_count_threshold=15,  # Augmenté pour filtrer les petits blocs de texte comme les menus
+        word_count_threshold=15,  # Higher threshold to filter small text blocks like menus
         excluded_tags=[
             # Base HTML elements
             "script", "style", "nav", "header", "footer", "aside",
@@ -138,23 +165,25 @@ async def crawl_documentation(url: str, name: str):
             processed_urls = {url}  # Keep track of processed URLs to avoid duplicates
             
             for link in internal_links:
+                # Check timeout
+                if (datetime.now() - start_time).total_seconds() > timeout:
+                    logger.warning(f"Timeout reached after {timeout} seconds. Stopping crawl.")
+                    break
+
                 try:
                     link_url = get_url_from_link(link)
                     if not link_url or link_url in processed_urls:
                         continue
                         
-                    # Skip fragment URLs (URLs with #)
-                    if '#' in link_url:
-                        logger.debug(f"Skipping fragment URL: {link_url}")
-                        continue
-                        
-                    # Verify it's from the same domain
-                    link_domain = urlparse(link_url).netloc
-                    if link_domain != base_domain:
-                        logger.debug(f"Skipping external domain: {link_url}")
+                    if not should_process_url(link_url, base_domain):
+                        logger.debug(f"Skipping filtered URL: {link_url}")
                         continue
                     
                     logger.info(f"Processing link: {link_url}")
+                    
+                    # Add delay between requests to be polite
+                    await asyncio.sleep(0.5)  # 500ms delay between requests
+                    
                     # Use content extraction config for the actual page content
                     result = await crawler.arun(link_url, config=content_extraction_cfg)
                     
@@ -181,12 +210,62 @@ async def crawl_documentation(url: str, name: str):
 
     logger.info(f"Crawling completed. Output directory: {output_dir}")
 
+async def crawl_multiple_libraries(config_file: str):
+    """
+    Crawl multiple documentation websites based on a configuration file.
+    
+    Args:
+        config_file (str): Path to the YAML configuration file containing library definitions
+    """
+    logger.info(f"Loading library configuration from: {config_file}")
+    
+    try:
+        with open(config_file, 'r') as f:
+            config = yaml.safe_load(f)
+    except Exception as e:
+        logger.error(f"Error loading configuration file: {str(e)}")
+        raise
+
+    if not config or 'libraries' not in config:
+        raise ValueError("Invalid configuration file: 'libraries' section not found")
+
+    libraries = config['libraries']
+    if not libraries:
+        logger.warning("No libraries defined in configuration file")
+        return
+
+    total_libraries = len(libraries)
+    for idx, library in enumerate(libraries, 1):
+        if not isinstance(library, dict) or 'name' not in library or 'url' not in library:
+            logger.warning(f"Skipping invalid library entry: {library}")
+            continue
+
+        name = library['name']
+        url = library['url']
+        
+        logger.info(f"\n{'='*50}")
+        logger.info(f"Processing library {idx}/{total_libraries}: {name}")
+        logger.info(f"{'='*50}")
+        
+        try:
+            await crawl_documentation(url, name)
+        except Exception as e:
+            logger.error(f"Error processing library {name}: {str(e)}")
+            logger.error("Moving to next library...")
+            # Sleep for a few seconds before trying the next library
+            await asyncio.sleep(5)
+            continue
+
+    logger.info(f"\nCompleted processing all libraries ({total_libraries} total)")
+    logger.info("Check the 'docs' directory for the generated documentation")
+
 def main():
     import argparse
     
     parser = argparse.ArgumentParser(description="Crawl documentation and convert to markdown")
-    parser.add_argument("url", help="URL of the documentation website")
-    parser.add_argument("name", help="Name of the output directory")
+    parser.add_argument("--config", help="Path to libraries configuration file (YAML)")
+    parser.add_argument("--url", help="URL of a single documentation website")
+    parser.add_argument("--name", help="Name of the output directory for single website")
     parser.add_argument("--debug", action="store_true", help="Enable debug logging")
     
     args = parser.parse_args()
@@ -196,10 +275,17 @@ def main():
         logger.debug("Debug mode enabled")
 
     try:
-        asyncio.run(crawl_documentation(args.url, args.name))
+        if args.config:
+            # Process multiple libraries from config file
+            asyncio.run(crawl_multiple_libraries(args.config))
+        elif args.url and args.name:
+            # Process single library with direct parameters
+            asyncio.run(crawl_documentation(args.url, args.name))
+        else:
+            parser.error("Either --config or both --url and --name must be provided")
     except Exception as e:
         logger.error(f"Fatal error: {str(e)}")
         raise
 
 if __name__ == "__main__":
-    main() 
+    main()

@@ -314,6 +314,14 @@ Whenever a new request arrives, **FastAPI** will take care of:
   * Get the result from your function.
   * Assign that result to the parameter in your _path operation function_.
 
+```
+graph TB
+common_parameters(["common_parameters"])
+read_items["/items/"]
+read_users["/users/"]
+common_parameters --> read_items
+common_parameters --> read_users
+```
 
 This way you write shared code once and **FastAPI** takes care of calling it for your _path operations_.
 Check
@@ -441,6 +449,25 @@ For example, let's say you have 4 API endpoints (_path operations_):
 
 
 then you could add different permission requirements for each of them just with dependencies and sub-dependencies:
+```
+graph TB
+current_user(["current_user"])
+active_user(["active_user"])
+admin_user(["admin_user"])
+paying_user(["paying_user"])
+public["/items/public/"]
+private["/items/private/"]
+activate_user["/users/{user_id}/activate"]
+pro_items["/items/pro/"]
+current_user --> active_user
+active_user --> admin_user
+active_user --> paying_user
+current_user --> public
+active_user --> private
+admin_user --> activate_user
+paying_user --> pro_items
+```
+
 ## Integrated with **OpenAPI**¶
 All these dependencies, while declaring their requirements, also add parameters, validations, etc. to your _path operations_.
 **FastAPI** will take care of adding it all to the OpenAPI schema, so that it is shown in the interactive documentation systems.

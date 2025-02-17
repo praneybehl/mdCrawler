@@ -342,6 +342,14 @@ async defread_query(query_or_default: str = Depends(query_or_cookie_extractor)):
 Info
 Notice that we are only declaring one dependency in the _path operation function_ , the `query_or_cookie_extractor`.
 But **FastAPI** will know that it has to solve `query_extractor` first, to pass the results of that to `query_or_cookie_extractor` while calling it.
+```
+graph TB
+query_extractor(["query_extractor"])
+query_or_cookie_extractor(["query_or_cookie_extractor"])
+read_query["/items/"]
+query_extractor --> query_or_cookie_extractor --> read_query
+```
+
 ## Using the same dependency multiple times¶
 If one of your dependencies is declared multiple times for the same _path operation_ , for example, multiple dependencies have a common sub-dependency, **FastAPI** will know to call that sub-dependency only once per request.
 And it will save the returned value in a "cache" and pass it to all the "dependants" that need it in that specific request, instead of calling the dependency multiple times for the same request.

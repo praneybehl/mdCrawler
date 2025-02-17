@@ -224,7 +224,17 @@ Nevertheless, if you just use `pip` directly, the packages would be installed in
 So, what's the problem with installing packages in the global Python environment?
 At some point, you will probably end up writing many different programs that depend on **different packages**. And some of these projects you work on will depend on **different versions** of the same package. 😱
 For example, you could create a project called `philosophers-stone`, this program depends on another package called **`harry`, using the version`1`**. So, you need to install `harry`.
+```
+flowchart LR
+  stone(philosophers-stone) -->|requires| harry-1[harry v1]
+```
+
 Then, at some point later, you create another project called `prisoner-of-azkaban`, and this project also depends on `harry`, but this project needs **`harry`version`3`**.
+```
+flowchart LR
+  azkaban(prisoner-of-azkaban) --> |requires| harry-3[harry v3]
+```
+
 But now the problem is, if you install the packages globally (in the global environment) instead of in a local **virtual environment** , you will have to choose which version of `harry` to install.
 If you want to run `philosophers-stone` you will need to first install `harry` version `1`, for example with:
 ```
@@ -234,6 +244,16 @@ fast →pip install "harry==1"restart ↻
 ```
 
 And then you would end up with `harry` version `1` installed in your global Python environment.
+```
+flowchart LR
+  subgraph global[global env]
+    harry-1[harry v1]
+  end
+  subgraph stone-project[philosophers-stone project]
+    stone(philosophers-stone) -->|requires| harry-1
+  end
+```
+
 But then if you want to run `prisoner-of-azkaban`, you will need to uninstall `harry` version `1` and install `harry` version `3` (or just installing version `3` would automatically uninstall version `1`).
 ```
 
@@ -243,6 +263,21 @@ fast →pip install "harry==3"restart ↻
 
 And then you would end up with `harry` version `3` installed in your global Python environment.
 And if you try to run `philosophers-stone` again, there's a chance it would **not work** because it needs `harry` version `1`.
+```
+flowchart LR
+  subgraph global[global env]
+    harry-1[<strike>harry v1</strike>]
+    style harry-1 fill:#ccc,stroke-dasharray: 5 5
+    harry-3[harry v3]
+  end
+  subgraph stone-project[philosophers-stone project]
+    stone(philosophers-stone) -.-x|⛔️| harry-1
+  end
+  subgraph azkaban-project[prisoner-of-azkaban project]
+    azkaban(prisoner-of-azkaban) --> |requires| harry-3
+  end
+```
+
 Tip
 It's very common in Python packages to try the best to **avoid breaking changes** in **new versions** , but it's better to be safe, and install newer versions intentionally and when you can run the tests to check everything is working correctly.
 Now, imagine that with **many** other **packages** that all your **projects depend on**. That's very difficult to manage. And you would probably end up running some projects with some **incompatible versions** of the packages, and not knowing why something isn't working.
@@ -265,6 +300,23 @@ By default, it will put those files downloaded and extracted in the directory th
 The solution to the problems of having all the packages in the global environment is to use a **virtual environment for each project** you work on.
 A virtual environment is a **directory** , very similar to the global one, where you can install the packages for a project.
 This way, each project will have its own virtual environment (`.venv` directory) with its own packages.
+```
+flowchart TB
+  subgraph stone-project[philosophers-stone project]
+    stone(philosophers-stone) --->|requires| harry-1
+    subgraph venv1[.venv]
+      harry-1[harry v1]
+    end
+  end
+  subgraph azkaban-project[prisoner-of-azkaban project]
+    azkaban(prisoner-of-azkaban) --->|requires| harry-3
+    subgraph venv2[.venv]
+      harry-3[harry v3]
+    end
+  end
+  stone-project ~~~ azkaban-project
+```
+
 ## What Does Activating a Virtual Environment Mean¶
 When you activate a virtual environment, for example with:
 Linux, macOSWindows PowerShellWindows Bash
