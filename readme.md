@@ -52,70 +52,48 @@ pip install -r requirements.txt
 
 # Install browser dependencies
 python -m playwright install
-
-# Convert an entire documentation site
-python main.py https://docs.python.org/fr/3/ python-docs
 ```
 
-Your converted documentation will be available in `output/python-docs/`!
+### Single Documentation Site
 
-## 📖 Examples
-
-Here are some examples of how to use mdCrawler with popular documentation sites:
-
-### Supabase Documentation
 ```bash
-# Convert Supabase docs to Markdown
-python main.py https://supabase.com/docs supabase-docs
+# Convert a single documentation site
+python main.py --url https://docs.python.org/fr/3/ --name python-docs
 ```
-This will create a complete Markdown version of Supabase's documentation, including:
-- Authentication guides
-- Database documentation
-- API references
-- Getting started guides
 
-### Stripe Documentation
+### Multiple Documentation Sites
+
 ```bash
-# Convert Stripe docs to Markdown
-python main.py https://docs.stripe.com stripe-docs
+# Convert multiple documentation sites using a YAML config
+python main.py --config libraries_extended.yaml
 ```
-Perfect for creating offline copies of:
-- Payment integration guides
-- API documentation
-- Product documentation
-- Testing guides
 
-### Crawl4AI Documentation
+Your converted documentation will be available in the `docs/` directory!
+
+## 📋 Extended Library Support
+
+mdCrawler now includes an extensive library of pre-configured documentation sources covering:
+
+- **Programming Languages**: Python, Java, C++, Rust, Go
+- **Web Frameworks**: Django, Flask, FastAPI, Express.js, Rails
+- **Database Systems**: PostgreSQL, MySQL, MongoDB, Redis
+- **AI/ML Frameworks**: TensorFlow, PyTorch, Hugging Face, LangChain
+- **Cloud & DevOps**: Docker, Kubernetes, Terraform
+- **Frontend Frameworks**: React, Vue, Angular, Svelte
+- **And many more!**
+
+To use the extended library:
+
+1. Check `libraries_extended.yaml` for available documentation sources
+2. Run with the config file to process multiple sites:
 ```bash
-# Convert Crawl4AI docs to Markdown
-python main.py https://docs.crawl4ai.com crawl4ai-docs
+python main.py --config libraries_extended.yaml
 ```
-Useful for:
-- Offline reference
-- Contributing to the project
-- Custom documentation styling
-
-### SvelteKit Documentation
-```bash
-# Convert SvelteKit docs to Markdown
-python main.py https://svelte.dev/docs/kit sveltekit-docs
-```
-Great for:
-- Learning materials
-- Framework documentation
-- Component guides
-
-Each conversion will maintain the original documentation structure and create clean, well-formatted Markdown files in their respective output directories.
-
-## 📋 Requirements
-
-- Python 3.8 or higher (Install via Windows Store for Windows users)
-- pip (Python package manager)
 
 ## 📂 Output Structure
 
 ```
-output/
+docs/
 └── your-docs/
     ├── index.md              # Main documentation page
     ├── getting-started.md    # Each page becomes a Markdown file
