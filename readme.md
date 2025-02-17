@@ -29,7 +29,7 @@ Perfect for:
 
 ```bash
 # Install and run in 3 simple steps:
-git clone https://github.com/yourusername/mdCrawler.git
+git clone https://github.com/AiCodingBattle/mdCrawler.git
 python -m playwright install
 pip install -r requirements.txt
 
