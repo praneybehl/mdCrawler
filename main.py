@@ -268,6 +268,10 @@ def main():
     parser.add_argument("--name", help="Name of the output directory for single website")
     parser.add_argument("--debug", action="store_true", help="Enable debug logging")
     
+    # Add support for positional arguments
+    parser.add_argument("url_pos", nargs="?", help="URL of documentation website (positional)")
+    parser.add_argument("name_pos", nargs="?", help="Output directory name (positional)")
+    
     args = parser.parse_args()
     
     if args.debug:
@@ -279,10 +283,13 @@ def main():
             # Process multiple libraries from config file
             asyncio.run(crawl_multiple_libraries(args.config))
         elif args.url and args.name:
-            # Process single library with direct parameters
+            # Process single library with named parameters
             asyncio.run(crawl_documentation(args.url, args.name))
+        elif args.url_pos and args.name_pos:
+            # Process single library with positional parameters
+            asyncio.run(crawl_documentation(args.url_pos, args.name_pos))
         else:
-            parser.error("Either --config or both --url and --name must be provided")
+            parser.error("Either --config or URL and name must be provided (either as named or positional arguments)")
     except Exception as e:
         logger.error(f"Fatal error: {str(e)}")
         raise

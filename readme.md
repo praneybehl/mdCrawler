@@ -56,8 +56,12 @@ python -m playwright install
 
 ### Single Documentation Site
 
+You can use either format:
 ```bash
-# Convert a single documentation site
+# Using positional arguments (original format)
+python main.py https://docs.python.org/fr/3/ python-docs
+
+# Using named arguments
 python main.py --url https://docs.python.org/fr/3/ --name python-docs
 ```
 
@@ -69,6 +73,59 @@ python main.py --config libraries_extended.yaml
 ```
 
 Your converted documentation will be available in the `docs/` directory!
+
+## 📖 Examples
+
+Here are some examples of how to use mdCrawler with popular documentation sites:
+
+### Supabase Documentation
+```bash
+# Convert Supabase docs to Markdown
+python main.py https://supabase.com/docs supabase-docs
+```
+This will create a complete Markdown version of Supabase's documentation, including:
+- Authentication guides
+- Database documentation
+- API references
+- Getting started guides
+
+### Stripe Documentation
+```bash
+# Convert Stripe docs to Markdown
+python main.py https://docs.stripe.com stripe-docs
+```
+Perfect for creating offline copies of:
+- Payment integration guides
+- API documentation
+- Product documentation
+- Testing guides
+
+### Crawl4AI Documentation
+```bash
+# Convert Crawl4AI docs to Markdown
+python main.py https://docs.crawl4ai.com crawl4ai-docs
+```
+Useful for:
+- Offline reference
+- Contributing to the project
+- Custom documentation styling
+
+### SvelteKit Documentation
+```bash
+# Convert SvelteKit docs to Markdown
+python main.py https://svelte.dev/docs/kit sveltekit-docs
+```
+Great for:
+- Learning materials
+- Framework documentation
+- Component guides
+
+Each conversion will maintain the original documentation structure and create clean, well-formatted Markdown files in their respective output directories.
+
+## 📋 Requirements
+
+- Python 3.8 or higher (Install via Windows Store for Windows users)
+- pip (Python package manager)
 
 ## 📋 Extended Library Support
 
