@@ -1,15 +1,15 @@
 # 📚 mdCrawler - Documentation to Markdown Converter
 
-> 🤖 **Perfect for AI Coding Assistants!**
-> 
-> Want to supercharge your AI coding experience? mdCrawler helps you provide the perfect context to your AI coding agents:
-> 1. Run mdCrawler to download documentation for the technologies you're using
-> 2. Place the generated Markdown docs in your project's `/docs` folder
-> 3. Now tools like Cursor, Augment, Windsurf, Traycer, Codebuff and others can access the full context of your dependencies!
->
-> No more incomplete or outdated context - give your AI the documentation it needs to help you code better!
-> PSSTTT : We already have fetched some docs for you :), check out our output folder to see the result
-> PSSSTTT2 : Don't know where to begin ? Check out our easycommand.txt
+🤖 **Perfect for AI Coding Assistants!**
+ 
+Want to supercharge your AI coding experience? mdCrawler helps you provide the perfect context to your AI coding agents:
+1. Run mdCrawler to download documentation for the technologies you're using
+2. Place the generated Markdown docs in your project's `/docs` folder
+3. Now tools like Cursor, Augment, Windsurf, Traycer, Codebuff and others can access the full context of your dependencies!
+
+No more incomplete or outdated context - give your AI the documentation it needs to help you code better!
+PSSTTT : We already have fetched some docs for you :), check out our output folder to see the result
+PSSSTTT2 : Don't know where to begin ? Check out our easycommand.txt
 
 > Built with ❤️ using [Crawl4AI](https://github.com/unclecode/crawl4ai), the powerful open-source web crawler (30.5k+ ⭐)
 
