@@ -11,6 +11,7 @@ python main.py https://capacitorjs.com/docs capacitor-docs
 python main.py https://coolify.io/docs/what-is-coolify coolify-docs
 python main.py https://react.dev/learn/ react-docs
 python main.py https://docs.stripe.com/ stripe-docs
+python main.py https://docs.stripe.com/connect stripe-docs
 
 python main.py https://docs.python.org/ python-docs
 
