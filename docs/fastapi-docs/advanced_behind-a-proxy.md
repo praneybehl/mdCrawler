@@ -24,6 +24,15 @@ Up to here, everything would work as normally.
 But then, when you open the integrated docs UI (the frontend), it would expect to get the OpenAPI schema at `/openapi.json`, instead of `/api/v1/openapi.json`.
 So, the frontend (that runs in the browser) would try to reach `/openapi.json` and wouldn't be able to get the OpenAPI schema.
 Because we have a proxy with a path prefix of `/api/v1` for our app, the frontend needs to fetch the OpenAPI schema at `/api/v1/openapi.json`.
+```
+graph LR
+browser("Browser")
+proxy["Proxy on http://0.0.0.0:9999/api/v1/app"]
+server["Server on http://127.0.0.1:8000/app"]
+browser --> proxy
+proxy --> server
+```
+
 Tip
 The IP `0.0.0.0` is commonly used to mean that the program listens on all the IPs available in that machine/server.
 The docs UI would also need the OpenAPI schema to declare that this API `server` is located at `/api/v1` (behind the proxy). For example:

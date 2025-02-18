@@ -494,6 +494,38 @@ defget_item(item_id: str, username: str = Depends(get_username)):
 Now the client will get the same _HTTP 500 Internal Server Error_ response, but the server will have our custom `InternalError` in the logs. 😎
 ## Execution of dependencies with `yield`¶
 The sequence of execution is more or less like this diagram. Time flows from top to bottom. And each column is one of the parts interacting or executing code.
+```
+sequenceDiagram
+participant client as Client
+participant handler as Exception handler
+participant dep as Dep with yield
+participant operation as Path Operation
+participant tasks as Background tasks
+  Note over client,operation: Can raise exceptions, including HTTPException
+  client ->> dep: Start request
+  Note over dep: Run code up to yield
+  opt raise Exception
+    dep -->> handler: Raise Exception
+    handler -->> client: HTTP error response
+  end
+  dep ->> operation: Run dependency, e.g. DB session
+  opt raise
+    operation -->> dep: Raise Exception (e.g. HTTPException)
+    opt handle
+      dep -->> dep: Can catch exception, raise a new HTTPException, raise other exception
+    end
+    handler -->> client: HTTP error response
+  end
+  operation ->> client: Return response to client
+  Note over client,operation: Response is already sent, can't change it anymore
+  opt Tasks
+    operation -->> tasks: Send background tasks
+  end
+  opt Raise other exception
+    tasks -->> tasks: Handle exceptions in the background task code
+  end
+```
+
 Info
 Only **one response** will be sent to the client. It might be one of the error responses or it will be the response from the _path operation_.
 After one of those responses is sent, no other response can be sent.

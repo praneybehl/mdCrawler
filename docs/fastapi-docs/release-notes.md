@@ -1683,6 +1683,44 @@ If you used to rely on this behavior, now you should create the resources for ba
 For example, instead of using the same database session, you would create a new database session inside of the background task, and you would obtain the objects from the database using this new session. And then instead of passing the object from the database as a parameter to the background task function, you would pass the ID of that object and then obtain the object again inside the background task function.
 The sequence of execution before FastAPI 0.106.0 was like this diagram:
 Time flows from top to bottom. And each column is one of the parts interacting or executing code.
+```
+sequenceDiagram
+participant client as Client
+participant handler as Exception handler
+participant dep as Dep with yield
+participant operation as Path Operation
+participant tasks as Background tasks
+  Note over client,tasks: Can raise exception for dependency, handled after response is sent
+  Note over client,operation: Can raise HTTPException and can change the response
+  client ->> dep: Start request
+  Note over dep: Run code up to yield
+  opt raise
+    dep -->> handler: Raise HTTPException
+    handler -->> client: HTTP error response
+    dep -->> dep: Raise other exception
+  end
+  dep ->> operation: Run dependency, e.g. DB session
+  opt raise
+    operation -->> dep: Raise HTTPException
+    dep -->> handler: Auto forward exception
+    handler -->> client: HTTP error response
+    operation -->> dep: Raise other exception
+    dep -->> handler: Auto forward exception
+  end
+  operation ->> client: Return response to client
+  Note over client,operation: Response is already sent, can't change it anymore
+  opt Tasks
+    operation -->> tasks: Send background tasks
+  end
+  opt Raise other exception
+    tasks -->> dep: Raise other exception
+  end
+  Note over dep: After yield
+  opt Handle other exception
+    dep -->> dep: Handle exception, can't change response. E.g. close DB session.
+  end
+```
+
 The new execution flow can be found in the docs: Execution of dependencies with `yield`.
 ### Features¶
   * ✨ Add support for raising exceptions (including `HTTPException`) in dependencies with `yield` in the exit code, do not support them in background tasks. PR #10831 by @tiangolo.

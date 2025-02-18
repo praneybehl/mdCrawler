@@ -332,6 +332,40 @@ defsay_hi(name: str, salutation: str = "Ms."):
 ```
 
 your program could execute like this:
+```
+sequenceDiagram
+participant code as Code
+participant function as say_hi()
+participant execute as Execute function
+  rect rgba(0, 255, 0, .1)
+    code ->> function: say_hi(name="Camila")
+    function ->> execute: execute function code
+    execute ->> code: return the result
+  end
+  rect rgba(0, 255, 255, .1)
+    code ->> function: say_hi(name="Camila")
+    function ->> code: return stored result
+  end
+  rect rgba(0, 255, 0, .1)
+    code ->> function: say_hi(name="Rick")
+    function ->> execute: execute function code
+    execute ->> code: return the result
+  end
+  rect rgba(0, 255, 0, .1)
+    code ->> function: say_hi(name="Rick", salutation="Mr.")
+    function ->> execute: execute function code
+    execute ->> code: return the result
+  end
+  rect rgba(0, 255, 255, .1)
+    code ->> function: say_hi(name="Rick")
+    function ->> code: return stored result
+  end
+  rect rgba(0, 255, 255, .1)
+    code ->> function: say_hi(name="Camila")
+    function ->> code: return stored result
+  end
+```
+
 In the case of our dependency `get_settings()`, the function doesn't even take any arguments, so it always returns the same value.
 That way, it behaves almost as if it was just a global variable. But as it uses a dependency function, then we can override it easily for testing.
 `@lru_cache` is part of `functools` which is part of Python's standard library, you can read more about it in the Python docs for `@lru_cache`.
