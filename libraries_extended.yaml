@@ -58,6 +58,10 @@ libraries:
     url: https://python.langchain.com/docs/
   - name: llama-index-docs
     url: https://docs.llamaindex.ai/
+  - name: langgraph-docs
+    url: https://langchain-ai.github.io/langgraph/tutorials
+  - name: pydantic-ai-docs
+    url: https://ai.pydantic.dev/
   
   # Natural Language Processing
   - name: spacy-docs
@@ -166,6 +170,8 @@ libraries:
     url: https://docs.ansible.com/
   - name: pulumi-docs
     url: https://www.pulumi.com/docs/
+  - name: coolify-docs
+    url: https://coolify.io/docs/what-is-coolify
   
   # CI/CD Tools
   - name: github-actions-docs
@@ -226,6 +232,8 @@ libraries:
     url: https://svelte.dev/docs
   - name: solidjs-docs
     url: https://www.solidjs.com/guides
+  - name: nextjs-docs
+    url: https://nextjs.org/docs
   
   # Mobile Development
   - name: react-native-docs
@@ -238,6 +246,8 @@ libraries:
     url: https://developer.apple.com/documentation/swiftui
   - name: compose-docs
     url: https://developer.android.com/jetpack/compose/documentation
+  - name: capacitor-docs
+    url: https://capacitorjs.com/docs
   
   # Game Development
   - name: unity-docs
@@ -291,7 +301,7 @@ libraries:
   - name: electron-docs
     url: https://www.electronjs.org/docs/latest/
   - name: tauri-docs
-    url: https://tauri.app/v1/guides/
+    url: https://v2.tauri.app/
   - name: qt-docs
     url: https://doc.qt.io/
   - name: gtk-docs
@@ -426,4 +436,33 @@ libraries:
     url: https://deno.land/manual
   - name: bun-docs
     url: https://bun.sh/docs
-  - name:
+  
+  # Browser Tools
+  - name: browser-use-docs
+    url: https://docs.browser-use.com/
+  
+  # Payment & Financial Services
+  - name: stripe-docs
+    url: https://docs.stripe.com/
+  
+  # AI Services & Tools
+  - name: trae-docs
+    url: https://docs.trae.ai/docs/
+  - name: praison-docs
+    url: https://docs.praison.ai/
+  
+  # Cloud Services
+  - name: firebase-firestore-docs
+    url: https://firebase.google.com/docs/firestore
+  - name: firebase-functions-docs
+    url: https://firebase.google.com/docs/functions
+  - name: firebase-storage-docs
+    url: https://firebase.google.com/docs/storage
+  - name: firebase-auth-docs
+    url: https://firebase.google.com/docs/auth
+  - name: firebase-ml-docs
+    url: https://firebase.google.com/docs/ml
+  - name: firebase-hosting-docs
+    url: https://firebase.google.com/docs/hosting
+  - name: firebase-app-check-docs
+    url: https://firebase.google.com/docs/app-check
