@@ -23,11 +23,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationRenderingClient Components
 # Client Components
 Client Components allow you to write interactive UI that is prerendered on the server and can use client JavaScript to run in the browser.
@@ -59,7 +59,7 @@ return (
 ```
 
 The diagram below shows that using `onClick` and `useState` in a nested component (`toggle.js`) will cause an error if the `"use client"` directive is not defined. This is because, by default, all components in the App Router are Server Components where these APIs are not available. By defining the `"use client"` directive in `toggle.js`, you can tell React to enter the client boundary where these APIs are available.
-![Use Client Directive and Network Boundary](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fuse-client-directive.png&w=3840&q=75)![Use Client Directive and Network Boundary](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fuse-client-directive.png&w=3840&q=75)
+![Use Client Directive and Network Boundary](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fuse-client-directive.png&w=3840&q=75)![Use Client Directive and Network Boundary](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fuse-client-directive.png&w=3840&q=75)
 > **Defining multiple`use client` entry points**:
 > You can define multiple "use client" entry points in your React Component tree. This allows you to split your application into multiple client bundles.
 > However, `"use client"` doesn't need to be defined in every component that needs to be rendered on the client. Once you define the boundary, all child components and modules imported into it are considered part of the client bundle.

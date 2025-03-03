@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Pages RouterBuilding Your ApplicationConfiguring
 # Configuring
 Next.js allows you to customize your project to meet specific requirements. This includes integrations with TypeScript, ESlint, and more, as well as internal configuration options such as Absolute Imports and Environment Variables.

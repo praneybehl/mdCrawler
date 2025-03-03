@@ -2,17 +2,17 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 App RouterGetting StartedLayouts and Pages
 # How to create layouts and pages
 Next.js uses **file-system based routing** , meaning you can use folders and files to define routes. This page will guide you through how to create layouts and pages, and link between them.
 ## Creating a page
 A **page** is UI that is rendered on a specific route. To create a page, add a `page` file inside the `app` directory and default export a React component. For example, to create an index page (`/`):
-![page.js special file](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fpage-special-file.png&w=3840&q=75)![page.js special file](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fpage-special-file.png&w=3840&q=75)
+![page.js special file](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fpage-special-file.png&w=3840&q=75)![page.js special file](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fpage-special-file.png&w=3840&q=75)
 app/page.tsx
 TypeScript
 JavaScriptTypeScript
@@ -26,7 +26,7 @@ return <h1>Hello Next.js!</h1>
 A layout is UI that is **shared** between multiple pages. On navigation, layouts preserve state, remain interactive, and do not rerender.
 You can define a layout by default exporting a React component from a `layout` file. The component should accept a `children` prop which can be a page or another layout.
 For example, to create a layout that accepts your index page as child, add a `layout` file inside the `app` directory:
-![layout.js special file](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Flayout-special-file.png&w=3840&q=75)![layout.js special file](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Flayout-special-file.png&w=3840&q=75)
+![layout.js special file](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Flayout-special-file.png&w=3840&q=75)![layout.js special file](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Flayout-special-file.png&w=3840&q=75)
 app/layout.tsx
 TypeScript
 JavaScriptTypeScript
@@ -62,7 +62,7 @@ In Next.js:
 
 
 To create nested routes, you can nest folders inside each other. For example, to add a route for `/blog`, create a folder called `blog` in the `app` directory. Then, to make `/blog` publicly accessible, add a `page` file:
-![File hierarchy showing blog folder and a page.js file](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fblog-nested-route.png&w=3840&q=75)![File hierarchy showing blog folder and a page.js file](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fblog-nested-route.png&w=3840&q=75)
+![File hierarchy showing blog folder and a page.js file](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fblog-nested-route.png&w=3840&q=75)![File hierarchy showing blog folder and a page.js file](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fblog-nested-route.png&w=3840&q=75)
 app/blog/page.tsx
 TypeScript
 JavaScriptTypeScript
@@ -82,7 +82,7 @@ return (
 ```
 
 You can continue nesting folders to create nested routes. For example, to create a route for a specific blog post, create a new `[slug]` folder inside `blog` and add a `page` file:
-![File hierarchy showing blog folder with a nested slug folder and a page.js file](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fblog-post-nested-route.png&w=3840&q=75)![File hierarchy showing blog folder with a nested slug folder and a page.js file](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fblog-post-nested-route.png&w=3840&q=75)
+![File hierarchy showing blog folder with a nested slug folder and a page.js file](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fblog-post-nested-route.png&w=3840&q=75)![File hierarchy showing blog folder with a nested slug folder and a page.js file](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fblog-post-nested-route.png&w=3840&q=75)
 app/blog/[slug]/page.tsx
 TypeScript
 JavaScriptTypeScript
@@ -97,7 +97,7 @@ return <h1>Hello, Blog Post Page!</h1>
 ## Nesting layouts
 By default, layouts in the folder hierarchy are also nested, which means they wrap child layouts via their `children` prop. You can nest layouts by adding `layout` inside specific route segments (folders).
 For example, to create a layout for the `/blog` route, add a new `layout` file inside the `blog` folder.
-![File hierarchy showing root layout wrapping the blog layout](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fnested-layouts.png&w=3840&q=75)![File hierarchy showing root layout wrapping the blog layout](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fnested-layouts.png&w=3840&q=75)
+![File hierarchy showing root layout wrapping the blog layout](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fnested-layouts.png&w=3840&q=75)![File hierarchy showing root layout wrapping the blog layout](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fnested-layouts.png&w=3840&q=75)
 app/blog/layout.tsx
 TypeScript
 JavaScriptTypeScript

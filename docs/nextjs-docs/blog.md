@@ -1,4 +1,23 @@
 # The latest Next.js news
+February 28th, 2025
+![](https://nextjs.org/_next/image?url=%2Fstatic%2Fteam%2Flee.jpg&w=48&q=75)
+Building APIs with Next.js
+This guide will cover how you can build APIs with Next.js, including setting up your project, understanding the App Router and Route Handlers, handling multiple HTTP methods, implementing dynamic routing, creating reusable middleware logic, and deciding when to spin up a dedicated API layer.
+Read More
+February 26th, 2025
+![](https://nextjs.org/_next/image?url=%2Fstatic%2Fteam%2Fjiachi.png&w=48&q=75)
+![](https://nextjs.org/_next/image?url=%2Fstatic%2Fteam%2Fjiwon.png&w=48&q=75)
++5![](https://nextjs.org/_next/image?url=%2Fstatic%2Fteam%2Fjude.png&w=48&q=75)
+Next.js 15.2
+Next.js 15.2 includes updates for debugging errors, metadata, Turbopack, and more:
+  * Redesigned error UI and improved stack traces
+  * Streaming metadata
+  * Turbopack performance improvements
+  * React View Transitions (experimental)
+  * Node.js Middleware (experimental)
+
+
+Read More
 January 3rd, 2025
 ![](https://nextjs.org/_next/image?url=%2Fstatic%2Fteam%2Flee.jpg&w=48&q=75)
 Composable Caching with Next.js
@@ -608,7 +627,7 @@ We are proud today to introduce the production-ready Next.js 8, featuring:
 
 Read More
 September 19th, 2018
-![](https://nextjs.org/_next/image?url=%2Fstatic%2Fcollaborators%2Fgiuseppe.jpg&w=48&q=75)
+![](https://nextjs.org/_next/image?url=%2Fstatic%2Fteam%2Fgiuseppe.jpg&w=48&q=75)
 ![](https://nextjs.org/_next/image?url=%2Fstatic%2Fteam%2Fshu.jpg&w=48&q=75)
 ![](https://nextjs.org/_next/image?url=%2Fstatic%2Fteam%2Ftim.jpg&w=48&q=75)
 Next.js 7

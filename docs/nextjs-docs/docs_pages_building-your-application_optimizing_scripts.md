@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationOptimizingScripts
 # Script Optimization
 ### Application Scripts
@@ -51,7 +51,7 @@ module.exports= {
 Then, run `next` (normally `npm run dev` or `yarn dev`) and Next.js will guide you through the installation of the required packages to finish the setup:
 Terminal
 ```
-npm rundev
+npmrundev
 ```
 
 You'll see instructions like these: Please install Partytown by running `npm install @builder.io/partytown`

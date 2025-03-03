@@ -23,11 +23,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceDirectivesuse server
 # use server
 The `use server` directive designates a function or file to be executed on the **server side**. It can be used at the top of a file to indicate that all functions in the file are server-side, or inline at the top of a function to mark the function as a Server Function. This is a React feature.

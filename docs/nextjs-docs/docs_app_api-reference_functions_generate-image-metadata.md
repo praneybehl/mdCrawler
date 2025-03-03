@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFunctionsgenerateImageMetadata
 # generateImageMetadata
 You can use `generateImageMetadata` to generate different versions of one image or return multiple images for one route segment. This is useful for when you want to avoid hard-coding metadata values, such as for icons.

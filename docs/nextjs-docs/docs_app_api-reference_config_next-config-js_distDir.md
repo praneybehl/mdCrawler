@@ -23,11 +23,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Configurationnext.config.jsdistDir
 # distDir
 You can specify a name to use for a custom build directory to use instead of `.next`.

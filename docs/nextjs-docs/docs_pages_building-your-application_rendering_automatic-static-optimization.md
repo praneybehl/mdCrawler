@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationRenderingAutomatic Static Optimization
 # Automatic Static Optimization
 Next.js automatically determines that a page is static (can be prerendered) if it has no blocking data requirements. This determination is made by the absence of `getServerSideProps` and `getInitialProps` in the page.

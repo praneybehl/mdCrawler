@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Configurationnext.config.jseslint
 # eslint
 When ESLint is detected in your project, Next.js fails your **production build** (`next build`) when errors are present.

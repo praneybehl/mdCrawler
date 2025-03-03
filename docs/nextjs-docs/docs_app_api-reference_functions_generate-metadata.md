@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFunctionsgenerateMetadata
 # generateMetadata
 This page covers all **Config-based Metadata** options with `generateMetadata` and the static metadata object.
@@ -30,7 +30,6 @@ return {
 > **Good to know** :
 >   * The `metadata` object and `generateMetadata` function exports are **only supported in Server Components**.
 >   * You cannot export both the `metadata` object and `generateMetadata` function from the same route segment.
->   * On the initial load, streaming is blocked until `generateMetadata` has fully resolved, including any content from `loading.js`.
 > 
 
 ## The `metadata` object
@@ -64,7 +63,7 @@ exportasyncfunctiongenerateMetadata(
  parent:ResolvingMetadata
 ):Promise<Metadata> {
 // read route params
-constid= (await params).id
+const { id } =await params
 // fetch data
 constproduct=awaitfetch(`https://.../${id}`).then((res) =>res.json())
 // optionally access and extend (rather than replace) parent metadata
@@ -1052,9 +1051,27 @@ exportconstmetadata= {
 }
 ```
 
+## Streaming metadata
+Metadata returned by `generateMetadata` is streamed to the client. This allows Next.js to inject metadata into the HTML as soon as it's resolved.
+Since page metadata primarily targets bots and crawlers, Next.js will stream metadata for bots that can execute JavaScript and inspect the full page DOM (e.g. `Googlebot`). However, metadata will continue blocking the render of the page for **HTML-limited** bots (e.g. `Twitterbot`) as these cannot execute JavaScript while crawling.
+Next.js automatically detects the user agent of incoming requests to determine whether to serve streaming metadata or fallback to blocking metadata.
+If you need to customize this list, you can define them manually using the `htmlLimitedBots` option in `next.config.js`. Next.js will ensure user agents matching this regex receive blocking metadata when requesting your web page.
+next.config.ts
+TypeScript
+JavaScriptTypeScript
+```
+importtype { NextConfig } from'next'
+constconfig:NextConfig= {
+ htmlLimitedBots:'MySpecialBot|MyAnotherSpecialBot|SimpleCrawler',
+}
+exportdefault config
+```
+
+Specifying a `htmlLimitedBots` config will override the Next.js' default list, allowing you full control over what user agents should opt into this behavior. This is advanced behavior, and the default should be sufficient for most cases.
 ## Version History
 Version| Changes  
 ---|---  
+`v15.2.0`| Introduced streaming support to `generateMetadata`.  
 `v13.2.0`| `viewport`, `themeColor`, and `colorScheme` deprecated in favor of the `viewport` configuration.  
 `v13.2.0`| `metadata` and `generateMetadata` introduced.  
 ## Next Steps

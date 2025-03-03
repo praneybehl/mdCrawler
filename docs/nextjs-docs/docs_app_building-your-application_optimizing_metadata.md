@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationOptimizingMetadata
 # Metadata
 Next.js has a Metadata API that can be used to define your application metadata (e.g. `meta` and `link` tags inside your HTML `head` element) for improved SEO and web shareability.
@@ -47,7 +47,7 @@ exportasyncfunctiongenerateMetadata(
  parent:ResolvingMetadata
 ):Promise<Metadata> {
 // read route params
-constid= (await params).id
+const { id } =await params
 // fetch data
 constproduct=awaitfetch(`https://.../${id}`).then((res) =>res.json())
 // optionally access and extend (rather than replace) parent metadata
@@ -240,7 +240,8 @@ TypeScript
 JavaScriptTypeScript
 ```
 exportdefaultasyncfunctionPage({ params }) {
-constproduct=awaitgetProduct((await params).id)
+const { id } =await params
+constproduct=awaitgetProduct(id)
 constjsonLd= {
 '@context':'https://schema.org',
 '@type':'Product',

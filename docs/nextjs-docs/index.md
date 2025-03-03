@@ -82,12 +82,10 @@ The power of full-stack to the frontend. Read the release notes.
 ## Built on a foundation of fast, production-grade tooling
 ![](https://nextjs.org/icons/mobile-lines.svg)
 Powered By
-![React Logo](https://nextjs.org/icons/react.svg)
 ReactThe library for web and native user interfaces. Next.js is built on the latest React features, including Server Components and Actions.
-![Turbopack Logo](https://nextjs.org/icons/turbopack.svg)
-TurbopackAn incremental bundler optimized for JavaScript and TypeScript, written in Rust ![Rust Logo](https://nextjs.org/icons/rust.svg), and built into Next.js.
+TurbopackAn incremental bundler optimized for JavaScript and TypeScript, written in Rust , and built into Next.js.
 ![SWC Logo](https://nextjs.org/icons/swc.svg)
-Speedy Web CompilerAn extensible Rust ![Rust Logo](https://nextjs.org/icons/rust.svg) based platform for the next generation of fast developer tools, and can be used for both compilation and minification.
+Speedy Web CompilerAn extensible Rust based platform for the next generation of fast developer tools, and can be used for both compilation and minification.
 ## Get started in seconds
 Deploy Next.js to Vercel
 StarterEcommerceBlogAIPortfolioSaaSMulti-tenant AppsRealtime AppsDocumentationVirtual EventWeb3
@@ -105,33 +103,33 @@ Next.js Commerce
 An all-in-one starter kit for high-performance ecommerce sites.
 ![](https://nextjs.org/icons/divider.svg)![](https://nextjs.org/icons/divider-mobile.svg)
 ## The framework of choice when it matters
-![Screenshot of Audible's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-audible.6063405a.png&w=828&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Audible's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-audible.6063405a.png&w=828&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Audible
-![Screenshot of Sonos's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-sonos.a3dbc334.png&w=828&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Sonos's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-sonos.a3dbc334.png&w=828&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Sonos
-![Screenshot of Dice's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-dice.9a4fbb45.png&w=640&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Dice's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-dice.9a4fbb45.png&w=640&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Dice
-![Screenshot of Notion's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-notion.2bd1f0c5.png&w=828&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Notion's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-notion.2bd1f0c5.png&w=828&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Notion
-![Screenshot of Today's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-today.98d66e07.png&w=640&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Today's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-today.98d66e07.png&w=640&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Today
-![Screenshot of ProductHunt's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-ph.c43e26c6.png&w=640&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of ProductHunt's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-ph.c43e26c6.png&w=640&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 ProductHunt
-![Screenshot of Nike's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-nike.ae99d521.png&w=828&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Nike's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-nike.ae99d521.png&w=828&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Nike
-![Screenshot of Washington Post's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-wapo.2769ff64.png&w=828&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Washington Post's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-wapo.2769ff64.png&w=828&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Washington Post
-![Screenshot of Sonos's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-sonos.a3dbc334.png&w=640&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Sonos's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-sonos.a3dbc334.png&w=640&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Sonos
-![Screenshot of Audible's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-audible.6063405a.png&w=640&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Audible's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-audible.6063405a.png&w=640&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Audible
-![Screenshot of Nike's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-nike.ae99d521.png&w=640&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Nike's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-nike.ae99d521.png&w=640&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Nike
-![Screenshot of Notion's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-notion.2bd1f0c5.png&w=640&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Notion's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-notion.2bd1f0c5.png&w=640&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Notion
-![Screenshot of ProductHunt's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-ph.c43e26c6.png&w=640&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of ProductHunt's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-ph.c43e26c6.png&w=640&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 ProductHunt
-![Screenshot of Washington Post's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-wapo.2769ff64.png&w=640&q=75&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![Screenshot of Washington Post's website](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpreview-wapo.2769ff64.png&w=640&q=75&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Washington Post
 For **performance** , **efficiency** and **developer experience**. Next.js is trusted by some of the biggest names on the web.
 View the Next.js Showcase

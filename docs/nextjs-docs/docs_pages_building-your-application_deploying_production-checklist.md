@@ -23,11 +23,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationDeployingProduction Checklist
 # Production Checklist
 Before taking your Next.js application to production, there are some optimizations and patterns you should consider implementing for the best user experience, performance, and security.

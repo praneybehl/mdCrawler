@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 App RouterBuilding Your ApplicationUpgrading
 # Upgrade Guide
 Upgrade your application to newer versions of Next.js or migrate from the Pages Router to the App Router.

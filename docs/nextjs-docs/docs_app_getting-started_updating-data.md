@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 App RouterGetting StartedUpdating Data
 # How to update data
 You can update data in Next.js using React's Server Functions. This page will go through how you can create and invoke Server Functions.

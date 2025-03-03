@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 App RouterGetting StartedInstallation
 # How to set up a new Next.js project
 ## System requirements
@@ -18,7 +18,7 @@ App RouterGetting StartedInstallation
 We recommend starting a new Next.js app using `create-next-app`, which sets up everything automatically for you. To create a project, run:
 Terminal
 ```
-npx create-next-app@latest
+npxcreate-next-app@latest
 ```
 
 On installation, you'll see the following prompts:
@@ -40,7 +40,7 @@ After the prompts, `create-next-app` will create a folder with your project name
 To manually create a new Next.js app, install the required packages:
 Terminal
 ```
-npm installnext@latestreact@latestreact-dom@latest
+npminstallnext@latestreact@latestreact-dom@latest
 ```
 
 Open your `package.json` file and add the following `scripts`:
@@ -66,7 +66,7 @@ These scripts refer to the different stages of developing an application:
 ### Create the `app` directory
 Next.js uses file-system routing, which means the routes in your application are determined by how you structure your files.
 Create an `app` folder, then add a `layout.tsx` and `page.tsx` file. These will be rendered when the user visits the root of your application (`/`).
-![App Folder Structure](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fapp-getting-started.png&w=3840&q=75)![App Folder Structure](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fapp-getting-started.png&w=3840&q=75)
+![App Folder Structure](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fapp-getting-started.png&w=3840&q=75)![App Folder Structure](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fapp-getting-started.png&w=3840&q=75)
 Create a root layout inside `app/layout.tsx` with the required `<html>` and `<body>` tags:
 app/layout.tsx
 TypeScript
@@ -118,7 +118,7 @@ You can enable the plugin in VS Code by:
   2. Searching for "TypeScript: Select TypeScript Version"
   3. Selecting "Use Workspace Version"
 
-![TypeScript Command Palette](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Ftypescript-command-palette.png&w=3840&q=75)![TypeScript Command Palette](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Ftypescript-command-palette.png&w=3840&q=75)
+![TypeScript Command Palette](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Ftypescript-command-palette.png&w=3840&q=75)![TypeScript Command Palette](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Ftypescript-command-palette.png&w=3840&q=75)
 Now, when editing files, the custom plugin will be enabled. When running `next build`, the custom type checker will be used.
 See the TypeScript configuration page for more information on how to use TypeScript in your project.
 ## Set up ESLint
@@ -136,7 +136,7 @@ package.json
 Then, run `npm run lint` and you will be guided through the installation and configuration process.
 Terminal
 ```
-npm runlint
+npmrunlint
 ```
 
 You'll see a prompt like this:

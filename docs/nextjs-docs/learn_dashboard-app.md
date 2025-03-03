@@ -22,7 +22,7 @@ Privacy Policy
 # App Router
 Welcome to the Next.js Foundations course! In this free interactive course, you'll learn the main features of Next.js by building a full-stack web application.
 ## What we'll be building
-![Screenshots of the dashboard project showing desktop and mobile versions.](https://nextjs.org/_next/image?url=%2Flearn%2Flight%2Fdashboard.png&w=3840&q=75)![Screenshots of the dashboard project showing desktop and mobile versions.](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Fdashboard.png&w=3840&q=75)
+![Screenshots of the dashboard project showing desktop and mobile versions.](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Flight%2Fdashboard.png&w=3840&q=75)![Screenshots of the dashboard project showing desktop and mobile versions.](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Fdark%2Fdashboard.png&w=3840&q=75)
 For this course, we'll build a financial dashboard that has:
   * A public home page.
   * A login page.

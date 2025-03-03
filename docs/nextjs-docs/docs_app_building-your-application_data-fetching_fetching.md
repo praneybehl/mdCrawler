@@ -1,33 +1,12 @@
-# Your Privacy
-This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
-DenyAccept all
-Consent Settings
-Privacy Policy
-Your Privacy
-This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
-Marketing
-Off
-Marketing cookies and services are used to deliver personalized advertisements, promotions, and offers. These technologies enable targeted advertising and marketing campaigns by collecting information about users' interests, preferences, and online activities. 
-Analytics
-Off
-Analytics cookies and services are used for collecting statistical information about how visitors interact with a website. These technologies provide insights into website usage, visitor behavior, and site performance to understand and improve the site and enhance user experience.
-Functional
-Off
-Functional cookies and services are used to offer enhanced and personalized functionalities. These technologies provide additional features and improved user experiences, such as remembering your language preferences, font sizes, region selections, and customized layouts. Opting out of these cookies may render certain services or functionality of the website unavailable.
-Essential
-On
-Essential cookies and services are used to enable core website features, such as ensuring the security of the website. 
-SaveDenyAccept all
-Privacy Policy
 Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationData FetchingData Fetching and Caching
 # Data Fetching and Caching
 Examples
@@ -146,7 +125,7 @@ return (
 ```
 
 ### Caching data with an ORM or Database
-You can use the `unstable_cache` API to cache the response to allow pages to be prerendered when running `next build`.
+You can use the `unstable_cache` API to cache the response when running `next build`.
 app/page.tsx
 TypeScript
 JavaScriptTypeScript
@@ -252,7 +231,7 @@ Learn more about revalidating cached data with Incremental Static Regeneration.
 ## Patterns
 ### Parallel and sequential data fetching
 When fetching data inside components, you need to be aware of two data fetching patterns: Parallel and Sequential.
-![Sequential and Parallel Data Fetching](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fsequential-parallel-data-fetching.png&w=3840&q=75)![Sequential and Parallel Data Fetching](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fsequential-parallel-data-fetching.png&w=3840&q=75)
+![Sequential and Parallel Data Fetching](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fsequential-parallel-data-fetching.png&w=3840&q=75)![Sequential and Parallel Data Fetching](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fsequential-parallel-data-fetching.png&w=3840&q=75)
   * **Sequential** : requests in a component tree are dependent on each other. This can lead to longer loading times.
   * **Parallel** : requests in a route are eagerly initiated and will load data at the same time. This reduces the total time it takes to load data.
 

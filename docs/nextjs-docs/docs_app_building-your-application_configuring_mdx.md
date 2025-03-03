@@ -23,11 +23,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationConfiguringMDX
 # Markdown and MDX
 Markdown is a lightweight markup language used to format text. It allows you to write using plain text syntax and convert it to structurally valid HTML. It's commonly used for writing content on websites and blogs.
@@ -49,7 +49,7 @@ The `@next/mdx` package, and related packages, are used to configure Next.js so 
 Install these packages to render MDX with Next.js:
 Terminal
 ```
-npm install@next/mdx@mdx-js/loader@mdx-js/react@types/mdx
+npminstall@next/mdx@mdx-js/loader@mdx-js/react@types/mdx
 ```
 
 ## Configure `next.config.mjs`
@@ -149,7 +149,7 @@ Navigating to the `/mdx-page` route should display your rendered MDX page.
 ### Using dynamic imports
 You can import dynamic MDX components instead of using filesystem routing for MDX files.
 For example, you can have a dynamic route segment which loads MDX components from a separate directory:
-![Route segments for dynamic MDX components](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fmdx-files.png&w=3840&q=75)![Route segments for dynamic MDX components](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fmdx-files.png&w=3840&q=75)
+![Route segments for dynamic MDX components](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fmdx-files.png&w=3840&q=75)![Route segments for dynamic MDX components](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fmdx-files.png&w=3840&q=75)
 `generateStaticParams` can be used to prerender the provided routes. By marking `dynamicParams` as `false`, accessing a route not defined in `generateStaticParams` will 404.
 app/blog/[slug]/page.tsx
 TypeScript
@@ -160,7 +160,7 @@ exportdefaultasyncfunctionPage({
 }: {
  params:Promise<{ slug:string }>
 }) {
-constslug= (await params).slug
+const { slug } =await params
 const { default: Post } =awaitimport(`@/content/${slug}.mdx`)
 return <Post />
 }

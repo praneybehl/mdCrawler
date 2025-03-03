@@ -23,11 +23,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceConfigurationnext.config.js
 # next.config.js
 Next.js can be configured through a `next.config.js` file in the root of your project directory (for example, by `package.json`) with a default export.
@@ -160,7 +160,7 @@ Use the `crossOrigin` option to add a crossOrigin tag on the `script` tags gener
 ### cssChunking
 Use the `cssChunking` option to control how CSS files are chunked in your Next.js application.
 ### devIndicators
-Optimized pages include an indicator to let you know if it's being statically optimized. You can opt-out of it here.
+Configuration options for the on-screen indicator that gives context about the current route you're viewing during development.
 ### distDir
 Set a custom build directory to use instead of the default .next directory.
 ### dynamicIO
@@ -179,6 +179,8 @@ Configure the build id, which is used to identify the current build in which you
 Next.js will generate etags for every page by default. Learn more about how to disable etag generation here.
 ### headers
 Add custom HTTP headers to your Next.js app.
+### htmlLimitedBots
+Specify a list of user agents that should receive blocking metadata.
 ### httpAgentOptions
 Next.js will automatically use HTTP Keep-Alive by default. Learn more about how to disable HTTP Keep-Alive here.
 ### images

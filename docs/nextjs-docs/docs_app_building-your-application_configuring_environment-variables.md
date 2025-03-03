@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationConfiguringEnvironment Variables
 # Environment Variables
 Examples
@@ -60,7 +60,7 @@ If you need to load environment variables outside of the Next.js runtime, such a
 This package is used internally by Next.js to load environment variables from `.env*` files.
 To use it, install the package and use the `loadEnvConfig` function to load the environment variables:
 ```
-npm install@next/env
+npminstall@next/env
 ```
 
 envConfig.ts
@@ -158,7 +158,7 @@ All types of Environment Variables should be configured there. Even Environment 
 If you've configured Development Environment Variables you can pull them into a `.env.local` for usage on your local machine using the following command:
 Terminal
 ```
-vercel envpull
+vercelenvpull
 ```
 
 > **Good to know** : When deploying your Next.js application to Vercel, your environment variables in `.env*` files will not be made available to Edge Runtime, unless their name are prefixed with `NEXT_PUBLIC_`. We strongly recommend managing your environment variables in Project Settings instead, from where all environment variables are available.

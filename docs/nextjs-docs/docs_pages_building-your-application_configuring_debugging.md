@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationConfiguringDebugging
 # Debugging
 This documentation explains how you can debug your Next.js frontend and backend code with full source maps support using the VS Code debugger, Chrome DevTools, or Firefox DevTools.
@@ -93,7 +93,7 @@ Note that when searching, your source files will have paths starting with `webpa
 To debug server-side Next.js code with browser DevTools, you need to pass the `--inspect` flag to the underlying Node.js process:
 Terminal
 ```
-NODE_OPTIONS='--inspect' next dev
+NODE_OPTIONS='--inspect'nextdev
 ```
 
 > **Good to know** : Use `NODE_OPTIONS='--inspect=0.0.0.0'` to allow remote debugging access outside localhost, such as when running the app in a Docker container.
@@ -110,9 +110,9 @@ package.json
 Launching the Next.js dev server with the `--inspect` flag will look something like this:
 Terminal
 ```
-Debugger listeningonws://127.0.0.1:9229/0cf90313-350d-4466-a748-cd60f4e47c95
-For help,see:https://nodejs.org/en/docs/inspector
-ready -startedserveron0.0.0.0:3000,url:http://localhost:3000
+Debuggerlisteningonws://127.0.0.1:9229/0cf90313-350d-4466-a748-cd60f4e47c95
+Forhelp,see:https://nodejs.org/en/docs/inspector
+ready-startedserveron0.0.0.0:3000,url:http://localhost:3000
 ```
 
 For Chrome:
@@ -135,8 +135,7 @@ For Firefox:
 Debugging server-side code works similarly to client-side debugging. When searching for files (`Ctrl+P`/`⌘+P`), your source files will have paths starting with `webpack://{application-name}/./` (where `{application-name}` will be replaced with the name of your application according to your `package.json` file).
 ### Inspect Server Errors with Browser DevTools
 When you encounter an error, inspecting the source code can help trace the root cause of errors.
-Next.js will display a Node.js logo like a green button on the dev overlay. By clicking that button, the DevTools URL is copied to your clipboard. You can open a new browser tab with that URL to inspect the Next.js server process.
-![Copy DevTools url example](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fcopy-devtool-url-example.png&w=3840&q=75)![Copy DevTools url example](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fcopy-devtool-url-example.png&w=3840&q=75)
+Next.js will display a Node.js icon underneath the Next.js version indicator on the error overlay. By clicking that icon, the DevTools URL is copied to your clipboard. You can open a new browser tab with that URL to inspect the Next.js server process.
 ### Debugging on Windows
 Windows users may run into an issue when using `NODE_OPTIONS='--inspect'` as that syntax is not supported on Windows platforms. To get around this, install the `cross-env` package as a development dependency (`-D` with `npm` and `yarn`) and replace the `dev` script with the following.
 package.json

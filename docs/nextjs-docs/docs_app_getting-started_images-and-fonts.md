@@ -2,17 +2,17 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 App RouterGetting StartedImages and Fonts
 # How to optimize images and fonts
 Next.js comes with automatic image and font optimization for better performance and user experience. This page will guide you through how to start using them.
 ## Handling static assets
 You can store static files, like images and fonts, under a folder called `public` in the root directory. Files inside `public` can then be referenced by your code starting from the base URL (`/`).
-![Folder structure showing app and public folders](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fpublic-folder.png&w=3840&q=75)![Folder structure showing app and public folders](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fpublic-folder.png&w=3840&q=75)
+![Folder structure showing app and public folders](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fpublic-folder.png&w=3840&q=75)![Folder structure showing app and public folders](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fpublic-folder.png&w=3840&q=75)
 ## Optimizing images
 The Next.js `<Image>` component extends the HTML `<img>` element to provide:
   * **Size optimization:** Automatically serving correctly sized images for each device, using modern image formats like WebP.

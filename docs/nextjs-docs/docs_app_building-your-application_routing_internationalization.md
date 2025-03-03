@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationRoutingInternationalization
 # Internationalization
 Next.js enables you to configure the routing and rendering of content to support multiple languages. Making your site adaptive to different locales includes translated content (localization) and internationalized routes.
@@ -74,7 +74,7 @@ exportdefaultasyncfunctionPage({
 }: {
  params:Promise<{ lang:string }>
 }) {
-constlang= (await params).lang;
+const { lang } =await params
 return...
 }
 ```
@@ -126,7 +126,7 @@ exportdefaultasyncfunctionPage({
 }: {
  params:Promise<{ lang:'en'|'nl' }>
 }) {
-constlang= (await params).lang
+const { lang } =await params
 constdict=awaitgetDictionary(lang) // en
 return <button>{dict.products.cart}</button> // Add to Cart
 }

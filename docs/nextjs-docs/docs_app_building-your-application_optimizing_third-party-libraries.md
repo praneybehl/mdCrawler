@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationOptimizingThird Party Libraries
 # Third Party Libraries
 **`@next/third-parties`**is a library that provides a collection of components and utilities that improve the performance and developer experience of loading popular third-party libraries in your Next.js application.
@@ -15,7 +15,7 @@ All third-party integrations provided by `@next/third-parties` have been optimiz
 To get started, install the `@next/third-parties` library:
 Terminal
 ```
-npm install@next/third-parties@latestnext@latest
+npminstall@next/third-parties@latestnext@latest
 ```
 
 `@next/third-parties` is currently an **experimental** library under active development. We recommend installing it with the **latest** or **canary** flags while we work on adding more third-party integrations.

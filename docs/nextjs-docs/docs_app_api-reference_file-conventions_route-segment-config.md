@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFile ConventionsRoute Segment Config
 # Route Segment Config
 > The options outlined on this page are disabled if the `dynamicIO` flag is on, and will eventually be deprecated in the future.
@@ -169,7 +169,7 @@ Support for `preferredRegion`, and regions supported, is dependent on your deplo
 
 ### `maxDuration`
 By default, Next.js does not limit the execution of server-side logic (rendering a page or handling an API). Deployment platforms can use `maxDuration` from the Next.js build output to add specific execution limits. For example, on Vercel.
-**Note** : This settings requires Next.js `13.4.10` or higher.
+**Note** : This setting requires Next.js `13.4.10` or higher.
 layout.tsx | page.tsx | route.ts
 TypeScript
 JavaScriptTypeScript

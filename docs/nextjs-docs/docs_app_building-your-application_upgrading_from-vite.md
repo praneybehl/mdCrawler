@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationUpgradingMigrating from Vite
 # Migrating from Vite
 This guide will help you migrate an existing Vite application to Next.js.
@@ -38,7 +38,7 @@ Our goal with this migration is to get a working Next.js application as quickly 
 The first thing you need to do is to install `next` as a dependency:
 Terminal
 ```
-npm installnext@latest
+npminstallnext@latest
 ```
 
 ### Step 2: Create the Next.js Configuration File

@@ -2,15 +2,15 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationRoutingRoute Handlers
 # Route Handlers
 Route Handlers allow you to create custom request handlers for a given route using the Web Request and Response APIs.
-![Route.js Special File](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Froute-special-file.png&w=3840&q=75)![Route.js Special File](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Froute-special-file.png&w=3840&q=75)
+![Route.js Special File](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Froute-special-file.png&w=3840&q=75)![Route.js Special File](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Froute-special-file.png&w=3840&q=75)
 > **Good to know** : Route Handlers are only available inside the `app` directory. They are the equivalent of API Routes inside the `pages` directory meaning you **do not** need to use API Routes and Route Handlers together.
 ## Convention
 Route Handlers are defined in a `route.js|ts` file inside the `app` directory:
@@ -168,7 +168,7 @@ exportasyncfunctionGET(
  request:Request,
  { params }: { params:Promise<{ slug:string }> }
 ) {
-constslug= (await params).slug // 'a', 'b', or 'c'
+const { slug } =await params // 'a', 'b', or 'c'
 }
 ```
 

@@ -23,11 +23,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFile Conventionsinstrumentation.js
 # instrumentation.js
 The `instrumentation.js|ts` file is used to integrate observability tools into your application, allowing you to track the performance and behavior, and to debug issues in production.
@@ -94,7 +94,7 @@ exportfunctiononRequestError(
 |'react-server-components'
 |'react-server-components-payload'
 |'server-rendering'
-  revalidateReason:'on-demand'|'stale'|undefined// undefined is a normal request without revalidation
+revalidateReason:'on-demand'|'stale'|undefined// undefined is a normal request without revalidation
   renderType:'dynamic'|'dynamic-resume'// 'dynamic-resume' for PPR
  }
 ):void|Promise<void>

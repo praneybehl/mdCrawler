@@ -2,33 +2,33 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationUpgradingVersion 13
 # Version 13
 ## Upgrading from 12 to 13
 To update to Next.js version 13, run the following command using your preferred package manager:
 Terminal
 ```
-npm inext@13react@latestreact-dom@latesteslint-config-next@13
+npminext@13react@latestreact-dom@latesteslint-config-next@13
 ```
 
 Terminal
 ```
-yarn addnext@13react@latestreact-dom@latesteslint-config-next@13
+yarnaddnext@13react@latestreact-dom@latesteslint-config-next@13
 ```
 
 Terminal
 ```
-pnpm inext@13react@latestreact-dom@latesteslint-config-next@13
+pnpminext@13react@latestreact-dom@latesteslint-config-next@13
 ```
 
 Terminal
 ```
-bun addnext@13react@latestreact-dom@latesteslint-config-next@13
+bunaddnext@13react@latestreact-dom@latesteslint-config-next@13
 ```
 
 > **Good to know:** If you are using TypeScript, ensure you also upgrade `@types/react` and `@types/react-dom` to their latest versions.

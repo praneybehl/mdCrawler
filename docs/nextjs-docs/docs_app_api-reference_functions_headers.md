@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFunctionsheaders
 # headers
 `headers` is an **async** function that allows you to **read** the HTTP incoming request headers from a Server Component.

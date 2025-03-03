@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationRenderingComposition Patterns
 # Server and Client Composition Patterns
 When building React applications, you will need to consider what parts of your application should be rendered on the server or the client. This page covers some recommended composition patterns when using Server and Client Components.
@@ -54,7 +54,7 @@ To prevent this sort of unintended client usage of server code, we can use the `
 To use `server-only`, first install the package:
 Terminal
 ```
-npm installserver-only
+npminstallserver-only
 ```
 
 Then import the package into any module that contains server-only code:

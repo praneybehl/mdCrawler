@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationUpgradingCanary
 # How to upgrade to Next.js Canary
 The Next.js canary channel is updated daily with the latest experimental features and bug fixes. It's a great way to try out new features and give feedback before they are released in a stable version.
@@ -14,11 +14,11 @@ To upgrade to canary, make sure you're on the latest version of Next.js and ever
 Then, run the following command:
 Terminal
 ```
-npm inext@canary
+npminext@canary
 # or
-yarn addnext@canary
+yarnaddnext@canary
 # or
-pnpm inext@canary
+pnpminext@canary
 ```
 
 ## Features available in canary

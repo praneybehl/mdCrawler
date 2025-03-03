@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationConfiguringProgressive Web Applications (PWA)
 # Progressive Web Applications (PWA)
 Progressive Web Applications (PWAs) offer the reach and accessibility of web applications combined with the features and user experience of native mobile apps. With Next.js, you can create PWAs that provide a seamless, app-like experience across all platforms without the need for multiple codebases or app store approvals.
@@ -253,13 +253,13 @@ To use the Web Push API, you need to generate VAPID keys. The simplest way is to
 First, install web-push globally:
 Terminal
 ```
-npm install-gweb-push
+npminstall-gweb-push
 ```
 
 Generate the VAPID keys by running:
 Terminal
 ```
-web-push generate-vapid-keys
+web-pushgenerate-vapid-keys
 ```
 
 Copy the output and paste the keys into your `.env` file:

@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFunctionsunstable_cache
 # unstable_cache
 > **Note:** This API will be replaced by `use cache` when it reaches stability.
@@ -55,7 +55,7 @@ exportdefaultasyncfunctionPage({
 }: {
  params:Promise<{ userId:string }>
 }) {
-constuserId= (await params).userId
+const { userId } =await params
 constgetCachedUser=unstable_cache(
 async () => {
 return { id: userId }

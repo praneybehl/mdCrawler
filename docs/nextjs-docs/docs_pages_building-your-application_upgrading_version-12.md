@@ -1,33 +1,54 @@
+# Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+DenyAccept all
+Consent Settings
+Privacy Policy
+Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+Marketing
+Off
+Marketing cookies and services are used to deliver personalized advertisements, promotions, and offers. These technologies enable targeted advertising and marketing campaigns by collecting information about users' interests, preferences, and online activities. 
+Analytics
+Off
+Analytics cookies and services are used for collecting statistical information about how visitors interact with a website. These technologies provide insights into website usage, visitor behavior, and site performance to understand and improve the site and enhance user experience.
+Functional
+Off
+Functional cookies and services are used to offer enhanced and personalized functionalities. These technologies provide additional features and improved user experiences, such as remembering your language preferences, font sizes, region selections, and customized layouts. Opting out of these cookies may render certain services or functionality of the website unavailable.
+Essential
+On
+Essential cookies and services are used to enable core website features, such as ensuring the security of the website. 
+SaveDenyAccept all
+Privacy Policy
 Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationUpgradingVersion 12
 # Version 12
 To upgrade to version 12, run the following command:
 Terminal
 ```
-npm inext@12react@17react-dom@17eslint-config-next@12
+npminext@12react@17react-dom@17eslint-config-next@12
 ```
 
 Terminal
 ```
-yarn addnext@12react@17react-dom@17eslint-config-next@12
+yarnaddnext@12react@17react-dom@17eslint-config-next@12
 ```
 
 Terminal
 ```
-pnpm upnext@12react@17react-dom@17eslint-config-next@12
+pnpmupnext@12react@17react-dom@17eslint-config-next@12
 ```
 
 Terminal
 ```
-bun addnext@12react@17react-dom@17eslint-config-next@12
+bunaddnext@12react@17react-dom@17eslint-config-next@12
 ```
 
 > **Good to know:** If you are using TypeScript, ensure you also upgrade `@types/react` and `@types/react-dom` to their corresponding versions.
@@ -38,10 +59,10 @@ Minimum Node.js Version - The minimum Node.js version has been bumped from `12.0
 Minimum React Version - The minimum required React version is `17.0.2`. To upgrade you can run the following command in the terminal:
 Terminal
 ```
-npm installreact@latestreact-dom@latest
-yarn addreact@latestreact-dom@latest
-pnpm updatereact@latestreact-dom@latest
-bun addreact@latestreact-dom@latest
+npminstallreact@latestreact-dom@latest
+yarnaddreact@latestreact-dom@latest
+pnpmupdatereact@latestreact-dom@latest
+bunaddreact@latestreact-dom@latest
 ```
 
 #### SWC replacing Babel

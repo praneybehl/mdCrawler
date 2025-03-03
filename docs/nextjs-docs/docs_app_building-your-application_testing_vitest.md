@@ -1,12 +1,33 @@
+# Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+DenyAccept all
+Consent Settings
+Privacy Policy
+Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+Marketing
+Off
+Marketing cookies and services are used to deliver personalized advertisements, promotions, and offers. These technologies enable targeted advertising and marketing campaigns by collecting information about users' interests, preferences, and online activities. 
+Analytics
+Off
+Analytics cookies and services are used for collecting statistical information about how visitors interact with a website. These technologies provide insights into website usage, visitor behavior, and site performance to understand and improve the site and enhance user experience.
+Functional
+Off
+Functional cookies and services are used to offer enhanced and personalized functionalities. These technologies provide additional features and improved user experiences, such as remembering your language preferences, font sizes, region selections, and customized layouts. Opting out of these cookies may render certain services or functionality of the website unavailable.
+Essential
+On
+Essential cookies and services are used to enable core website features, such as ensuring the security of the website. 
+SaveDenyAccept all
+Privacy Policy
 Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationTestingVitest
 # Setting up Vitest with Next.js
 Vite and React Testing Library are frequently used together for **Unit Testing**. This guide will show you how to setup Vitest with Next.js and write your first tests.
@@ -15,7 +36,7 @@ Vite and React Testing Library are frequently used together for **Unit Testing**
 You can use `create-next-app` with the Next.js with-vitest example to quickly get started:
 Terminal
 ```
-npx create-next-app@latest--examplewith-vitestwith-vitest-app
+npxcreate-next-app@latest--examplewith-vitestwith-vitest-app
 ```
 
 ## Manual Setup
@@ -23,9 +44,9 @@ To manually set up Vitest, install `vitest` and the following packages as dev de
 Terminal
 ```
 # Using TypeScript
-npm install-Dvitest@vitejs/plugin-reactjsdom@testing-library/react@testing-library/domvite-tsconfig-paths
+npminstall-Dvitest@vitejs/plugin-reactjsdom@testing-library/react@testing-library/domvite-tsconfig-paths
 # Using JavaScript
-npm install-Dvitest@vitejs/plugin-reactjsdom@testing-library/react@testing-library/dom
+npminstall-Dvitest@vitejs/plugin-reactjsdom@testing-library/react@testing-library/dom
 ```
 
 Create a `vitest.config.mts|js` file in the root of your project, and add the following options:
@@ -94,13 +115,13 @@ expect(screen.getByRole('heading', { level:1, name:'Home' })).toBeDefined()
 Then, run the following command to run your tests:
 Terminal
 ```
-npm runtest
+npmruntest
 # or
-yarn test
+yarntest
 # or
-pnpm test
+pnpmtest
 # or
-bun test
+buntest
 ```
 
 ## Additional Resources

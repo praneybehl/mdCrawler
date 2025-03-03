@@ -1,33 +1,12 @@
-# Your Privacy
-This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
-DenyAccept all
-Consent Settings
-Privacy Policy
-Your Privacy
-This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
-Marketing
-Off
-Marketing cookies and services are used to deliver personalized advertisements, promotions, and offers. These technologies enable targeted advertising and marketing campaigns by collecting information about users' interests, preferences, and online activities. 
-Analytics
-Off
-Analytics cookies and services are used for collecting statistical information about how visitors interact with a website. These technologies provide insights into website usage, visitor behavior, and site performance to understand and improve the site and enhance user experience.
-Functional
-Off
-Functional cookies and services are used to offer enhanced and personalized functionalities. These technologies provide additional features and improved user experiences, such as remembering your language preferences, font sizes, region selections, and customized layouts. Opting out of these cookies may render certain services or functionality of the website unavailable.
-Essential
-On
-Essential cookies and services are used to enable core website features, such as ensuring the security of the website. 
-SaveDenyAccept all
-Privacy Policy
 Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 App RouterBuilding Your ApplicationRendering
 # Rendering
 Rendering converts the code you write into user interfaces. React and Next.js allow you to create hybrid web applications where parts of your code can be rendered on the server or the client. This section will help you understand the differences between these rendering environments, strategies, and runtimes.
@@ -40,7 +19,7 @@ To start, it's helpful to be familiar with three foundational web concepts:
 
 ### Rendering Environments
 There are two environments where web applications can be rendered: the client and the server.
-![Client and Server Environments](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fclient-and-server-environments.png&w=3840&q=75)![Client and Server Environments](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fclient-and-server-environments.png&w=3840&q=75)
+![Client and Server Environments](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fclient-and-server-environments.png&w=3840&q=75)![Client and Server Environments](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fclient-and-server-environments.png&w=3840&q=75)
   * The **client** refers to the browser on a user's device that sends a request to a server for your application code. It then turns the response from the server into a user interface.
   * The **server** refers to the computer in a data center that stores your application code, receives requests from a client, and sends back an appropriate response.
 

@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationUpgradingApp Router Migration
 # App Router Incremental Adoption Guide
 This guide will help you:
@@ -22,14 +22,14 @@ The minimum Node.js version is now **v18.17**. See the Node.js documentation for
 To update to Next.js version 13, run the following command using your preferred package manager:
 Terminal
 ```
-npm installnext@latestreact@latestreact-dom@latest
+npminstallnext@latestreact@latestreact-dom@latest
 ```
 
 ### ESLint Version
 If you're using ESLint, you need to upgrade your ESLint version:
 Terminal
 ```
-npm install-Deslint-config-next@latest
+npminstall-Deslint-config-next@latest
 ```
 
 > **Good to know** : You may need to restart the ESLint server in VS Code for the ESLint changes to take effect. Open the Command Palette (`cmd+shift+p` on Mac; `ctrl+shift+p` on Windows) and search for `ESLint: Restart ESLint Server`.
@@ -98,7 +98,7 @@ We recommend reducing the combined complexity of these updates by breaking down 
 ### Step 1: Creating the `app` directory
 Update to the latest Next.js version (requires 13.4 or greater):
 ```
-npm installnext@latest
+npminstallnext@latest
 ```
 
 Then, create a new `app` directory at the root of your project (or `src/` directory).

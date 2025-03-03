@@ -2,18 +2,18 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationStylingSass
 # Sass
 Next.js has built-in support for integrating with Sass after the package is installed using both the `.scss` and `.sass` extensions. You can use component-level Sass via CSS Modules and the `.module.scss`or `.module.sass` extension.
 First, install `sass`:
 Terminal
 ```
-npm install--save-devsass
+npminstall--save-devsass
 ```
 
 > **Good to know** :

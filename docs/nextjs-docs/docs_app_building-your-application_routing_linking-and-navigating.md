@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationRoutingLinking and Navigating
 # Linking and Navigating
 There are four ways to navigate between routes in Next.js:
@@ -68,7 +68,7 @@ exportdefaultasyncfunctionProfile({
 }: {
  params:Promise<{ id:string }>
 }) {
-constid= (await params).id
+const { id } =await params
 if (!id) {
 redirect('/login')
  }
@@ -160,7 +160,7 @@ Learn more about how the Router Cache works and how to configure it.
 ### 4. Partial Rendering
 Partial rendering means only the route segments that change on navigation re-render on the client, and any shared segments are preserved.
 For example, when navigating between two sibling routes, `/dashboard/settings` and `/dashboard/analytics`, the `settings` page will be unmounted, the `analytics` page will be mounted with fresh state, and the shared `dashboard` layout will be preserved. This behavior is also present between two routes on the same dynamic segment e.g. with `/blog/[slug]/page` and navigating from `/blog/first` to `/blog/second`.
-![How partial rendering works](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fpartial-rendering.png&w=3840&q=75)![How partial rendering works](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fpartial-rendering.png&w=3840&q=75)
+![How partial rendering works](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fpartial-rendering.png&w=3840&q=75)![How partial rendering works](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fpartial-rendering.png&w=3840&q=75)
 Without partial rendering, each navigation would cause the full page to re-render on the client. Rendering only the segment that changes reduces the amount of data transferred and execution time, leading to improved performance.
 ### 5. Soft Navigation
 Browsers perform a "hard navigation" when navigating between pages. The Next.js App Router enables "soft navigation" between pages, ensuring only the route segments that have changed are re-rendered (partial rendering). This enables client React state to be preserved during navigation.

@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationRenderingEdge and Node.js Runtimes
 # Edge and Node.js Runtimes
 Next.js has two server runtimes you can use in your application:
@@ -14,6 +14,7 @@ Next.js has two server runtimes you can use in your application:
   * The **Edge Runtime** which contains a more limited set of APIs.
 
 
+The Edge Runtime is the default runtime for Middleware. However, this can be changed to the Node.js runtime. See the Middleware documentation for more details.
 ## Use Cases
   * The Node.js Runtime is used for rendering your application.
   * The Edge Runtime is used for Middleware (routing rules like redirects, rewrites, and setting headers).

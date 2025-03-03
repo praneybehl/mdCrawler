@@ -2,18 +2,18 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceCLICLI
 # CLI
 The `create-next-app` CLI allow you to create a new Next.js application using the default template or an example from a public GitHub repository. It is the easiest way to get started with Next.js.
 Basic usage:
 Terminal
 ```
-npx create-next-app@latest [project-name] [options]
+npxcreate-next-app@latest [project-name] [options]
 ```
 
 ## Reference
@@ -28,6 +28,7 @@ Options| Description
 `--tailwind`| Initialize with Tailwind CSS config (default)  
 `--eslint`| Initialize with ESLint config  
 `--app`| Initialize as an App Router project  
+`--api`| Initialize a project with only route handlers  
 `--src-dir`| Initialize inside a `src/` directory  
 `--turbopack`| Enable Turbopack by default for development  
 `--import-alias <alias-to-configure>`| Specify import alias to use (default "@/*")  
@@ -46,7 +47,7 @@ Options| Description
 To create a new app using the default template, run the following command in your terminal:
 Terminal
 ```
-npx create-next-app@latest
+npxcreate-next-app@latest
 ```
 
 You will then be asked the following prompts:
@@ -67,7 +68,7 @@ Once you've answered the prompts, a new project will be created with your chosen
 To create a new app using an official Next.js example, use the `--example` flag. For example:
 Terminal
 ```
-npx create-next-app@latest--example [example-name] [your-project-name]
+npxcreate-next-app@latest--example [example-name] [your-project-name]
 ```
 
 You can view a list of all available examples along with setup instructions in the Next.js repository.
@@ -75,7 +76,7 @@ You can view a list of all available examples along with setup instructions in t
 To create a new app using any public GitHub example, use the `--example` option with the GitHub repo's URL. For example:
 Terminal
 ```
-npx create-next-app@latest--example"https://github.com/.../" [your-project-name]
+npxcreate-next-app@latest--example"https://github.com/.../" [your-project-name]
 ```
 
 Was this helpful?

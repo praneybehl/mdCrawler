@@ -1,12 +1,33 @@
+# Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+DenyAccept all
+Consent Settings
+Privacy Policy
+Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+Marketing
+Off
+Marketing cookies and services are used to deliver personalized advertisements, promotions, and offers. These technologies enable targeted advertising and marketing campaigns by collecting information about users' interests, preferences, and online activities. 
+Analytics
+Off
+Analytics cookies and services are used for collecting statistical information about how visitors interact with a website. These technologies provide insights into website usage, visitor behavior, and site performance to understand and improve the site and enhance user experience.
+Functional
+Off
+Functional cookies and services are used to offer enhanced and personalized functionalities. These technologies provide additional features and improved user experiences, such as remembering your language preferences, font sizes, region selections, and customized layouts. Opting out of these cookies may render certain services or functionality of the website unavailable.
+Essential
+On
+Essential cookies and services are used to enable core website features, such as ensuring the security of the website. 
+SaveDenyAccept all
+Privacy Policy
 Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Pages RouterBuilding Your ApplicationAuthentication
 # Authentication
 Understanding authentication is crucial for protecting your application's data. This page will guide you through what React and Next.js features to use to implement auth.
@@ -17,7 +38,7 @@ Before starting, it helps to break down the process into three concepts:
 
 
 This diagram shows the authentication flow using React and Next.js features:
-![Diagram showing the authentication flow with React and Next.js features](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fauthentication-overview.png&w=3840&q=75)![Diagram showing the authentication flow with React and Next.js features](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fauthentication-overview.png&w=3840&q=75)
+![Diagram showing the authentication flow with React and Next.js features](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fauthentication-overview.png&w=3840&q=75)![Diagram showing the authentication flow with React and Next.js features](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fauthentication-overview.png&w=3840&q=75)
 The examples on this page walk through basic username and password auth for educational purposes. While you can implement a custom auth solution, for increased security and simplicity, we recommend using an authentication library. These offer built-in solutions for authentication, session management, and authorization, as well as additional features such as social logins, multi-factor authentication, and role-based access control. You can find a list in the Auth Libraries section.
 ## Authentication
 Here are the steps to implement a sign-up and/or login form:
@@ -259,6 +280,7 @@ Now that you've learned about authentication in Next.js, here are Next.js-compat
   * Auth0
   * Clerk
   * Kinde
+  * Logto
   * NextAuth.js
   * Ory
   * Stack Auth

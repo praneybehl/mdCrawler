@@ -2,32 +2,32 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationUpgradingVersion 11
 # Version 11
 To upgrade to version 11, run the following command:
 Terminal
 ```
-npm inext@11react@17react-dom@17
+npminext@11react@17react-dom@17
 ```
 
 Terminal
 ```
-yarn addnext@11react@17react-dom@17
+yarnaddnext@11react@17react-dom@17
 ```
 
 Terminal
 ```
-pnpm upnext@11react@17react-dom@17
+pnpmupnext@11react@17react-dom@17
 ```
 
 Terminal
 ```
-bun addnext@11react@17react-dom@17
+bunaddnext@11react@17react-dom@17
 ```
 
 > **Good to know:** If you are using TypeScript, ensure you also upgrade `@types/react` and `@types/react-dom` to their corresponding versions.

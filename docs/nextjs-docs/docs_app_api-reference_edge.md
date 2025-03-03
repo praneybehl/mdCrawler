@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 App RouterAPI ReferenceEdge Runtime
 # Edge Runtime
 The Next.js Edge Runtime is used for Middleware and supports the following APIs:

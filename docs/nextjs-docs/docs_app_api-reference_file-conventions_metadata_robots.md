@@ -23,11 +23,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 File ConventionsMetadata Filesrobots.txt
 # robots.txt
 Add or generate a `robots.txt` file that matches the Robots Exclusion Standard in the **root** of `app` directory to tell search engine crawlers which URLs they can access on your site.
@@ -121,8 +121,8 @@ typeRobots= {
     disallow?:string|string[]
     crawlDelay?:number
    }>
- sitemap?:string|string[]
- host?:string
+sitemap?:string|string[]
+host?:string
 }
 ```
 

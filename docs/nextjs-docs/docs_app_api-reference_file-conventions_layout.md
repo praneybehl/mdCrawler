@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFile Conventionslayout.js
 # layout.js
 The `layout` file is used to define a layout in your Next.js application.
@@ -56,7 +56,7 @@ exportdefaultasyncfunctionLayout({
 }: {
  params:Promise<{ team:string }>
 }) {
-constteam= (await params).team
+const { team } =await params
 }
 ```
 
@@ -99,7 +99,7 @@ return (
 Unlike Pages, Layout components **do not** receive the `searchParams` prop. This is because a shared layout is not re-rendered during navigation which could lead to stale `searchParams` between navigations.
 When using client-side navigation, Next.js automatically only renders the part of the page below the common layout between two routes.
 For example, in the following directory structure, `dashboard/layout.tsx` is the common layout for both `/dashboard/settings` and `/dashboard/analytics`:
-![File structure showing a dashboard folder nesting a layout.tsx file, and settings and analytics folders with their own pages](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fshared-dashboard-layout.png&w=3840&q=75)![File structure showing a dashboard folder nesting a layout.tsx file, and settings and analytics folders with their own pages](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fshared-dashboard-layout.png&w=3840&q=75)
+![File structure showing a dashboard folder nesting a layout.tsx file, and settings and analytics folders with their own pages](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fshared-dashboard-layout.png&w=3840&q=75)![File structure showing a dashboard folder nesting a layout.tsx file, and settings and analytics folders with their own pages](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fshared-dashboard-layout.png&w=3840&q=75)
 When navigating from `/dashboard/settings` to `/dashboard/analytics`, `page.tsx` in `/dashboard/analytics` will rerender on the server, while `dashboard/layout.tsx` will **not** rerender because it's a common UI shared between the two routes.
 This performance optimization allows navigation between pages that share a layout to be quicker as only the data fetching and rendering for the page has to run, instead of the entire route that could include shared layouts that fetch their own data.
 Because `dashboard/layout.tsx` doesn't re-render, the `searchParams` prop in the layout Server Component might become **stale** after navigation.

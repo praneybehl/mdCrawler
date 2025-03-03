@@ -1,12 +1,33 @@
+# Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+DenyAccept all
+Consent Settings
+Privacy Policy
+Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+Marketing
+Off
+Marketing cookies and services are used to deliver personalized advertisements, promotions, and offers. These technologies enable targeted advertising and marketing campaigns by collecting information about users' interests, preferences, and online activities. 
+Analytics
+Off
+Analytics cookies and services are used for collecting statistical information about how visitors interact with a website. These technologies provide insights into website usage, visitor behavior, and site performance to understand and improve the site and enhance user experience.
+Functional
+Off
+Functional cookies and services are used to offer enhanced and personalized functionalities. These technologies provide additional features and improved user experiences, such as remembering your language preferences, font sizes, region selections, and customized layouts. Opting out of these cookies may render certain services or functionality of the website unavailable.
+Essential
+On
+Essential cookies and services are used to enable core website features, such as ensuring the security of the website. 
+SaveDenyAccept all
+Privacy Policy
 Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 IntroductionCommunityContribution Guide
 # Docs Contribution Guide
 Welcome to the Next.js Docs Contribution Guide! We're excited to have you here.
@@ -164,7 +185,7 @@ Code blocks should have a header that includes the language and the `filename`. 
 code-example.mdx
 ```
 ```bash filename="Terminal"
-npx create-next-app
+npxcreate-next-app
 ```
 ```
 
@@ -176,6 +197,11 @@ JavaScript files with JSX code| ```jsx| .js
 JavaScript files without JSX| ```js| .js  
 TypeScript files with JSX| ```tsx| .tsx  
 TypeScript files without JSX| ```ts| .ts  
+> **Good to know** :
+>   * Make sure to use **`js`**extension with**JSX** code at JavaScript files.
+>   * For example, ```jsx filename="app/layout.js"
+> 
+
 ### TS and JS Switcher
 Add a language switcher to toggle between TypeScript and JavaScript. Code blocks should be TypeScript first with a JavaScript version to accommodate users.
 Currently, we write TS and JS examples one after the other, and link them with `switcher` prop:

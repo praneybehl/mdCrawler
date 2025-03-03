@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationTestingCypress
 # Setting up Cypress with Next.js
 Cypress is a test runner used for **End-to-End (E2E)** and **Component Testing**. This page will show you how to set up Cypress with Next.js and write your first tests.
@@ -18,11 +18,11 @@ Cypress is a test runner used for **End-to-End (E2E)** and **Component Testing**
 To manually set up Cypress, install `cypress` as a dev dependency:
 Terminal
 ```
-npm install-Dcypress
+npminstall-Dcypress
 # or
-yarn add-Dcypress
+yarnadd-Dcypress
 # or
-pnpm install-Dcypress
+pnpminstall-Dcypress
 ```
 
 Add the Cypress `open` command to the `package.json` scripts field:
@@ -42,7 +42,7 @@ package.json
 Run Cypress for the first time to open the Cypress testing suite:
 Terminal
 ```
-npm runcypress:open
+npmruncypress:open
 ```
 
 You can choose to configure **E2E Testing** and/or **Component Testing**. Selecting any of these options will automatically create a `cypress.config.js` file and a `cypress` folder in your project.

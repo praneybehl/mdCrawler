@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFunctionsgenerateViewport
 # generateViewport
 You can customize the initial viewport of the page with the static `viewport` object or the dynamic `generateViewport` function.

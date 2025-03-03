@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Configurationnext.config.jsreactCompiler
 # reactCompiler
 This feature is currently experimental and subject to change, it's not recommended for production. Try it out and share your feedback on GitHub.
@@ -14,7 +14,7 @@ Next.js 15 introduced support for the React Compiler. The compiler improves perf
 To use it, upgrade to Next.js 15, install the `babel-plugin-react-compiler`:
 Terminal
 ```
-npm installbabel-plugin-react-compiler
+npminstallbabel-plugin-react-compiler
 ```
 
 Then, add `experimental.reactCompiler` option in `next.config.js`:

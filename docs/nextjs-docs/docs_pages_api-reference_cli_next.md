@@ -2,18 +2,18 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceCLInext CLI
 # next CLI
 The Next.js CLI allows you to develop, build, start your application, and more.
 Basic usage:
 Terminal
 ```
-npx next [command] [options]
+npxnext [command] [options]
 ```
 
 ## Reference
@@ -51,11 +51,11 @@ Option| Description
 `next build` creates an optimized production build of your application. The output displays information about each route. For example:
 Terminal
 ```
-Route (app)               SizeFirstLoadJS
-┌ ○/_not-found0B0kB
-└ ƒ/products/[id]0B0kB
-○ (Static)  prerenderedasstaticcontent
-ƒ (Dynamic) server-renderedondemand
+Route (app)               Size   First Load JS
+┌○/_not-found0B0kB
+└ƒ/products/[id]0B0kB
+○ (Static)  prerendered as static content
+ƒ (Dynamic) server-rendered on demand
 ```
 
   * **Size** : The size of assets downloaded when navigating to the page client-side. The size for each route only includes its dependencies.
@@ -89,25 +89,25 @@ Option| Description
 The output should look like this:
 Terminal
 ```
-Operating System:
- Platform: darwin
- Arch: arm64
- Version: DarwinKernelVersion23.6.0
- Available memory (MB): 65536
- Available CPUcores:10
+OperatingSystem:
+Platform:darwin
+Arch:arm64
+Version:DarwinKernelVersion23.6.0
+Availablememory (MB): 65536
+AvailableCPUcores:10
 Binaries:
- Node: 20.12.0
- npm: 10.5.0
- Yarn: 1.22.19
- pnpm: 9.6.0
-Relevant Packages:
- next: 15.0.0-canary.115//Latestavailableversionisdetected (15.0.0-canary.115).
- eslint-config-next: 14.2.5
- react: 19.0.0-rc
- react-dom: 19.0.0
- typescript: 5.5.4
-Next.js Config:
- output: N/A
+Node:20.12.0
+npm:10.5.0
+Yarn:1.22.19
+pnpm:9.6.0
+RelevantPackages:
+next:15.0.0-canary.115//Latestavailableversionisdetected (15.0.0-canary.115).
+eslint-config-next:14.2.5
+react:19.0.0-rc
+react-dom:19.0.0
+typescript:5.5.4
+Next.jsConfig:
+output:N/A
 ```
 
 The following options are available for the `next info` command:
@@ -157,13 +157,13 @@ Learn more about Telemetry.
 By default, Next.js uses `http://localhost:3000` during development and with `next start`. The default port can be changed with the `-p` option, like so:
 Terminal
 ```
-next dev-p4000
+nextdev-p4000
 ```
 
 Or using the `PORT` environment variable:
 Terminal
 ```
-PORT=4000 next dev
+PORT=4000nextdev
 ```
 
 > **Good to know** : `PORT` cannot be set in `.env` as booting up the HTTP server happens before any other code is initialized.
@@ -171,14 +171,14 @@ PORT=4000 next dev
 For certain use cases like webhooks or authentication, you can use HTTPS to have a secure environment on `localhost`. Next.js can generate a self-signed certificate with `next dev` using the `--experimental-https` flag:
 Terminal
 ```
-next dev--experimental-https
+nextdev--experimental-https
 ```
 
 With the generated certificate, the Next.js development server will exist at `https://localhost:3000`. The default port `3000` is used unless a port is specified with `-p`, `--port`, or `PORT`.
 You can also provide a custom certificate and key with `--experimental-https-key` and `--experimental-https-cert`. Optionally, you can provide a custom CA certificate with `--experimental-https-ca` as well.
 Terminal
 ```
-next dev--experimental-https--experimental-https-key./certificates/localhost-key.pem--experimental-https-cert./certificates/localhost.pem
+nextdev--experimental-https--experimental-https-key./certificates/localhost-key.pem--experimental-https-cert./certificates/localhost.pem
 ```
 
 `next dev --experimental-https` is only intended for development and creates a locally trusted certificate with `mkcert`. In production, use properly issued certificates from trusted authorities.
@@ -188,16 +188,16 @@ When deploying Next.js behind a downstream proxy (e.g. a load-balancer like AWS 
 To configure the timeout values for the production Next.js server, pass `--keepAliveTimeout` (in milliseconds) to `next start`, like so:
 Terminal
 ```
-next start--keepAliveTimeout70000
+nextstart--keepAliveTimeout70000
 ```
 
 ### Passing Node.js arguments
 You can pass any node arguments to `next` commands. For example:
 Terminal
 ```
-NODE_OPTIONS='--throw-deprecation' next
-NODE_OPTIONS='-r esm' next
-NODE_OPTIONS='--inspect' next
+NODE_OPTIONS='--throw-deprecation'next
+NODE_OPTIONS='-r esm'next
+NODE_OPTIONS='--inspect'next
 ```
 
 Was this helpful?

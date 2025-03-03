@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationOptimizingImages
 # Image Optimization
 Examples
@@ -168,7 +168,7 @@ Styling the Image component is similar to styling a normal `<img>` element, but 
 
 ## Examples
 ### Responsive
-![Responsive image filling the width and height of its parent container](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fresponsive-image.png&w=3840&q=75)![Responsive image filling the width and height of its parent container](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fresponsive-image.png&w=3840&q=75)
+![Responsive image filling the width and height of its parent container](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fresponsive-image.png&w=3840&q=75)![Responsive image filling the width and height of its parent container](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fresponsive-image.png&w=3840&q=75)
 ```
 import Image from'next/image'
 import mountains from'../public/mountains.jpg'
@@ -193,7 +193,7 @@ style={{
 ```
 
 ### Fill Container
-![Grid of images filling parent container width](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Ffill-container.png&w=3840&q=75)![Grid of images filling parent container width](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Ffill-container.png&w=3840&q=75)
+![Grid of images filling parent container width](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Ffill-container.png&w=3840&q=75)![Grid of images filling parent container width](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Ffill-container.png&w=3840&q=75)
 ```
 import Image from'next/image'
 import mountains from'../public/mountains.jpg'
@@ -224,7 +224,7 @@ style={{
 ```
 
 ### Background Image
-![Background image taking full width and height of page](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fbackground-image.png&w=3840&q=75)![Background image taking full width and height of page](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fbackground-image.png&w=3840&q=75)
+![Background image taking full width and height of page](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fbackground-image.png&w=3840&q=75)![Background image taking full width and height of page](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fbackground-image.png&w=3840&q=75)
 ```
 import Image from'next/image'
 import mountains from'../public/mountains.jpg'

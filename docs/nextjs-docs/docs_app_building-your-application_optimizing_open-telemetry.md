@@ -1,12 +1,33 @@
+# Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+DenyAccept all
+Consent Settings
+Privacy Policy
+Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+Marketing
+Off
+Marketing cookies and services are used to deliver personalized advertisements, promotions, and offers. These technologies enable targeted advertising and marketing campaigns by collecting information about users' interests, preferences, and online activities. 
+Analytics
+Off
+Analytics cookies and services are used for collecting statistical information about how visitors interact with a website. These technologies provide insights into website usage, visitor behavior, and site performance to understand and improve the site and enhance user experience.
+Functional
+Off
+Functional cookies and services are used to offer enhanced and personalized functionalities. These technologies provide additional features and improved user experiences, such as remembering your language preferences, font sizes, region selections, and customized layouts. Opting out of these cookies may render certain services or functionality of the website unavailable.
+Essential
+On
+Essential cookies and services are used to enable core website features, such as ensuring the security of the website. 
+SaveDenyAccept all
+Privacy Policy
 Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationOptimizingOpenTelemetry
 # OpenTelemetry
 Observability is crucial for understanding and optimizing the behavior and performance of your Next.js app.
@@ -20,7 +41,7 @@ OpenTelemetry is extensible but setting it up properly can be quite verbose. Tha
 To get started, install the following packages:
 Terminal
 ```
-npm install@vercel/otel@opentelemetry/sdk-logs@opentelemetry/api-logs@opentelemetry/instrumentation
+npminstall@vercel/otel@opentelemetry/sdk-logs@opentelemetry/api-logs@opentelemetry/instrumentation
 ```
 
 Next, create a custom `instrumentation.ts` (or `.js`) file in the **root directory** of the project (or inside `src` folder if using one):
@@ -46,7 +67,7 @@ The `@vercel/otel` package provides many configuration options and should serve 
 Firstly you need to install OpenTelemetry packages:
 Terminal
 ```
-npm install@opentelemetry/sdk-node@opentelemetry/resources@opentelemetry/semantic-conventions@opentelemetry/sdk-trace-node@opentelemetry/exporter-trace-otlp-http
+npminstall@opentelemetry/sdk-node@opentelemetry/resources@opentelemetry/semantic-conventions@opentelemetry/sdk-trace-node@opentelemetry/exporter-trace-otlp-http
 ```
 
 Now you can initialize `NodeSDK` in your `instrumentation.ts`. Unlike `@vercel/otel`, `NodeSDK` is not compatible with edge runtime, so you need to make sure that you are importing them only when `process.env.NEXT_RUNTIME === 'nodejs'`. We recommend creating a new file `instrumentation.node.ts` which you conditionally import only when using node:
@@ -100,7 +121,7 @@ OpenTelemetry Collector is not necessary. You can use a custom OpenTelemetry exp
 You can add a custom span with OpenTelemetry APIs.
 Terminal
 ```
-npm install@opentelemetry/api
+npminstall@opentelemetry/api
 ```
 
 The following example demonstrates a function that fetches GitHub stars and adds a custom `fetchGithubStars` span to track the fetch request's result:

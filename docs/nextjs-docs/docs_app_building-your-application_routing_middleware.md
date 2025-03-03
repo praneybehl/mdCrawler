@@ -1,12 +1,33 @@
+# Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+DenyAccept all
+Consent Settings
+Privacy Policy
+Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+Marketing
+Off
+Marketing cookies and services are used to deliver personalized advertisements, promotions, and offers. These technologies enable targeted advertising and marketing campaigns by collecting information about users' interests, preferences, and online activities. 
+Analytics
+Off
+Analytics cookies and services are used for collecting statistical information about how visitors interact with a website. These technologies provide insights into website usage, visitor behavior, and site performance to understand and improve the site and enhance user experience.
+Functional
+Off
+Functional cookies and services are used to offer enhanced and personalized functionalities. These technologies provide additional features and improved user experiences, such as remembering your language preferences, font sizes, region selections, and customized layouts. Opting out of these cookies may render certain services or functionality of the website unavailable.
+Essential
+On
+Essential cookies and services are used to enable core website features, such as ensuring the security of the website. 
+SaveDenyAccept all
+Privacy Policy
 Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationRoutingMiddleware
 # Middleware
 Middleware allows you to run code before a request is completed. Then, based on the incoming request, you can modify the response by rewriting, redirecting, modifying the request or response headers, or responding directly.
@@ -398,10 +419,35 @@ expect(getRewrittenUrl(response)).toEqual('https://other-domain.com/docs')
 ```
 
 ## Runtime
-Middleware currently only supports APIs compatible with the Edge runtime. APIs exclusive to Node.js are unsupported.
+Middleware defaults to using the Edge runtime. As of v15.2 (canary), we have experimental support for using the Node.js runtime. To enable, add the flag to your `next.config` file:
+next.config.ts
+TypeScript
+JavaScriptTypeScript
+```
+importtype { NextConfig } from'next'
+constnextConfig:NextConfig= {
+ experimental: {
+  nodeMiddleware:true,
+ },
+}
+exportdefault nextConfig
+```
+
+Then in your middleware file, set the runtime to `nodejs` in the `config` object:
+middleware.ts
+TypeScript
+JavaScriptTypeScript
+```
+exportconstconfig= {
+ runtime:'nodejs',
+}
+```
+
+> **Note** : This feature is not yet recommended for production use. Therefore, Next.js will throw an error unless you are using the next@canary release instead of the stable release.
 ## Version History
 Version| Changes  
 ---|---  
+`v15.2.0`| Middleware can now use the Node.js runtime (experimental)  
 `v13.1.0`| Advanced Middleware flags added  
 `v13.0.0`| Middleware can modify request headers, response headers, and send responses  
 `v12.2.0`| Middleware is stable, please see the upgrade guide  

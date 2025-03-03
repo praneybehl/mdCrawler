@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationTestingJest
 # Setting up Jest with Next.js
 Jest and React Testing Library are frequently used together for **Unit Testing** and **Snapshot Testing**. This guide will show you how to set up Jest with Next.js and write your first tests.
@@ -15,7 +15,7 @@ Jest and React Testing Library are frequently used together for **Unit Testing**
 You can use `create-next-app` with the Next.js with-jest example to quickly get started:
 Terminal
 ```
-npx create-next-app@latest--examplewith-jestwith-jest-app
+npxcreate-next-app@latest--examplewith-jestwith-jest-app
 ```
 
 ## Manual setup
@@ -23,21 +23,21 @@ Since the release of Next.js 12, Next.js now has built-in configuration for Jest
 To set up Jest, install `jest` and the following packages as dev dependencies:
 Terminal
 ```
-npm install-Djestjest-environment-jsdom@testing-library/react@testing-library/dom@testing-library/jest-domts-node
+npminstall-Djestjest-environment-jsdom@testing-library/react@testing-library/dom@testing-library/jest-domts-node
 # or
-yarn add-Djestjest-environment-jsdom@testing-library/react@testing-library/dom@testing-library/jest-domts-node
+yarnadd-Djestjest-environment-jsdom@testing-library/react@testing-library/dom@testing-library/jest-domts-node
 # or
-pnpm install-Djestjest-environment-jsdom@testing-library/react@testing-library/dom@testing-library/jest-domts-node
+pnpminstall-Djestjest-environment-jsdom@testing-library/react@testing-library/dom@testing-library/jest-domts-node
 ```
 
 Generate a basic Jest configuration file by running the following command:
 Terminal
 ```
-npm initjest@latest
+npminitjest@latest
 # or
-yarn createjest@latest
+yarncreatejest@latest
 # or
-pnpm createjest@latest
+pnpmcreatejest@latest
 ```
 
 This will take you through a series of prompts to setup Jest for your project, including automatically creating a `jest.config.ts|js` file.
@@ -256,11 +256,11 @@ expect(container).toMatchSnapshot()
 Then, run the following command to run your tests:
 Terminal
 ```
-npm runtest
+npmruntest
 # or
-yarn test
+yarntest
 # or
-pnpm test
+pnpmtest
 ```
 
 ## Additional Resources

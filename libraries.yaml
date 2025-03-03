@@ -1,5 +1,9 @@
 libraries:
-  - name: python-docs
-    url: https://docs.python.org/3/
-  - name: fastapi-docs
-    url: https://fastapi.tiangolo.com/
+  - name: svelte-docs
+    url: https://svelte.dev/docs
+  - name: nextjs-docs
+    url: https://nextjs.org/docs
+  - name: excalibur-docs
+    url: https://excaliburjs.com/docs/
+  - name: heroui-docs
+    url: https://www.heroui.com/docs/guide/introduction

@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Pages RouterGetting StartedInstallation
 # Create a new Next.js application
 ## System requirements
@@ -18,7 +18,7 @@ Pages RouterGetting StartedInstallation
 We recommend starting a new Next.js app using `create-next-app`, which sets up everything automatically for you. To create a project, run:
 Terminal
 ```
-npx create-next-app@latest
+npxcreate-next-app@latest
 ```
 
 On installation, you'll see the following prompts:
@@ -40,7 +40,7 @@ After the prompts, `create-next-app` will create a folder with your project name
 To manually create a new Next.js app, install the required packages:
 Terminal
 ```
-npm installnext@latestreact@latestreact-dom@latest
+npminstallnext@latestreact@latestreact-dom@latest
 ```
 
 Open your `package.json` file and add the following `scripts`:
@@ -132,7 +132,7 @@ package.json
 Then, run `npm run lint` and you will be guided through the installation and configuration process.
 Terminal
 ```
-npm runlint
+npmrunlint
 ```
 
 You'll see a prompt like this:

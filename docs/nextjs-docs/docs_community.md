@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 IntroductionCommunity
 # Next.js Community
 With over 5 million weekly downloads, Next.js has a large and active community of developers across the world. Here's how you can get involved in our community:

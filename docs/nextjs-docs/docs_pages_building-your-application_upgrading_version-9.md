@@ -2,32 +2,32 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationUpgradingVersion 9
 # Upgrading to Version 9
 To upgrade to version 9, run the following command:
 Terminal
 ```
-npm inext@9
+npminext@9
 ```
 
 Terminal
 ```
-yarn addnext@9
+yarnaddnext@9
 ```
 
 Terminal
 ```
-pnpm upnext@9
+pnpmupnext@9
 ```
 
 Terminal
 ```
-bun addnext@9
+bunaddnext@9
 ```
 
 > **Good to know:** If you are using TypeScript, ensure you also upgrade `@types/react` and `@types/react-dom` to their corresponding versions.
@@ -97,7 +97,7 @@ Next.js now has the concept of page-level configuration, so the `withAmp` higher
 This change can be **automatically migrated by running the following commands in the root of your Next.js project:**
 Terminal
 ```
-curl -Lhttps://github.com/vercel/next-codemod/archive/master.tar.gz| tar -xz--strip=2next-codemod-master/transforms/withamp-to-config.jsnpxjscodeshift-t./withamp-to-config.jspages/**/*.js
+curl-Lhttps://github.com/vercel/next-codemod/archive/master.tar.gz|tar-xz--strip=2next-codemod-master/transforms/withamp-to-config.jsnpxjscodeshift-t./withamp-to-config.jspages/**/*.js
 ```
 
 To perform this migration by hand, or view what the codemod will produce, see below:

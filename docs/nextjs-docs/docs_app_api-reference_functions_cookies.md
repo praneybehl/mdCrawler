@@ -2,14 +2,14 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFunctionscookies
 # cookies
-`cookies` is an **async** function that allows you to read the HTTP incoming request cookies in Server Component, and read/write outgoing request cookies in Server Actions or Route Handlers.
+`cookies` is an **async** function that allows you to read the HTTP incoming request cookies in Server Components, and read/write outgoing request cookies in Server Actions or Route Handlers.
 app/page.tsx
 TypeScript
 JavaScriptTypeScript
@@ -58,7 +58,7 @@ To learn more about these options, see the MDN docs.
   * `cookies` is a Dynamic API whose returned values cannot be known ahead of time. Using it in a layout or page will opt a route into dynamic rendering.
   * The `.delete` method can only be called: 
     * In a Server Action or Route Handler.
-    * If it belongs to the same domain from which `.set` is called. Additionally, the code must be executed on the same protocol (HTTP or HTTPS) as the cookie you want to delete.
+    * If it belongs to the same domain from which `.set` is called. For wildcard domains, the specific subdomain must be an exact match. Additionally, the code must be executed on the same protocol (HTTP or HTTPS) as the cookie you want to delete.
   * HTTP does not allow setting cookies after streaming starts, so you must use `.set` in a Server Action or Route Handler.
 
 

@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationUpgradingCodemods
 # Codemods
 Codemods are transformations that run on your codebase programmatically. This allows a large number of changes to be programmatically applied without having to manually go through every file.
@@ -15,7 +15,7 @@ Next.js provides Codemod transformations to help upgrade your Next.js codebase w
 In your terminal, navigate (`cd`) into your project's folder, then run:
 Terminal
 ```
-npx @next/codemod<transform><path>
+npx@next/codemod<transform><path>
 ```
 
 Replacing `<transform>` and `<path>` with appropriate values.
@@ -32,7 +32,7 @@ Replacing `<transform>` and `<path>` with appropriate values.
 > **Note** : This codemod is App Router specific.
 Terminal
 ```
-npx @next/codemod@latestapp-dir-runtime-config-experimental-edge.
+npx@next/codemod@latestapp-dir-runtime-config-experimental-edge.
 ```
 
 This codemod transforms Route Segment Config `runtime` value `experimental-edge` to `edge`.
@@ -51,7 +51,7 @@ APIs that opted into dynamic rendering that previously supported synchronous acc
 ##### `next-async-request-api`
 Terminal
 ```
-npx @next/codemod@latestnext-async-request-api.
+npx@next/codemod@latestnext-async-request-api.
 ```
 
 This codemod will transform dynamic APIs (`cookies()`, `headers()` and `draftMode()` from `next/headers`) that are now asynchronous to be properly awaited or wrapped with `React.use()` if applicable. When an automatic migration isn't possible, the codemod will either add a typecast (if a TypeScript file) or a comment to inform the user that it needs to be manually reviewed & updated.
@@ -146,7 +146,7 @@ return {
 ##### `next-request-geo-ip`
 Terminal
 ```
-npx @next/codemod@latestnext-request-geo-ip.
+npx@next/codemod@latestnext-request-geo-ip.
 ```
 
 This codemod installs `@vercel/functions` and transforms `geo` and `ip` properties of `NextRequest` with corresponding `@vercel/functions` features.
@@ -173,7 +173,7 @@ constip=ipAddress(req)
 ##### `next-og-import`
 Terminal
 ```
-npx @next/codemod@latestnext-og-import.
+npx@next/codemod@latestnext-og-import.
 ```
 
 This codemod moves transforms imports from `next/server` to `next/og` for usage of Dynamic OG Image Generation.
@@ -191,7 +191,7 @@ import { ImageResponse } from'next/og'
 ##### `metadata-to-viewport-export`
 Terminal
 ```
-npx @next/codemod@latestmetadata-to-viewport-export.
+npx@next/codemod@latestmetadata-to-viewport-export.
 ```
 
 This codemod migrates certain viewport metadata to `viewport` export.
@@ -222,7 +222,7 @@ exportconstviewport= {
 ##### `built-in-next-font`
 Terminal
 ```
-npx @next/codemod@latestbuilt-in-next-font.
+npx@next/codemod@latestbuilt-in-next-font.
 ```
 
 This codemod uninstalls the `@next/font` package and transforms `@next/font` imports into the built-in `next/font`.
@@ -241,7 +241,7 @@ import { Inter } from'next/font/google'
 ##### `next-image-to-legacy-image`
 Terminal
 ```
-npx @next/codemod@latestnext-image-to-legacy-image.
+npx@next/codemod@latestnext-image-to-legacy-image.
 ```
 
 Safely renames `next/image` imports in existing Next.js 10, 11, or 12 applications to `next/legacy/image` in Next.js 13. Also renames `next/future/image` to `next/image`.
@@ -281,7 +281,7 @@ return (
 ##### `next-image-experimental`
 Terminal
 ```
-npx @next/codemod@latestnext-image-experimental.
+npx@next/codemod@latestnext-image-experimental.
 ```
 
 Dangerously migrates from `next/legacy/image` to the new `next/image` by adding inline styles and removing unused props.
@@ -296,7 +296,7 @@ Dangerously migrates from `next/legacy/image` to the new `next/image` by adding 
 ##### `new-link`
 Terminal
 ```
-npx @next/codemod@latestnew-link.
+npx@next/codemod@latestnew-link.
 ```
 
 Remove `<a>` tags inside Link Components, or add a `legacyBehavior` prop to Links that cannot be auto-fixed.
@@ -335,7 +335,7 @@ constComponent= () => <a>About</a>
 ##### `cra-to-next`
 Terminal
 ```
-npx @next/codemodcra-to-next
+npx@next/codemodcra-to-next
 ```
 
 Migrates a Create React App project to Next.js; creating a Pages Router and necessary config to match behavior. Client-side only rendering is leveraged initially to prevent breaking compatibility due to `window` usage during SSR and can be enabled seamlessly to allow the gradual adoption of Next.js specific features.
@@ -345,7 +345,7 @@ Please share any feedback related to this transform in this discussion.
 ##### `add-missing-react-import`
 Terminal
 ```
-npx @next/codemodadd-missing-react-import
+npx@next/codemodadd-missing-react-import
 ```
 
 Transforms files that do not import `React` to include the import in order for the new React JSX transform to work.
@@ -375,7 +375,7 @@ return <div>Hello World</div>
 ##### `name-default-component`
 Terminal
 ```
-npx @next/codemodname-default-component
+npx@next/codemodname-default-component
 ```
 
 **Versions 9 and above.**
@@ -402,7 +402,7 @@ The component will have a camel-cased name based on the name of the file, and it
 ##### `withamp-to-config`
 Terminal
 ```
-npx @next/codemodwithamp-to-config
+npx@next/codemodwithamp-to-config
 ```
 
 Transforms the `withAmp` HOC into Next.js 9 page configuration.
@@ -431,7 +431,7 @@ exportconstconfig= {
 ##### `url-to-withrouter`
 Terminal
 ```
-npx @next/codemodurl-to-withrouter
+npx@next/codemodurl-to-withrouter
 ```
 
 Transforms the deprecated automatically injected `url` property on top level pages to using `withRouter` and the `router` property it injects. Read more here: https://nextjs.org/docs/messages/url-deprecated

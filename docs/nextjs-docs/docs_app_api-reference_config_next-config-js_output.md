@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Configurationnext.config.jsoutput
 # output
 During a build, Next.js will automatically trace each page and its dependencies to determine all of the files that are needed for deploying a production version of your application.
@@ -31,13 +31,13 @@ Additionally, a minimal `server.js` file is also output which can be used instea
 To copy these manually, you can use the `cp` command-line tool after you `next build`:
 Terminal
 ```
-cp -rpublic.next/standalone/&& cp -r.next/static.next/standalone/.next/
+cp-rpublic.next/standalone/&&cp-r.next/static.next/standalone/.next/
 ```
 
 To start your minimal `server.js` file locally, run the following command:
 Terminal
 ```
-node .next/standalone/server.js
+node.next/standalone/server.js
 ```
 
 > **Good to know** :

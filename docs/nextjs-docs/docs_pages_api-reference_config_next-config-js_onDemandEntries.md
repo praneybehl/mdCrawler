@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Configurationnext.config.js OptionsonDemandEntries
 # onDemandEntries
 Next.js exposes some options that give you some control over how the server will dispose or keep in memory built pages in development.

@@ -1,12 +1,33 @@
+# Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+DenyAccept all
+Consent Settings
+Privacy Policy
+Your Privacy
+This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+Marketing
+Off
+Marketing cookies and services are used to deliver personalized advertisements, promotions, and offers. These technologies enable targeted advertising and marketing campaigns by collecting information about users' interests, preferences, and online activities. 
+Analytics
+Off
+Analytics cookies and services are used for collecting statistical information about how visitors interact with a website. These technologies provide insights into website usage, visitor behavior, and site performance to understand and improve the site and enhance user experience.
+Functional
+Off
+Functional cookies and services are used to offer enhanced and personalized functionalities. These technologies provide additional features and improved user experiences, such as remembering your language preferences, font sizes, region selections, and customized layouts. Opting out of these cookies may render certain services or functionality of the website unavailable.
+Essential
+On
+Essential cookies and services are used to enable core website features, such as ensuring the security of the website. 
+SaveDenyAccept all
+Privacy Policy
 Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationUpgradingMigrating from Create React App
 # Migrating from Create React App
 This guide will help you migrate an existing Create React App (CRA) site to Next.js.
@@ -39,7 +60,7 @@ Our goal is to get a working Next.js application as quickly as possible so that 
 Install Next.js in your existing project:
 Terminal
 ```
-npm installnext@latest
+npminstallnext@latest
 ```
 
 ### Step 2: Create the Next.js Configuration File
@@ -215,9 +236,9 @@ Since we want to keep the app as an SPA for now and intercept **all** routes, we
 
 ```
 app
- ┣ [[...slug]]
- ┃ ┗page.tsx
- ┣ layout.tsx
+┣ [[...slug]]
+┃┗page.tsx
+┣layout.tsx
 ```
 
   1. **Add the following to`page.tsx`** :
@@ -324,7 +345,7 @@ next-env.d.ts
 
 Now you can run:
 ```
-npm rundev
+npmrundev
 ```
 
 Open http://localhost:3000. You should see your application now running on Next.js (in SPA mode).
@@ -395,7 +416,7 @@ Next.js automatically sets up TypeScript if you have a `tsconfig.json`. Make sur
 ## Bundler Compatibility
 Both Create React App and Next.js default to webpack for bundling. Next.js also offers Turbopack for faster local development with:
 ```
-next dev--turbopack
+nextdev--turbopack
 ```
 
 You can still provide a custom webpack configuration if you need to migrate advanced webpack settings from CRA.

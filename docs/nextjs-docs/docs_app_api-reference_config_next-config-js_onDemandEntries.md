@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Configurationnext.config.jsonDemandEntries
 # onDemandEntries
 Next.js exposes some options that give you some control over how the server will dispose or keep in memory built pages in development.

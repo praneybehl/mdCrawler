@@ -2,24 +2,24 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationUpgradingVersion 15
 # Version 15
 ## Upgrading from 14 to 15
 To update to Next.js version 15, you can use the `upgrade` codemod:
 Terminal
 ```
-npx @next/codemod@canaryupgradelatest
+npx@next/codemod@canaryupgradelatest
 ```
 
 If you prefer to do it manually, ensure that you're installing the latest Next & React versions:
 Terminal
 ```
-npm inext@latestreact@latestreact-dom@latesteslint-config-next@latest
+npminext@latestreact@latestreact-dom@latesteslint-config-next@latest
 ```
 
 > **Good to know:**

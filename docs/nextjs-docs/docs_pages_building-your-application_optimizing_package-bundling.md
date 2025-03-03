@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationOptimizingBundling
 # Optimizing Bundling
 Bundling external packages can significantly improve the performance of your application. By default, packages imported into your application are not bundled. This can impact performance or might not work if external packages are not pre-bundled, for example, if imported from a monorepo or `node_modules`. This page will guide you through how to analyze and configure package bundling.
@@ -15,11 +15,11 @@ Bundling external packages can significantly improve the performance of your app
 ### Installation
 Install the plugin by running the following command:
 ```
-npm i@next/bundle-analyzer
+npmi@next/bundle-analyzer
 # or
-yarn add@next/bundle-analyzer
+yarnadd@next/bundle-analyzer
 # or
-pnpm add@next/bundle-analyzer
+pnpmadd@next/bundle-analyzer
 ```
 
 Then, add the bundle analyzer's settings to your `next.config.js`.
@@ -36,11 +36,11 @@ module.exports=withBundleAnalyzer(nextConfig)
 ### Generating a report
 Run the following command to analyze your bundles:
 ```
-ANALYZE=true npm run build
+ANALYZE=truenpmrunbuild
 # or
-ANALYZE=true yarn build
+ANALYZE=trueyarnbuild
 # or
-ANALYZE=true pnpm build
+ANALYZE=truepnpmbuild
 ```
 
 The report will open three new tabs in your browser, which you can inspect. Periodically evaluating your application's bundles can help you maintain application performance over time.

@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationRenderingServer Components
 # Server Components
 React Server Components allow you to write UI that can be rendered and optionally cached on the server. In Next.js, the rendering work is further split by route segments to enable streaming and partial rendering, and there are three different server rendering strategies:
@@ -82,9 +82,9 @@ Dynamic APIs rely on information that can only be known at request time (and not
 
 
 ### Streaming
-![Diagram showing parallelization of route segments during streaming, showing data fetching, rendering, and hydration of individual chunks.](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fsequential-parallel-data-fetching.png&w=3840&q=75)![Diagram showing parallelization of route segments during streaming, showing data fetching, rendering, and hydration of individual chunks.](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fsequential-parallel-data-fetching.png&w=3840&q=75)
+![Diagram showing parallelization of route segments during streaming, showing data fetching, rendering, and hydration of individual chunks.](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fsequential-parallel-data-fetching.png&w=3840&q=75)![Diagram showing parallelization of route segments during streaming, showing data fetching, rendering, and hydration of individual chunks.](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fsequential-parallel-data-fetching.png&w=3840&q=75)
 Streaming enables you to progressively render UI from the server. Work is split into chunks and streamed to the client as it becomes ready. This allows the user to see parts of the page immediately, before the entire content has finished rendering.
-![Diagram showing partially rendered page on the client, with loading UI for chunks that are being streamed.](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fserver-rendering-with-streaming.png&w=3840&q=75)![Diagram showing partially rendered page on the client, with loading UI for chunks that are being streamed.](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fserver-rendering-with-streaming.png&w=3840&q=75)
+![Diagram showing partially rendered page on the client, with loading UI for chunks that are being streamed.](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fserver-rendering-with-streaming.png&w=3840&q=75)![Diagram showing partially rendered page on the client, with loading UI for chunks that are being streamed.](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fserver-rendering-with-streaming.png&w=3840&q=75)
 Streaming is built into the Next.js App Router by default. This helps improve both the initial page loading performance, as well as UI that depends on slower data fetches that would block rendering the whole route. For example, reviews on a product page.
 You can start streaming route segments using `loading.js` and UI components with React Suspense. See the Loading UI and Streaming section for more information.
 ## Next Steps

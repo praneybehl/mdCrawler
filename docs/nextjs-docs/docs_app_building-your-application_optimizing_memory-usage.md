@@ -1,33 +1,12 @@
-# Your Privacy
-This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
-DenyAccept all
-Consent Settings
-Privacy Policy
-Your Privacy
-This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
-Marketing
-Off
-Marketing cookies and services are used to deliver personalized advertisements, promotions, and offers. These technologies enable targeted advertising and marketing campaigns by collecting information about users' interests, preferences, and online activities. 
-Analytics
-Off
-Analytics cookies and services are used for collecting statistical information about how visitors interact with a website. These technologies provide insights into website usage, visitor behavior, and site performance to understand and improve the site and enhance user experience.
-Functional
-Off
-Functional cookies and services are used to offer enhanced and personalized functionalities. These technologies provide additional features and improved user experiences, such as remembering your language preferences, font sizes, region selections, and customized layouts. Opting out of these cookies may render certain services or functionality of the website unavailable.
-Essential
-On
-Essential cookies and services are used to enable core website features, such as ensuring the security of the website. 
-SaveDenyAccept all
-Privacy Policy
 Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationOptimizingMemory Usage
 # Memory Usage
 As applications grow and become more feature rich, they can demand more resources when developing locally or creating production builds.
@@ -45,7 +24,7 @@ Starting in `14.2.0`, you can run `next build --experimental-debug-memory-usage`
 To look for memory issues, you can record a heap profile from Node.js and load it in Chrome DevTools to identify potential sources of memory leaks.
 In your terminal, pass the `--heap-prof` flag to Node.js when starting your Next.js build:
 ```
-node --heap-profnode_modules/next/dist/bin/nextbuild
+node--heap-profnode_modules/next/dist/bin/nextbuild
 ```
 
 At the end of the build, a `.heapprofile` file will be created by Node.js.

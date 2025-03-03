@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceComponentsForm
 # Form
 The `<Form>` component extends the HTML `<form>` element to provide **prefetching** of loading UI, **client-side navigation** on submission, and **progressive enhancement**.
@@ -20,7 +20,7 @@ import Form from'next/form'
 exportdefaultfunctionPage() {
 return (
   <Formaction="/search">
-   {/* On submission, the input value will be appended to 
+   {/* On submission, the input value will be appended to
      the URL, e.g. /search?query=abc */}
    <inputname="query" />
    <buttontype="submit">Submit</button>
@@ -199,7 +199,8 @@ exportdefaultasyncfunctionPostPage({
 }: {
  params:Promise<{ id:string }>
 }) {
-constdata=awaitgetPost((await params).id)
+const { id } =await params
+constdata=awaitgetPost(id)
 return (
   <div>
    <h1>{data.title}</h1>

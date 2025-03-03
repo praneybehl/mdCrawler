@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFile Conventionsroute.js
 # route.js
 Route Handlers allow you to create custom request handlers for a given route using the Web Request and Response APIs.
@@ -61,7 +61,7 @@ exportasyncfunctionGET(
  request:Request,
  { params }: { params:Promise<{ team:string }> }
 ) {
-constteam= (await params).team
+const { team } =await params
 }
 ```
 

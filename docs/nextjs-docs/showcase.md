@@ -36,9 +36,9 @@ Uptime
 17m+
 Edge requests at launch
   * ![](https://nextjs.org/_next/static/media/sonos-visual-light.baebe285.svg)
-![Sonos logo](https://nextjs.org/icons/sonos.svg)
+![Sonos logo](https://assets.vercel.com/image/upload/v1582596549/front/home/new/logos/sonos.svg)
 Read Sonos's customer story
-![Sonos logo](https://nextjs.org/icons/sonos.svg)
+![Sonos logo](https://assets.vercel.com/image/upload/v1582596549/front/home/new/logos/sonos.svg)
 Developing at the speed of sound: How Sonos amplified their DevExAfter migrating to Next.js and Vercel, Sonos had 75% faster build times and improved their performance scores by 10%
 75% faster
 Build times
@@ -70,22 +70,22 @@ Web Apps
 AI
 Marketing & Media
 Platform Engineering
-![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsonos.fd388bcb.png&w=750&q=55&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsonos.fd388bcb.png&w=750&q=55&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Sonos
 Composable Commerce
-![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnike.509ec268.jpg&w=750&q=55&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnike.509ec268.jpg&w=750&q=55&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Nike
 Composable Commerce
-![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fopen-ai.e18a2b60.png&w=750&q=55&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fopen-ai.e18a2b60.png&w=750&q=55&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 OpenAI
 AI
-![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fclaude.5aa10087.png&w=750&q=55&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fclaude.5aa10087.png&w=750&q=55&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Claude
 AI
-![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fspotify.6415e03a.png&w=750&q=55&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fspotify.6415e03a.png&w=750&q=55&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 Spotify
 Web Apps
-![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnerdwallet.d4dd8d82.png&w=750&q=55&dpl=dpl_2wcoCZLikygxkRr57axKiXuLsdyM)
+![](https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnerdwallet.d4dd8d82.png&w=750&q=55&dpl=dpl_7jKcesqkbXmpzRdJBbsHq2cJAxBV)
 NerdWallet
 Web Apps
 Load More

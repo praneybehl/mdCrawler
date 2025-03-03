@@ -23,33 +23,33 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationUpgradingVersion 14
 # Version 14
 ## Upgrading from 13 to 14
 To update to Next.js version 14, run the following command using your preferred package manager:
 Terminal
 ```
-npm inext@next-14react@18react-dom@18&& npm ieslint-config-next@next-14-D
+npminext@next-14react@18react-dom@18&&npmieslint-config-next@next-14-D
 ```
 
 Terminal
 ```
-yarn addnext@next-14react@18react-dom@18&& yarn addeslint-config-next@next-14-D
+yarnaddnext@next-14react@18react-dom@18&&yarnaddeslint-config-next@next-14-D
 ```
 
 Terminal
 ```
-pnpm inext@next-14react@18react-dom@18&& pnpm ieslint-config-next@next-14-D
+pnpminext@next-14react@18react-dom@18&&pnpmieslint-config-next@next-14-D
 ```
 
 Terminal
 ```
-bun addnext@next-14react@18react-dom@18&& bun addeslint-config-next@next-14-D
+bunaddnext@next-14react@18react-dom@18&&bunaddeslint-config-next@next-14-D
 ```
 
 > **Good to know:** If you are using TypeScript, ensure you also upgrade `@types/react` and `@types/react-dom` to their latest versions.

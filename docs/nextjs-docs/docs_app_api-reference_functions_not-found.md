@@ -23,11 +23,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFunctionsnotFound
 # notFound
 The `notFound` function allows you to render the `not-found file` within a route segment as well as inject a `<meta name="robots" content="noindex" />` tag.
@@ -42,7 +42,8 @@ if (!res.ok) returnundefined
 returnres.json()
 }
 exportdefaultasyncfunctionProfile({ params }) {
-constuser=awaitfetchUser((await params).id)
+const { id } =await params
+constuser=awaitfetchUser(id)
 if (!user) {
 notFound()
  }

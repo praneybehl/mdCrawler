@@ -260,6 +260,8 @@ libraries:
     url: https://www.pygame.org/docs/
   - name: bevy-docs
     url: https://bevyengine.org/learn/
+  - name: excalibur-docs
+    url: https://excaliburjs.com/docs/
   
   # Embedded Systems
   - name: arduino-docs
@@ -466,3 +468,7 @@ libraries:
     url: https://firebase.google.com/docs/hosting
   - name: firebase-app-check-docs
     url: https://firebase.google.com/docs/app-check
+
+  # Frontend UI Frameworks
+  - name: heroui-docs
+    url: https://www.heroui.com/docs/guide/introduction

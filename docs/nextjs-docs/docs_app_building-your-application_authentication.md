@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 App RouterBuilding Your ApplicationAuthentication
 # Authentication
 Understanding authentication is crucial for protecting your application's data. This page will guide you through what React and Next.js features to use to implement auth.
@@ -17,7 +17,7 @@ Before starting, it helps to break down the process into three concepts:
 
 
 This diagram shows the authentication flow using React and Next.js features:
-![Diagram showing the authentication flow with React and Next.js features](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fauthentication-overview.png&w=3840&q=75)![Diagram showing the authentication flow with React and Next.js features](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fauthentication-overview.png&w=3840&q=75)
+![Diagram showing the authentication flow with React and Next.js features](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Flight%2Fauthentication-overview.png&w=3840&q=75)![Diagram showing the authentication flow with React and Next.js features](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Fauthentication-overview.png&w=3840&q=75)
 The examples on this page walk through basic username and password auth for educational purposes. While you can implement a custom auth solution, for increased security and simplicity, we recommend using an authentication library. These offer built-in solutions for authentication, session management, and authorization, as well as additional features such as social logins, multi-factor authentication, and role-based access control. You can find a list in the Auth Libraries section.
 ## Authentication
 ### Sign-up and login functionality
@@ -229,7 +229,7 @@ In addition to the above, consider adding functionality to update (or refresh) t
 There are a few ways you can generate secret key to sign your session. For example, you may choose to use the `openssl` command in your terminal:
 terminal
 ```
-openssl rand-base6432
+opensslrand-base6432
 ```
 
 This command generates a 32-character random string that you can use as your secret key and store in your environment variables file:
@@ -733,6 +733,7 @@ Now that you've learned about authentication in Next.js, here are Next.js-compat
   * Auth0
   * Clerk
   * Kinde
+  * Logto
   * NextAuth.js
   * Ory
   * Stack Auth

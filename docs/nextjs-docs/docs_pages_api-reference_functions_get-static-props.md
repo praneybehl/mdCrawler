@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFunctionsgetStaticProps
 # getStaticProps
 Exporting a function called `getStaticProps` will pre-render a page at build time using the props returned from the function:

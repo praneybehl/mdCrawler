@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Configurationnext.config.jsoptimizePackageImports
 # optimizePackageImports
 Some packages can export hundreds or thousands of modules, which can cause performance issues in development and production.

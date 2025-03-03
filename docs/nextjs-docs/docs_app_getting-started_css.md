@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 App RouterGetting StartedCSS
 # How to use CSS in your application
 Next.js provides several ways to use CSS in your application, including:
@@ -78,7 +78,7 @@ Tailwind CSS is a utility-first CSS framework that integrates seamlessly with Ne
 To start using Tailwind, install the necessary Tailwind CSS packages:
 Terminal
 ```
-npm install-Dtailwindcss@tailwindcss/postcsspostcss
+npminstall-Dtailwindcss@tailwindcss/postcsspostcss
 ```
 
 ### Configuring Tailwind
@@ -142,7 +142,7 @@ You can also use component-level Sass via CSS Modules and the `.module.scss`or `
 To start using Sass, install the `sass` package:
 Terminal
 ```
-npm install--save-devsass
+npminstall--save-devsass
 ```
 
 ### Customizing Sass options

@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceConfigurationESLint
 # ESLint
 Next.js provides an ESLint plugin, `eslint-plugin-next`, already bundled within the base configuration that makes it possible to catch common issues and problems in a Next.js application.
@@ -59,7 +59,7 @@ module.exports= {
 Similarly, the `--dir` and `--file` flags can be used for `next lint` to lint specific directories and files:
 Terminal
 ```
-next lint--dirpages--dirutils--filebar.js
+nextlint--dirpages--dirutils--filebar.js
 ```
 
 ### Specifying a root directory within a monorepo
@@ -89,7 +89,7 @@ export default eslintConfig
 To improve performance, information of files processed by ESLint are cached by default. This is stored in `.next/cache` or in your defined build directory. If you include any ESLint rules that depend on more than the contents of a single source file and need to disable the cache, use the `--no-cache` flag with `next lint`.
 Terminal
 ```
-next lint--no-cache
+nextlint--no-cache
 ```
 
 ### Disabling rules
@@ -155,10 +155,10 @@ ESLint also contains code formatting rules, which can conflict with your existin
 First, install the dependency:
 Terminal
 ```
-npm install--save-deveslint-config-prettier
-yarn add--deveslint-config-prettier
-pnpm add--save-deveslint-config-prettier
-bun add--deveslint-config-prettier
+npminstall--save-deveslint-config-prettier
+yarnadd--deveslint-config-prettier
+pnpmadd--save-deveslint-config-prettier
+bunadd--deveslint-config-prettier
 ```
 
 Then, add `prettier` to your existing ESLint config:
@@ -234,10 +234,10 @@ module.exports= {
 The plugin can be installed normally in your project without needing to run `next lint`:
 Terminal
 ```
-npm install--save-dev@next/eslint-plugin-next
-yarn add--dev@next/eslint-plugin-next
-pnpm add--save-dev@next/eslint-plugin-next
-bun add--dev@next/eslint-plugin-next
+npminstall--save-dev@next/eslint-plugin-next
+yarnadd--dev@next/eslint-plugin-next
+pnpmadd--save-dev@next/eslint-plugin-next
+bunadd--dev@next/eslint-plugin-next
 ```
 
 This eliminates the risk of collisions or errors that can occur due to importing the same plugin or parser across multiple configurations.

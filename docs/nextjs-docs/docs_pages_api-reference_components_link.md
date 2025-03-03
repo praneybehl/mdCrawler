@@ -2,11 +2,11 @@ Menu
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 Using Pages Router
 Features available in /pages
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceComponentsLink
 # Link
 `<Link>` is a React component that extends the HTML `<a>` element to provide prefetching and client-side navigation between routes. It is the primary way to navigate between routes in Next.js.
@@ -116,22 +116,6 @@ An `<a>` element is no longer required as a child of `<Link>`. Add the `legacyBe
 > **Good to know** : when `legacyBehavior` is not set to `true`, all `anchor` tag properties can be passed to `next/link` as well such as, `className`, `onClick`, etc.
 ### `passHref`
 Forces `Link` to send the `href` property to its child. Defaults to `false`. See the passing a functional component example for more information.
-### `scroll`
-Scroll to the top of the page after a navigation. Defaults to `true`.
-pages/index.tsx
-TypeScript
-JavaScriptTypeScript
-```
-import Link from'next/link'
-exportdefaultfunctionHome() {
-return (
-  <Linkhref="/dashboard"scroll={false}>
-   Dashboard
-  </Link>
- )
-}
-```
-
 ### `shallow`
 Update the path of the current page without rerunning `getStaticProps`, `getServerSideProps` or `getInitialProps`. Defaults to `false`.
 pages/index.tsx

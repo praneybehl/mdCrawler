@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Configurationnext.config.jsgenerateBuildId
 # generateBuildId
 Next.js generates an ID during `next build` to identify which version of your application is being served. The same build should be used and boot up multiple containers.

@@ -23,11 +23,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 File ConventionsMetadata Filessitemap.xml
 # sitemap.xml
 `sitemap.(xml|js|ts)` is a special file that matches the Sitemaps XML format to help search engine crawlers index your site more efficiently.
@@ -339,8 +339,8 @@ typeSitemap=Array<{
 |'monthly'
 |'yearly'
 |'never'
- priority?:number
- alternates?: {
+priority?:number
+alternates?: {
   languages?:Languages<string>
  }
 }>

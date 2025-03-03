@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationTestingPlaywright
 # Setting up Playwright with Next.js
 Playwright is a testing framework that lets you automate Chromium, Firefox, and WebKit with a single API. You can use it to write **End-to-End (E2E)** testing. This guide will show you how to set up Playwright with Next.js and write your first tests.
@@ -14,18 +14,18 @@ Playwright is a testing framework that lets you automate Chromium, Firefox, and 
 The fastest way to get started is to use `create-next-app` with the with-playwright example. This will create a Next.js project complete with Playwright configured.
 Terminal
 ```
-npx create-next-app@latest--examplewith-playwrightwith-playwright-app
+npxcreate-next-app@latest--examplewith-playwrightwith-playwright-app
 ```
 
 ## Manual setup
 To install Playwright, run the following command:
 Terminal
 ```
-npm initplaywright
+npminitplaywright
 # or
-yarn createplaywright
+yarncreateplaywright
 # or
-pnpm createplaywright
+pnpmcreateplaywright
 ```
 
 This will take you through a series of prompts to setup and configure Playwright for your project, including adding a `playwright.config.ts` file. Please refer to the Playwright installation guide for the step-by-step guide.

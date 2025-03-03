@@ -33,6 +33,7 @@ We track general usage information, such as Next.js plugins and build performanc
   * General machine information (e.g. number of CPUs, macOS/Windows/Linux, whether or not the command was run within CI)
   * What Next.js plugins are present in your project
   * Duration of `next build` and size of application (total number of pages)
+  * During development, we ask for additional feedback on errors (see Error Feedback)
 
 
 > **Note** : This list is regularly audited to ensure its accuracy.
@@ -56,56 +57,59 @@ We take privacy and our security very seriously. Next.js telemetry falls under t
 ## Will this data be shared?
 The data we collect is completely anonymous, not traceable to the source, and only meaningful in aggregate form.
 **No data we collect is personally identifiable.**
+## Error Feedback
+When an error is displayed during development, Next.js allows sending feedback whether the error was helpful or not. This feedback is sent to Vercel and is used to improve the error messages in Next.js. Next.js will not automatically collect this feedback. Developers must click the thumbs up or down buttons to send the corresponding feedback.
+Next.js will only collect an error code and any other information it already automatically collects. The error code is a unique identifier for a particular error. The full error message cannot be reconstructed from this code since the error message may contain app-specific data like the page the error occured in. A list of error codes and their corresponding messages is available at vercel/next.js/packages/next/errors.json.
 ## How do I opt-out?
 You may opt out-by running `next telemetry disable` in the root of your project directory:
 ```
-npx nexttelemetrydisable
+npxnexttelemetrydisable
 ```
 
 ```
-yarn nexttelemetrydisable
+yarnnexttelemetrydisable
 ```
 
 ```
-pnpm execnexttelemetrydisable
+pnpmexecnexttelemetrydisable
 ```
 
 ```
-bun nexttelemetrydisable
+bunnexttelemetrydisable
 ```
 
 You may check the status of telemetry collection at any time by running `next telemetry status` in the root of your project directory:
 ```
-npx nexttelemetrystatus
+npxnexttelemetrystatus
 ```
 
 ```
-yarn nexttelemetrystatus
+yarnnexttelemetrystatus
 ```
 
 ```
-pnpm execnexttelemetrystatus
+pnpmexecnexttelemetrystatus
 ```
 
 ```
-bun nexttelemetrystatus
+bunnexttelemetrystatus
 ```
 
 You may re-enable telemetry if you'd like to re-join the program by running the following in the root of your project directory:
 ```
-npx nexttelemetryenable
+npxnexttelemetryenable
 ```
 
 ```
-yarn nexttelemetryenable
+yarnnexttelemetryenable
 ```
 
 ```
-pnpm execnexttelemetryenable
+pnpmexecnexttelemetryenable
 ```
 
 ```
-bun nexttelemetryenable
+bunnexttelemetryenable
 ```
 
 You may also opt-out by setting an environment variable: `NEXT_TELEMETRY_DISABLED=1`.

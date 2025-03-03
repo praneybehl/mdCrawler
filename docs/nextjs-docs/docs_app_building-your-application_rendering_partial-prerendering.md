@@ -2,17 +2,17 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Building Your ApplicationRenderingPartial Prerendering
 # Partial Prerendering
 > **Note:** Partial Prerendering is an **experimental** feature only available on canary and is subject to change. It is not ready for production use.
 Partial Prerendering (PPR) enables you to combine static and dynamic components together in the same route.
 During the build, Next.js prerenders as much of the route as possible. If dynamic code is detected, like reading from the incoming request, you can wrap the relevant component with a React Suspense boundary. The Suspense boundary fallback will then be included in the prerendered HTML.
-![Partially Prerendered Product Page showing static nav and product information, and dynamic cart and recommended products](https://nextjs.org/_next/image?url=%2Flearn%2Flight%2Fthinking-in-ppr.png&w=3840&q=75)![Partially Prerendered Product Page showing static nav and product information, and dynamic cart and recommended products](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Fthinking-in-ppr.png&w=3840&q=75)
+![Partially Prerendered Product Page showing static nav and product information, and dynamic cart and recommended products](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Flight%2Fthinking-in-ppr.png&w=3840&q=75)![Partially Prerendered Product Page showing static nav and product information, and dynamic cart and recommended products](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Fdark%2Fthinking-in-ppr.png&w=3840&q=75)
 > **🎥 Watch:** Why PPR and how it works → YouTube (10 minutes).
 ## Background
 PPR enables your Next.js server to immediately send prerendered content.
@@ -22,7 +22,7 @@ To prevent creating many HTTP requests for each dynamic component, PPR is able t
 ### Incremental Adoption (Version 15 Canary Versions)
 In Next.js 15 canary versions, PPR is available as an experimental feature. It's not available in the stable versions yet. To install:
 ```
-npm installnext@canary
+npminstallnext@canary
 ```
 
 You can incrementally adopt Partial Prerendering in layouts and pages by setting the `ppr` option in `next.config.js` to `incremental`, and exporting the `experimental_ppr` route config option at the top of the file:

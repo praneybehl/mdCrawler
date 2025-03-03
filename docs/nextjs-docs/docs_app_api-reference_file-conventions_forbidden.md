@@ -23,11 +23,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFile Conventionsforbidden.js
 # forbidden.js
 This feature is currently experimental and subject to change, it's not recommended for production. Try it out and share your feedback on GitHub.

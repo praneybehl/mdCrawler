@@ -2,11 +2,11 @@ Menu
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 Using App Router
 Features available in /app
 Using Latest Version
-15.1.7
+15.2.0
 API ReferenceFunctionsuseParams
 # useParams
 `useParams` is a **Client Component** hook that lets you read a route's dynamic params filled in by the current URL.
