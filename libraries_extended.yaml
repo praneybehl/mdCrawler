@@ -10,7 +10,9 @@ libraries:
     url: https://doc.rust-lang.org/std/
   - name: go-docs
     url: https://go.dev/doc/
-  
+  - name: php-docs
+    url: https://www.php.net/manual/en/
+
   # Web Frameworks
   - name: django-docs
     url: https://docs.djangoproject.com/
@@ -22,7 +24,9 @@ libraries:
     url: https://expressjs.com/
   - name: rails-docs
     url: https://guides.rubyonrails.org/
-  
+  - name: laravel-docs
+    url: https://laravel.com/docs/
+
   # Database Systems
   - name: postgresql-docs
     url: https://www.postgresql.org/docs/
@@ -34,7 +38,7 @@ libraries:
     url: https://www.mongodb.com/docs/
   - name: redis-docs
     url: https://redis.io/docs/
-  
+
   # ORMs & Database Tools
   - name: sqlalchemy-docs
     url: https://docs.sqlalchemy.org/
@@ -46,7 +50,7 @@ libraries:
     url: https://typeorm.io/
   - name: drizzle-docs
     url: https://orm.drizzle.team/docs/
-  
+
   # AI/ML Frameworks
   - name: tensorflow-docs
     url: https://www.tensorflow.org/api_docs
@@ -62,7 +66,7 @@ libraries:
     url: https://langchain-ai.github.io/langgraph/tutorials
   - name: pydantic-ai-docs
     url: https://ai.pydantic.dev/
-  
+
   # Natural Language Processing
   - name: spacy-docs
     url: https://spacy.io/api/
@@ -74,7 +78,7 @@ libraries:
     url: https://stanfordnlp.github.io/stanza/
   - name: flair-docs
     url: https://github.com/flairNLP/flair
-  
+
   # Computer Vision
   - name: opencv-docs
     url: https://docs.opencv.org/
@@ -86,7 +90,7 @@ libraries:
     url: https://mmdetection.readthedocs.io/
   - name: keras-cv-docs
     url: https://keras.io/api/keras_cv/
-  
+
   # AI Agents & Automation
   - name: autogpt-docs
     url: https://docs.agpt.co/
@@ -98,7 +102,7 @@ libraries:
     url: https://docs.crewai.com/
   - name: jarvis-docs
     url: https://microsoft.github.io/JARVIS/
-  
+
   # Vector Databases
   - name: pinecone-docs
     url: https://docs.pinecone.io/
@@ -110,7 +114,7 @@ libraries:
     url: https://milvus.io/docs/
   - name: chroma-docs
     url: https://docs.trychroma.com/
-  
+
   # LLM Toolkits
   - name: llama-cpp-docs
     url: https://llama.meta.com/docs/
@@ -122,7 +126,7 @@ libraries:
     url: https://platform.openai.com/docs/
   - name: anthropic-docs
     url: https://docs.anthropic.com/
-  
+
   # Data Processing
   - name: pandas-docs
     url: https://pandas.pydata.org/docs/
@@ -134,7 +138,7 @@ libraries:
     url: https://docs.dask.org/
   - name: spark-docs
     url: https://spark.apache.org/docs/
-  
+
   # YAML Processing
   - name: ruamel.yaml-docs
     url: https://yaml.readthedocs.io/
@@ -146,7 +150,7 @@ libraries:
     url: https://bitbucket.org/asomov/snakeyaml/src/master/
   - name: yaml-cpp-docs
     url: https://github.com/jbeder/yaml-cpp
-  
+
   # API Tools
   - name: swagger-docs
     url: https://swagger.io/docs/
@@ -158,7 +162,7 @@ libraries:
     url: https://docs.insomnia.rest/
   - name: hoppscotch-docs
     url: https://hoppscotch.io/docs
-  
+
   # DevOps & Cloud
   - name: docker-docs
     url: https://docs.docker.com/
@@ -172,7 +176,7 @@ libraries:
     url: https://www.pulumi.com/docs/
   - name: coolify-docs
     url: https://coolify.io/docs/what-is-coolify
-  
+
   # CI/CD Tools
   - name: github-actions-docs
     url: https://docs.github.com/actions
@@ -184,7 +188,7 @@ libraries:
     url: https://circleci.com/docs/
   - name: argo-workflows-docs
     url: https://argoproj.github.io/argo-workflows/
-  
+
   # Testing Frameworks
   - name: pytest-docs
     url: https://docs.pytest.org/
@@ -196,7 +200,9 @@ libraries:
     url: https://playwright.dev/docs/intro
   - name: selenium-docs
     url: https://www.selenium.dev/documentation/
-  
+  - name: pest-docs
+    url: https://pestphp.com/docs/
+
   # Monitoring & Observability
   - name: prometheus-docs
     url: https://prometheus.io/docs/
@@ -208,7 +214,7 @@ libraries:
     url: https://docs.datadoghq.com/
   - name: newrelic-docs
     url: https://docs.newrelic.com/
-  
+
   # Security Tools
   - name: vault-docs
     url: https://developer.hashicorp.com/vault/docs
@@ -220,7 +226,7 @@ libraries:
     url: https://docs.snyk.io/
   - name: owasp-zap-docs
     url: https://www.zaproxy.org/docs/
-  
+
   # Frontend Frameworks
   - name: react-docs
     url: https://react.dev/learn
@@ -234,7 +240,15 @@ libraries:
     url: https://www.solidjs.com/guides
   - name: nextjs-docs
     url: https://nextjs.org/docs
-  
+  - name: inertia-docs
+    url: https://inertiajs.com/
+  - name: blade-docs
+    url: https://laravel.com/docs/blade
+  - name: livewire-docs
+    url: https://livewire.laravel.com/docs/quickstart
+  - name: alpinejs-docs
+    url: https://alpinejs.dev/start-here
+
   # Mobile Development
   - name: react-native-docs
     url: https://reactnative.dev/docs/getting-started
@@ -248,7 +262,7 @@ libraries:
     url: https://developer.android.com/jetpack/compose/documentation
   - name: capacitor-docs
     url: https://capacitorjs.com/docs
-  
+
   # Game Development
   - name: unity-docs
     url: https://docs.unity3d.com/Manual/index.html
@@ -262,7 +276,7 @@ libraries:
     url: https://bevyengine.org/learn/
   - name: excalibur-docs
     url: https://excaliburjs.com/docs/
-  
+
   # Embedded Systems
   - name: arduino-docs
     url: https://docs.arduino.cc/
@@ -274,7 +288,7 @@ libraries:
     url: https://docs.zephyrproject.org/
   - name: raspberry-pi-docs
     url: https://www.raspberrypi.com/documentation/
-  
+
   # Quantum Computing
   - name: qiskit-docs
     url: https://qiskit.org/documentation/
@@ -286,7 +300,7 @@ libraries:
     url: https://www.tensorflow.org/quantum
   - name: braket-docs
     url: https://docs.aws.amazon.com/braket/
-  
+
   # Blockchain
   - name: solidity-docs
     url: https://docs.soliditylang.org/
@@ -298,7 +312,7 @@ libraries:
     url: https://book.getfoundry.sh/
   - name: substrate-docs
     url: https://docs.substrate.io/
-  
+
   # Desktop Applications
   - name: electron-docs
     url: https://www.electronjs.org/docs/latest/
@@ -310,7 +324,7 @@ libraries:
     url: https://docs.gtk.org/
   - name: javafx-docs
     url: https://openjfx.io/openjfx-docs/
-  
+
   # Audio Processing
   - name: librosa-docs
     url: https://librosa.org/doc/latest/
@@ -322,7 +336,7 @@ libraries:
     url: http://files.portaudio.com/docs/
   - name: soundfile-docs
     url: https://pysoundfile.readthedocs.io/
-  
+
   # Geospatial
   - name: gdal-docs
     url: https://gdal.org/documentation/
@@ -334,7 +348,7 @@ libraries:
     url: https://openlayers.org/doc/
   - name: cesium-docs
     url: https://cesium.com/learn/
-  
+
   # Visualization
   - name: matplotlib-docs
     url: https://matplotlib.org/stable/contents.html
@@ -346,7 +360,7 @@ libraries:
     url: https://docs.bokeh.org/
   - name: altair-docs
     url: https://altair-viz.github.io/
-  
+
   # Workflow Automation
   - name: airflow-docs
     url: https://airflow.apache.org/docs/
@@ -358,7 +372,7 @@ libraries:
     url: https://luigi.readthedocs.io/
   - name: kubeflow-docs
     url: https://www.kubeflow.org/docs/
-  
+
   # Documentation Tools
   - name: mkdocs-docs
     url: https://www.mkdocs.org/
@@ -370,7 +384,7 @@ libraries:
     url: https://docs.readthedocs.io/
   - name: swagger-ui-docs
     url: https://swagger.io/tools/swagger-ui/
-  
+
   # IDEs & Editors
   - name: vscode-docs
     url: https://code.visualstudio.com/docs
@@ -382,7 +396,7 @@ libraries:
     url: https://www.gnu.org/software/emacs/documentation.html
   - name: cursor-docs
     url: https://cursor.sh/docs/
-  
+
   # Package Managers
   - name: npm-docs
     url: https://docs.npmjs.com/
@@ -394,7 +408,9 @@ libraries:
     url: https://pip.pypa.io/
   - name: cargo-docs
     url: https://doc.rust-lang.org/cargo/
-  
+  - name: composer-docs
+    url: https://getcomposer.org/doc/
+
   # Build Tools
   - name: cmake-docs
     url: https://cmake.org/documentation/
@@ -406,7 +422,9 @@ libraries:
     url: https://webpack.js.org/concepts/
   - name: esbuild-docs
     url: https://esbuild.github.io/
-  
+  - name: vite-docs
+    url: https://vite.dev/guide/
+
   # Containerization
   - name: podman-docs
     url: https://docs.podman.io/
@@ -418,7 +436,7 @@ libraries:
     url: https://github.com/GoogleContainerTools/kaniko
   - name: skaffold-docs
     url: https://skaffold.dev/docs/
-  
+
   # Serverless
   - name: aws-lambda-docs
     url: https://docs.aws.amazon.com/lambda/
@@ -430,7 +448,7 @@ libraries:
     url: https://developers.cloudflare.com/workers/
   - name: openfaas-docs
     url: https://docs.openfaas.com/
-  
+
   # Edge Computing
   - name: wasm-edge-docs
     url: https://wasmedge.org/docs/
@@ -438,21 +456,21 @@ libraries:
     url: https://deno.land/manual
   - name: bun-docs
     url: https://bun.sh/docs
-  
+
   # Browser Tools
   - name: browser-use-docs
     url: https://docs.browser-use.com/
-  
+
   # Payment & Financial Services
   - name: stripe-docs
     url: https://docs.stripe.com/
-  
+
   # AI Services & Tools
   - name: trae-docs
     url: https://docs.trae.ai/docs/
   - name: praison-docs
     url: https://docs.praison.ai/
-  
+
   # Cloud Services
   - name: firebase-firestore-docs
     url: https://firebase.google.com/docs/firestore
@@ -472,3 +490,11 @@ libraries:
   # Frontend UI Frameworks
   - name: heroui-docs
     url: https://www.heroui.com/docs/guide/introduction
+
+  # CSS Frameworks
+  - name: tailwindcss-docs
+    url: https://tailwindcss.com/docs/
+
+  # Code Style Fixers
+  - name: pint-docs
+    url: https://laravel.com/docs/pint
