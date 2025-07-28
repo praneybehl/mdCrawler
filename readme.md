@@ -25,17 +25,18 @@ Join our vibrant Discord community [AiCodingBattle](https://discord.gg/TH8V5b5rG
 ## 🎯 What it Does
 
 Give it a documentation URL, and mdCrawler will:
-1. 🔍 Automatically discover all documentation pages
-2. 📥 Download and process each page
-3. ✨ Convert the content to clean Markdown
-4. 📁 Save everything in an organized folder structure
+1. 🗺️ Check for sitemaps to discover all documentation pages efficiently
+2. 🔍 Automatically discover pages through link crawling (if no sitemap)
+3. 📥 Download and process each page
+4. ✨ Convert the content to clean Markdown
+5. 📁 Save everything in an organized folder structure
 
 Perfect for:
 - 📖 Offline documentation reading
 - 📝 Content migration projects
 - 🔄 Documentation backups
 - 🎨 Custom documentation styling
-
+    
 ## 🚀 Quick Start
 
 ```bash
@@ -63,6 +64,9 @@ python main.py https://docs.python.org/fr/3/ python-docs
 
 # Using named arguments
 python main.py --url https://docs.python.org/fr/3/ --name python-docs
+
+# Disable sitemap discovery (use link crawling only)
+python main.py --no-sitemap --url https://docs.python.org/fr/3/ --name python-docs
 ```
 
 ### Multiple Documentation Sites
@@ -74,9 +78,37 @@ python main.py --config libraries_extended.yaml
 
 Your converted documentation will be available in the `docs/` directory!
 
+### 🗺️ Sitemap Support
+
+mdCrawler now automatically discovers and uses sitemaps for more efficient crawling:
+
+- **Automatic Discovery**: Checks common sitemap locations (`/sitemap.xml`, `/sitemap_index.xml`, etc.)
+- **Sitemap Index Support**: Handles sites with multiple sitemaps
+- **Efficient Crawling**: Gets all URLs upfront instead of discovering incrementally
+- **Fallback Mode**: Automatically falls back to link discovery if no sitemap is found
+- **Manual Override**: Use `--no-sitemap` to force link discovery mode
+
+Benefits of sitemap crawling:
+- ⚡ Faster - knows all pages upfront
+- 📊 More complete - ensures no pages are missed
+- 🎯 More efficient - no need to crawl pages just to find links
+- 📈 Progress tracking - shows accurate progress (e.g., "Processing [23/150]")
+
 ## 📖 Examples
 
 Here are some examples of how to use mdCrawler with popular documentation sites:
+
+### Claudelog
+```bash
+# Convert Claudelog docs to Markdown
+python main.py https://claudelog.com/ claudelog
+```
+
+### Pocketbase Documentation
+```bash
+# Convert Pocketbase docs to Markdown
+python main.py https://claudelog.com/ pocketbase
+```
 
 ### Supabase Documentation
 ```bash
