@@ -2,8 +2,10 @@ import os
 import asyncio
 import logging
 import yaml
+import aiohttp
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
+from xml.etree import ElementTree
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
 from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
 from crawl4ai.content_filter_strategy import PruningContentFilter
@@ -63,7 +65,117 @@ def should_process_url(url: str, base_domain: str) -> bool:
     
     return True
 
-async def crawl_documentation(url: str, name: str, timeout: int = 1800):  # 30 minute timeout
+async def discover_sitemap_urls(base_url: str) -> list:
+    """
+    Discover and parse sitemap URLs from a website.
+    Checks common sitemap locations and returns all found URLs.
+    """
+    parsed = urlparse(base_url)
+    base_domain = f"{parsed.scheme}://{parsed.netloc}"
+    
+    # Common sitemap locations
+    sitemap_locations = [
+        urljoin(base_domain, "/sitemap.xml"),
+        urljoin(base_domain, "/sitemap_index.xml"),
+        urljoin(base_domain, "/sitemap.xml.gz"),
+        urljoin(base_domain, "/sitemap/"),
+        urljoin(base_domain, "/sitemaps.xml"),
+    ]
+    
+    all_urls = []
+    
+    async with aiohttp.ClientSession() as session:
+        for sitemap_url in sitemap_locations:
+            try:
+                logger.debug(f"Checking sitemap at: {sitemap_url}")
+                async with session.get(sitemap_url, timeout=10) as response:
+                    if response.status == 200:
+                        content = await response.text()
+                        logger.info(f"Found sitemap at: {sitemap_url}")
+                        
+                        # Parse sitemap XML
+                        urls = parse_sitemap_content(content, base_domain)
+                        
+                        # Check if this is a sitemap index
+                        if is_sitemap_index(content):
+                            logger.info(f"Processing sitemap index at: {sitemap_url}")
+                            # Get all sitemap URLs from index
+                            sitemap_urls = parse_sitemap_index(content, base_domain)
+                            for sub_sitemap_url in sitemap_urls:
+                                try:
+                                    async with session.get(sub_sitemap_url, timeout=10) as sub_response:
+                                        if sub_response.status == 200:
+                                            sub_content = await sub_response.text()
+                                            sub_urls = parse_sitemap_content(sub_content, base_domain)
+                                            all_urls.extend(sub_urls)
+                                            logger.info(f"Found {len(sub_urls)} URLs in {sub_sitemap_url}")
+                                except Exception as e:
+                                    logger.warning(f"Error fetching sub-sitemap {sub_sitemap_url}: {str(e)}")
+                        else:
+                            all_urls.extend(urls)
+                            logger.info(f"Found {len(urls)} URLs in sitemap")
+                        
+                        # If we found a sitemap, don't check other locations
+                        break
+                        
+            except Exception as e:
+                logger.debug(f"No sitemap found at {sitemap_url}: {str(e)}")
+                continue
+    
+    # Remove duplicates while preserving order
+    seen = set()
+    unique_urls = []
+    for url in all_urls:
+        if url not in seen:
+            seen.add(url)
+            unique_urls.append(url)
+    
+    return unique_urls
+
+def is_sitemap_index(content: str) -> bool:
+    """Check if the XML content is a sitemap index."""
+    return '<sitemapindex' in content
+
+def parse_sitemap_index(content: str, base_domain: str) -> list:
+    """Parse sitemap index XML and extract sitemap URLs."""
+    urls = []
+    try:
+        root = ElementTree.fromstring(content)
+        # Handle namespace
+        namespace = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+        
+        # Find all sitemap locations
+        for sitemap in root.findall('.//ns:sitemap', namespace):
+            loc = sitemap.find('ns:loc', namespace)
+            if loc is not None and loc.text:
+                urls.append(loc.text.strip())
+    except Exception as e:
+        logger.error(f"Error parsing sitemap index: {str(e)}")
+    
+    return urls
+
+def parse_sitemap_content(content: str, base_domain: str) -> list:
+    """Parse sitemap XML content and extract URLs."""
+    urls = []
+    try:
+        root = ElementTree.fromstring(content)
+        # Handle namespace
+        namespace = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+        
+        # Find all URL locations
+        for url_elem in root.findall('.//ns:url', namespace):
+            loc = url_elem.find('ns:loc', namespace)
+            if loc is not None and loc.text:
+                url = loc.text.strip()
+                # Only include URLs from the same domain
+                if urlparse(url).netloc == urlparse(base_domain).netloc:
+                    urls.append(url)
+    except Exception as e:
+        logger.error(f"Error parsing sitemap: {str(e)}")
+    
+    return urls
+
+async def crawl_documentation(url: str, name: str, timeout: int = 1800, use_sitemap: bool = True):  # 30 minute timeout
     """
     Crawl a documentation website and save all pages as markdown files.
     
@@ -71,9 +183,11 @@ async def crawl_documentation(url: str, name: str, timeout: int = 1800):  # 30 m
         url (str): The URL of the documentation website
         name (str): Name of the output directory where markdown files will be saved
         timeout (int): Maximum time in seconds to spend crawling (default: 30 minutes)
+        use_sitemap (bool): Whether to attempt to discover and use sitemap (default: True)
     """
     logger.info(f"Starting crawl process for URL: {url}")
     logger.info(f"Output will be saved in: docs/{name}")
+    logger.info(f"Sitemap discovery: {'enabled' if use_sitemap else 'disabled'}")
 
     # Create output directory
     output_dir = Path(f"docs/{name}")
@@ -81,6 +195,24 @@ async def crawl_documentation(url: str, name: str, timeout: int = 1800):  # 30 m
     logger.info(f"Created output directory: {output_dir}")
 
     start_time = datetime.now()
+    
+    # Get base domain for filtering
+    base_domain = urlparse(url).netloc
+    logger.info(f"Base domain: {base_domain}")
+    
+    # Try to discover URLs from sitemap first
+    sitemap_urls = []
+    if use_sitemap:
+        logger.info("Attempting to discover sitemap URLs...")
+        sitemap_urls = await discover_sitemap_urls(url)
+        if sitemap_urls:
+            logger.info(f"Discovered {len(sitemap_urls)} URLs from sitemap")
+            # Filter sitemap URLs based on our rules
+            filtered_sitemap_urls = [u for u in sitemap_urls if should_process_url(u, base_domain)]
+            logger.info(f"Filtered to {len(filtered_sitemap_urls)} URLs after applying rules")
+            sitemap_urls = filtered_sitemap_urls
+        else:
+            logger.info("No sitemap found, falling back to link discovery mode")
     
     # Configure browser for better performance and reliability
     browser_cfg = BrowserConfig(
@@ -144,62 +276,66 @@ async def crawl_documentation(url: str, name: str, timeout: int = 1800):  # 30 m
     logger.info("Initializing AsyncWebCrawler...")
     async with AsyncWebCrawler(config=browser_cfg) as crawler:
         try:
-            # Get base domain for filtering
-            base_domain = urlparse(url).netloc
-            logger.info(f"Base domain: {base_domain}")
+            processed_urls = set()  # Keep track of processed URLs to avoid duplicates
             
-            # First get all links from the main page with less restrictive config
-            main_result = await crawler.arun(url, config=link_extraction_cfg)
-            internal_links = main_result.links.get("internal", [])
-            logger.info(f"Found {len(internal_links)} internal links")
+            # If we have sitemap URLs, use them
+            if sitemap_urls:
+                logger.info(f"Processing {len(sitemap_urls)} URLs from sitemap...")
+                urls_to_process = sitemap_urls
+                
+                # Still process the main page if it's not in the sitemap
+                if url not in sitemap_urls:
+                    urls_to_process = [url] + sitemap_urls
+            else:
+                # Fall back to the original link discovery approach
+                logger.info("Using link discovery mode...")
+                
+                # First get all links from the main page with less restrictive config
+                main_result = await crawler.arun(url, config=link_extraction_cfg)
+                internal_links = main_result.links.get("internal", [])
+                logger.info(f"Found {len(internal_links)} internal links")
+                
+                # Start with the main URL
+                urls_to_process = [url]
+                
+                # Add discovered links
+                for link in internal_links:
+                    link_url = get_url_from_link(link)
+                    if link_url and should_process_url(link_url, base_domain):
+                        urls_to_process.append(link_url)
             
-            # Process the main page with content config
-            main_content = await crawler.arun(url, config=content_extraction_cfg)
-            main_filename = get_safe_filename(url)
-            main_path = output_dir / main_filename
-            with open(main_path, "w", encoding="utf-8") as f:
-                f.write(main_content.markdown)
-            logger.info(f"Saved main page: {main_path}")
-            
-            # Process each internal link
-            processed_urls = {url}  # Keep track of processed URLs to avoid duplicates
-            
-            for link in internal_links:
+            # Process all URLs
+            for idx, current_url in enumerate(urls_to_process, 1):
                 # Check timeout
                 if (datetime.now() - start_time).total_seconds() > timeout:
                     logger.warning(f"Timeout reached after {timeout} seconds. Stopping crawl.")
                     break
 
                 try:
-                    link_url = get_url_from_link(link)
-                    if not link_url or link_url in processed_urls:
-                        continue
-                        
-                    if not should_process_url(link_url, base_domain):
-                        logger.debug(f"Skipping filtered URL: {link_url}")
+                    if current_url in processed_urls:
                         continue
                     
-                    logger.info(f"Processing link: {link_url}")
+                    logger.info(f"Processing [{idx}/{len(urls_to_process)}]: {current_url}")
                     
                     # Add delay between requests to be polite
                     await asyncio.sleep(0.5)  # 500ms delay between requests
                     
                     # Use content extraction config for the actual page content
-                    result = await crawler.arun(link_url, config=content_extraction_cfg)
+                    result = await crawler.arun(current_url, config=content_extraction_cfg)
                     
                     if result and result.success:
-                        filename = get_safe_filename(link_url)
+                        filename = get_safe_filename(current_url)
                         output_path = output_dir / filename
                         
                         with open(output_path, "w", encoding="utf-8") as f:
                             f.write(result.markdown)
                         logger.info(f"Successfully saved: {output_path}")
-                        processed_urls.add(link_url)
+                        processed_urls.add(current_url)
                     else:
-                        logger.warning(f"Failed to process {link_url}")
+                        logger.warning(f"Failed to process {current_url}")
                         
                 except Exception as e:
-                    logger.error(f"Error processing link {link}: {str(e)}")
+                    logger.error(f"Error processing URL {current_url}: {str(e)}")
                     continue
             
             logger.info(f"Total pages processed: {len(processed_urls)}")
@@ -248,7 +384,7 @@ async def crawl_multiple_libraries(config_file: str):
         logger.info(f"{'='*50}")
         
         try:
-            await crawl_documentation(url, name)
+            await crawl_documentation(url, name, use_sitemap=True)
         except Exception as e:
             logger.error(f"Error processing library {name}: {str(e)}")
             logger.error("Moving to next library...")
@@ -267,6 +403,7 @@ def main():
     parser.add_argument("--url", help="URL of a single documentation website")
     parser.add_argument("--name", help="Name of the output directory for single website")
     parser.add_argument("--debug", action="store_true", help="Enable debug logging")
+    parser.add_argument("--no-sitemap", action="store_true", help="Disable sitemap discovery and use link crawling only")
     
     # Add support for positional arguments
     parser.add_argument("url_pos", nargs="?", help="URL of documentation website (positional)")
@@ -279,15 +416,17 @@ def main():
         logger.debug("Debug mode enabled")
 
     try:
+        use_sitemap = not args.no_sitemap
+        
         if args.config:
             # Process multiple libraries from config file
             asyncio.run(crawl_multiple_libraries(args.config))
         elif args.url and args.name:
             # Process single library with named parameters
-            asyncio.run(crawl_documentation(args.url, args.name))
+            asyncio.run(crawl_documentation(args.url, args.name, use_sitemap=use_sitemap))
         elif args.url_pos and args.name_pos:
             # Process single library with positional parameters
-            asyncio.run(crawl_documentation(args.url_pos, args.name_pos))
+            asyncio.run(crawl_documentation(args.url_pos, args.name_pos, use_sitemap=use_sitemap))
         else:
             parser.error("Either --config or URL and name must be provided (either as named or positional arguments)")
     except Exception as e:
